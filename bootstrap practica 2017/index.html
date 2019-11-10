@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Esliceu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip();
+        })
+        $('.btn-secondary').tooltip({delay: {show: 1000, hide: 100}});
+      });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <img src="https://moodle.esliceu.com/pluginfile.php/1/theme_clean/logo/1494363003/LogoLiceu.png" alt="liceu">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="#">Inicis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="#">Escola</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cursos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-danger" href="#">EI</a>
+                        <a class="dropdown-item text-danger" href="#">EP</a>
+                        <a class="dropdown-item text-danger" href="#">ESO</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#">FPB</a>
+                        <a class="dropdown-item text-danger" href="#">CFGM</a>
+                        <a class="dropdown-item text-danger" href="#">CFGS</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <button class="btn btn-danger mr-1">Missatges <span class="badge badge-light">5</span></button>
+                <button class="btn btn-danger mr-1">Notificacions <span class="badge badge-light">9</span></button>
+                <input class="form-control mr-1" type="search" placeholder="Cerca" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Cerca</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid p-5">
+        <h1>Disseny d'Interfícies Web</h1>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="joan.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Joan Galmés</h4>
+                        <p class="card-text"> Tutor de segon de DAW</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Bootstrap</li>
+                        <li class="list-group-item">Material</li>
+                        <li class="list-group-item">SASS</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Perfil</a>
+                        <a href="#" class="card-link">Expedient</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <table class="table table-dark">
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Usuari</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Cognoms</th>
+                        <th scope="col">Rol</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">jgalmes</th>
+                        <td>Joan</td>
+                        <td>Galmés</td>
+                        <td>Tutor</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Afegir professor">
+                                    <span data-toggle="modal" data-target="#afegir"><span class="oi oi-plus"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Editar professor"><span data-toggle="modal" data-target="#afegir"><span class="oi oi-pencil"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Eliminar professor"><span data-toggle="modal" data-target="#eliminar"><span class="oi oi-trash"></span></span></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">xtorrens</th>
+                        <td>Xavier</td>
+                        <td>Torrens</td>
+                        <td>Professor</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Afegir professor"><span data-toggle="modal" data-target="#afegir"><span class="oi oi-plus"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Editar professor"><span data-toggle="modal" data-target="#afegir"><span class="oi oi-pencil"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Eliminar professor"><span data-toggle="modal" data-target="#eliminar"><span class="oi oi-trash"></span></span></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">mpiulats</th>
+                        <td>Miquel</td>
+                        <td>Piulats</td>
+                        <td>Cap d'estudis</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Afegir professor"><span data-toggle="modal" data-target="#afegir"><span class="oi oi-plus"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Editar professor"><span data-toggle="modal" data-target="#afegir"><span class="oi oi-pencil"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Eliminar professor"><span data-toggle="modal" data-target="#eliminar"><span class="oi oi-trash"></span></span></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">pbuades</th>
+                        <td>Pep</td>
+                        <td>Buades</td>
+                        <td>Professor</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Afegir professor"><span data-toggle="modal" data-target="#afegir"><span class="oi oi-plus"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Editar professor"><span data-toggle="modal" data-target="#afegir"><span class="oi oi-pencil"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Eliminar professor"><span data-toggle="modal" data-target="#eliminar"><span class="oi oi-trash"></span></span></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">pnegre</th>
+                        <td>Pere</td>
+                        <td>Negre</td>
+                        <td>Professor</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Afegir professor"><span data-toggle="modal" data-target="#afegir"><span class="oi oi-plus"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Editar professor"><span data-toggle="modal" data-target="#afegir"><span class="oi oi-pencil"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Eliminar professor"><span data-toggle="modal" data-target="#eliminar"><span class="oi oi-trash"></span></span></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">aescudero</th>
+                        <td>Ana</td>
+                        <td>Escudero</td>
+                        <td>Professor</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Afegir professor"><span data-toggle="modal" data-target="#afegir"><span class="oi oi-plus"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Editar professor"><span data-toggle="modal" data-target="#afegir"><span class="oi oi-pencil"></span></span></button>
+                                <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="bottom" title="Eliminar professor"><span data-toggle="modal" data-target="#eliminar"><span class="oi oi-trash"></span></span></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="eliminarModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="eliminarModalLabel">Esborrar element</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    esta segur de que vol esborrar l'element?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Si</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="afegir" tabindex="-1" role="dialog" aria-labelledby="afegirModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="afegirModalLabel">Alta nou professor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="usuari">Nom d'usuari</label>
+                            <input type="text" class="form-control" id="usuari" aria-describedby="emailHelp" placeholder="00000">
+                            <small id="usuariHelp" class="form-text text-muted">Nom d'usuari del professor</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" class="form-control" id="nom" placeholder="John">
+                            <small id="nomHelp" class="form-text text-muted">Nom del professor</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="cognom">Cogoms del professor</label>
+                            <input type="text" class="form-control" id="cognom" placeholder="Doe">
+                            <small id="cognomHelp" class="form-text text-muted">Cogoms del professor</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="rol">Rol</label>
+                            <select class="form-control" id="rol">
+                                <option>Professor</option>
+                                <option>Tutor</option>
+                                <option>Cap d'estudis</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tanca</button>
+                    <button type="button" class="btn btn-primary">Desa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
