@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Scoremaker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        video {
+            height: 100px;
+            width: 100px;
+        }
+
+        #nota{
+            position: relative;
+        }
+
+        #pentagrama{
+            position: relative;
+        }
+        .piano {
+            position:relative;
+            height:200px;
+            margin: 20px;
+        }
+
+        .blancas {
+            position:absolute;
+            left:0px;
+            display:-webkit-box;
+        }
+
+        .blancas .tecla {
+            width:40px;
+            height:200px;
+            border:solid 1px black;
+            background-color: #eee;
+        }
+
+        .negras {
+            display:-webkit-box;
+            position:absolute;
+            top: 1px;
+            left: 25px;
+        }
+
+        .negras .tecla {
+            width:30px;
+            height:120px;
+            border:solid 1px white;
+            margin-right: 10px;
+            background-color: #000;
+        }
+
+        .do1{
+            position: absolute;
+            top: 250px;
+            left: 250px;
+        }
+
+        .do1-sust{
+            position: absolute;
+            top: 250px;
+            left: 250px;
+        }
+
+        .re{
+            position: absolute;
+            top: 210px;
+            left: 270px;
+        }
+
+        .re-sust{
+            position: absolute;
+            top: 210px;
+            left: 270px;
+        }
+
+        .mi{
+            position: absolute;
+            top: 170px;
+            left: 270px;
+        }
+        .fa{
+            position: absolute;
+            top: 150px;
+            left: 270px;
+        }
+
+        .fa-sust{
+            position: absolute;
+            top: 150px;
+            left: 270px;
+        }
+        .sol{
+            position: absolute;
+            top: 130px;
+            left: 270px;
+        }
+
+        .sol-sust{
+            position: absolute;
+            top: 130px;
+            left: 270px;
+        }
+
+        .la{
+            position: absolute;
+            top: 100px;
+            left: 270px;
+        }
+
+        .la-sust{
+            position: absolute;
+            top: 100px;
+            left: 270px;
+        }
+
+        .si{
+            position: absolute;
+            top: 75px;
+            left: 270px;
+        }
+        .do2{
+            position: absolute;
+            top: 50px;
+            left: 270px;
+        }
+
+    </style>
+
+    <script>
+      let contador = 1;
+      let espaciador = 1;
+      let audio;
+      let arraynotas = [];
+      let sonando;
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev, pos) {
+        ev.dataTransfer.setData(pos, ev.target.id);
+      }
+
+      function drop(ev, pos) {
+        ev.preventDefault();
+        let cln = document.getElementById("notas").cloneNode(true);
+        if (pos === "do1"){
+          cln.src="assets/nota2.png";
+        }
+
+        if (contador > 4){
+          let elem = document.getElementById((contador-4).toString());
+          elem.remove();
+        }
+
+        ev.target.appendChild(cln);
+        cln.className = pos;
+        cln.id = contador;
+        document.getElementById(contador.toString()).style.left = (270*espaciador) + "px";
+        contador++;
+        espaciador++;
+        if (espaciador > 4){
+          espaciador = 1;
+        }
+      }
+
+      function play(){
+        sonando = true;
+        for (let i=1;i<contador;i++){
+          if (document.getElementById(i.toString())) {
+            console.log(document.getElementById(i.toString()).className);
+            audio = new Audio('notes/'+document.getElementById(i.toString()).className+'.wav');
+            arraynotas.push(audio);
+          }
+        }
+        let i = -1;
+        playSnd();
+        function playSnd() {
+          if (sonando == true) {
+            i++;
+            if (i == arraynotas.length) return;
+            arraynotas[i].addEventListener('ended', playSnd);
+            arraynotas[i].play();
+          }
+        }
+      }
+
+      function stop(){sonando = false;}
+
+      function colocanota(pos){
+        let cln = document.getElementById("notas").cloneNode(true);
+        if (pos === "do1"){
+          cln.src="assets/nota2.png";
+        }
+        if (pos === "do1-sust"){
+          cln.src="assets/nota2sust.png";
+          cln.className = pos;
+          let res = pos.split("-");
+          pos = res[0];
+        }
+        if (pos === "fa-sust"||pos === "la-sust"||pos === "re-sust"||pos === "sol-sust"){
+          cln.src="assets/nota1sust.png";
+          cln.className = pos;
+          let res = pos.split("-");
+          pos = res[0];
+        }
+
+        if (contador > 4){
+          let elem = document.getElementById((contador-4).toString());
+          elem.remove();
+        }
+
+        document.getElementById(pos).appendChild(cln);
+        if (cln.className === ""){
+          cln.className = pos;
+        }
+        cln.id = contador;
+        document.getElementById(contador.toString()).style.left = (270*espaciador) + "px";
+        contador++;
+        espaciador++;
+        if (espaciador > 4){
+          espaciador = 1;
+        }
+
+        audio = new Audio('notes/'+cln.className+'.wav');
+        audio.play();
+      }
+
+      document.addEventListener('keydown', function(e){
+        switch (e.key) {
+          case 'a':
+            colocanota("do1");
+            document.getElementById("tecla-do1").style.backgroundColor = "red";
+            break;
+          case 'w':
+            colocanota("do1-sust");
+            document.getElementById("tecla-do1-sust").style.backgroundColor = "red";
+            break;
+          case 's':
+            colocanota("re");
+            document.getElementById("tecla-re").style.backgroundColor = "red";
+            break;
+          case 'e':
+            colocanota("re-sust");
+            document.getElementById("tecla-re-sust").style.backgroundColor = "red";
+            break;
+          case 'd':
+            colocanota("mi");
+            document.getElementById("tecla-mi").style.backgroundColor = "red";
+            break;
+          case 'f':
+            colocanota("fa");
+            document.getElementById("tecla-fa").style.backgroundColor = "red";
+            break;
+          case 't':
+            colocanota("fa-sust");
+            document.getElementById("tecla-fa-sust").style.backgroundColor = "red";
+            break;
+          case 'g':
+            colocanota("sol");
+            document.getElementById("tecla-sol").style.backgroundColor = "red";
+            break;
+          case 'y':
+            colocanota("sol-sust");
+            document.getElementById("tecla-sol-sust").style.backgroundColor = "red";
+            break;
+          case 'h':
+            colocanota("la");
+            document.getElementById("tecla-la").style.backgroundColor = "red";
+            break;
+          case 'u':
+            colocanota("la-sust");
+            document.getElementById("tecla-la-sust").style.backgroundColor = "red";
+            break;
+          case 'j':
+            colocanota("si");
+            document.getElementById("tecla-si").style.backgroundColor = "red";
+            break;
+          case 'k':
+            colocanota("do2");
+            document.getElementById("tecla-do2").style.backgroundColor = "red";
+        }
+      });
+
+      let constraints = {audio: true,video: true};
+      let video;
+      let mediaRecorder;
+      navigator.mediaDevices.getUserMedia(constraints)
+        .then(function(mediaStream) {
+          video = document.querySelector('video');
+          video.srcObject = mediaStream;
+          video.volume = 0;
+          video.play();
+
+          mediaRecorder = new MediaRecorder(mediaStream);
+          let chunks = [];
+
+          mediaRecorder.ondataavailable = (event)=>{
+            chunks.push(event.data);
+          };
+
+          mediaRecorder.onstop = function() {
+            let blob = new Blob(chunks);
+            chunks.pop();
+            llamadaserver(blob);
+          };
+
+        })
+        .catch(function(err) { console.log(err.name + ": " + err.message); });
+
+      function record(){
+        mediaRecorder.start();
+      }
+
+      function stoprecord(){
+        mediaRecorder.stop();
+      }
+
+      function llamadaserver(blob){
+        let form = new FormData();
+        form.append("arxiu",blob);
+
+        fetch("http://35.194.72.13/scoremaker/backend.php", {
+          method: "POST",
+          body: form
+        }).then((res)=>{
+          return res.json();
+        }).then((respuesta)=>{
+          console.log(respuesta);
+          procesaNotasServer(respuesta);
+        });
+      }
+
+      function procesaNotasServer(notas){
+        if (notas[0].confianca > 0.8){
+          let notasRecibidas = notas[0].transcripcio;
+          notasRecibidas.toLowerCase();
+          notasRecibidas = notasRecibidas.split(" ");
+          console.log(notasRecibidas);
+          //falta arreglar las notas que contengan espacios (sostenido y agudo)
+          for(let i=0;i<notasRecibidas.length;i++){
+            if (notasRecibidas[i] === "do"){
+              notasRecibidas[i] = "do1"
+            }
+            if (notasRecibidas[i] === "do agudo"){
+              notasRecibidas[i] = "do2"
+            }
+            colocanota(notasRecibidas[i]);
+          }
+        }
+      }
+    </script>
+
+</head>
+<body>
+<video></video>
+<button onclick="record()">Graba</button>
+<button onclick="stoprecord()">Deja de grabar</button>
+<div id="nota">
+    <img src="assets/nota1.png" id="notas" alt="nota" draggable="true" ondragstart="drag(event, 'nota')">
+</div>
+
+<div id="pentagrama">
+    <img src="assets/pentagrama.png" alt="pentagrama" usemap="#Map">
+
+    <map name="Map" id="Map">
+        <!-- DO-1 -->
+        <area id="do1" ondrop="drop(event, 'do1')" ondragover="allowDrop(event)"  shape="poly" coords="258,403,1000,405,998,448,255,443" />
+        <!-- Re -->
+        <area id="re" ondrop="drop(event, 're')" ondragover="allowDrop(event)" shape="poly" coords="258,396,260,364,997,364,996,386,996,390,997,397" />
+        <!-- Mi -->
+        <area id="mi" ondrop="drop(event, 'mi')" ondragover="allowDrop(event)" shape="poly" coords="262,360,265,338,998,336,999,358,999,361" />
+        <!-- Fa -->
+        <area id="fa" ondrop="drop(event, 'fa')" ondragover="allowDrop(event)" shape="poly" coords="266,309,267,334,998,331,998,312,998,306,998,308" />
+        <!-- Sol -->
+        <area id="sol" ondrop="drop(event, 'sol')" ondragover="allowDrop(event)" shape="poly" coords="269,305,998,303,999,288,270,289" />
+        <!-- La -->
+        <area id="la" ondrop="drop(event, 'la')" ondragover="allowDrop(event)" shape="poly" coords="272,288,273,260,998,259,998,286" />
+        <!-- Si -->
+        <area id="si" ondrop="drop(event, 'si')" ondragover="allowDrop(event)" shape="poly" coords="273,256,275,239,999,239,1000,257" />
+        <!-- Do-2 -->
+        <area id="do2" ondrop="drop(event, 'do2')" ondragover="allowDrop(event)" shape="poly" coords="271,231,273,205,999,204,998,236" />
+    </map>
+</div>
+<div id="botones">
+    <button onclick="play()">PLAY</button>
+    <button onclick="stop()">STOP</button>
+</div>
+
+<div class="piano">
+    <div class="blancas">
+        <div class="tecla" id="tecla-do1"></div>
+        <div class="tecla" id="tecla-re"></div>
+        <div class="tecla" id="tecla-mi"></div>
+        <div class="tecla" id="tecla-fa"></div>
+        <div class="tecla" id="tecla-sol"></div>
+        <div class="tecla" id="tecla-la"></div>
+        <div class="tecla" id="tecla-si"></div>
+        <div class="tecla" id="tecla-do2"></div>
+    </div>
+    <div class="negras">
+        <div class="tecla" id="tecla-do1-sust"></div>
+        <div class="tecla" id="tecla-re-sust"></div>
+        <div class="tecla" style="visibility:hidden;"></div>
+        <div class="tecla" id="tecla-fa-sust"></div>
+        <div class="tecla" id="tecla-sol-sust"></div>
+        <div class="tecla" id="tecla-la-sust"></div>
+    </div>
+</div>
+
+</body>
+</html>
