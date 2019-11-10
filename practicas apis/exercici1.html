@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Endreça les Joguines</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="lib/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+        <link href="css/dragndrop.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <h1>Endreça les joguines!</h1>
+        <div id="boxes">
+            <img id="boxblue" ondrop="drop(event, this.id)" ondragover="allowDrop(event)" src="img/boxblue.png" alt="boxblue" class="box" />
+            <img id="boxgreen" ondrop="drop(event, this.id)" ondragover="allowDrop(event)" src="img/boxgreen.png" alt="boxgreen" class="box" />
+            <img id="boxred" ondrop="drop(event, this.id)" ondragover="allowDrop(event)" src="img/boxred.png" alt="boxred" class="box" />
+        </div>
+
+        <div id="toys">
+            <img id="joguina1" draggable="true" ondragstart="drag(event, 'boxred')" src="img/joguines/p.jpg" alt="motoRojo"/>
+            <img id="joguina2" draggable="true" ondragstart="drag(event, 'boxblue')" src="img/joguines/sa_1454415777toy.jpg" alt="trenAzul"/>
+            <img id="joguina3" draggable="true" ondragstart="drag(event, 'boxred')" src="img/joguines/green-toy-fire-truck.jpg" alt="BomberosRojo"/>
+            <img id="joguina4" draggable="true" ondragstart="drag(event, 'boxgreen')" src="img/joguines/71x5BSdfRlL._SL1500_.jpg" alt="AvionetaVerde"/>
+            <img id="joguina5" draggable="true" ondragstart="drag(event, 'boxgreen')" src="img/joguines/home_06picpresent.jpg" alt="CocodriloVerde"/>
+            <img id="joguina6" draggable="true" ondragstart="drag(event, 'boxred')" src="img/joguines/lillabo-toy-car-red__0175385_PE328763_S4.JPG" alt="CocheRojo"/>
+            <img id="joguina7" draggable="true" ondragstart="drag(event, 'boxred')" src="img/joguines/robot-295165_960_720.png" alt="RobotRojo"/>
+            <img id="joguina8" draggable="true" ondragstart="drag(event, 'boxblue')" src="img/joguines/s464826693606066693_p949_i1_w886.jpeg" alt="CocheAzul"/>
+            <img id="joguina9" draggable="true" ondragstart="drag(event, 'boxgreen')" src="img/joguines/file_85234.jpg" alt="CamionVerde"/>
+        </div>
+        <script>
+            //El vostre codi va aquí
+            function pushMessage(title, message) {
+                if (window.Notification && Notification.permission !== "denied") {
+                    Notification.requestPermission(function (status) {
+                        new Notification(title, {
+                            body: message
+                        });
+                    });
+                }
+            }
+
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev, id) {
+                console.log(id);
+                ev.dataTransfer.setData(id, ev.target.id);
+            }
+
+            var contador = 0;
+            function drop(ev, id) {
+                console.log(id);
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData(id);
+                if (data != "") {
+                    contador++;
+                    ev.target.appendChild(document.getElementById(data));
+                    pushMessage("Correcto!", "Has acertado");
+                } else {
+                    pushMessage("Va a ser que no", " Vuelve a intentar.");
+                }
+                if (contador === 9) {
+                    pushMessage("Enhorabuena!"," Fin del juego");
+                }
+            }
+        </script>
+    </body>
+</html>

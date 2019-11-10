@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+
+        <title>Examen Desenvolupament en entorn client. Exercici 3.</title>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #mapa {
+                height: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="adreca">Introduiu aquí l'adreça de l'exercici 3c</div>
+        <div id="mapa"></div>
+        <script type="text/javascript">
+
+            //El vostre codi va aquí
+            function getLocation() {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            function showPosition(position) {
+                if (navigator.geolocation) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    var map = new google.maps.Map(document.getElementById('mapa'), {
+                        center: {lat: position.coords.latitude, lng: position.coords.longitude},
+                        zoom: 18
+                    });
+
+                     var cityCircle = new google.maps.Circle({
+                     strokeColor: '#FF0000',
+                     strokeOpacity: 0.8,
+                     strokeWeight: 2,
+                     fillColor: 'yellow',
+                     fillOpacity: 0.35,
+                     map: map,
+                     center: {lat: position.coords.latitude, lng: position.coords.longitude},
+                     radius: position.coords.accuracy
+                     });
+
+                    var image = {url: './img/pin-solar.png'};
+                    var beachMarker = new google.maps.Marker({
+                        position: {lat: position.coords.latitude, lng: position.coords.longitude},
+                        map: map,
+                        icon: image
+                    });
+
+                } else {
+                    handleLocationError(false, infoWindow, map.getCenter());
+                }
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAfKcIXVZSxM2Nm0dYXVCBETKIz0DN8y0&signed_in=true&callback=getLocation" 
+        async defer></script>
+    </body>
+
+</html>
