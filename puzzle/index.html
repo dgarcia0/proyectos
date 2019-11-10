@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>puzzle</title>
+        <meta charset="UTF-8">
+        <style>
+            .comunidad1{
+                position: absolute;
+                top: 1087px;
+                left: 380px;
+            }
+
+            .comunidad2{
+                position: absolute;
+                top: 625px;
+                left: 1028px;
+            }
+
+            .comunidad3{
+                position: absolute;
+                top: 522px;
+                left: 231px;
+            }
+
+            .comunidad4{
+                position: absolute;
+                top: 803px;
+                left: 559px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" value="volveracomenzar" onClick="window.location.reload()">
+        <div style="position: absolute">
+            <img id="andalucia" src="img/andalucia.png" alt="andalucia" draggable="true" ondragstart="drag(event, comunidad1.id)"/>
+            <img id="catalunya" src="img/catalunya.png" alt="catalunya" draggable="true" ondragstart="drag(event, comunidad2.id)"/>
+            <img id="galcia" src="img/galicia.png" alt="galicia" draggable="true" ondragstart="drag(event, comunidad3.id)"/>
+            <img id="castilla" src="img/castellalamanxa.png" alt="castilla" draggable="true" ondragstart="drag(event, comunidad4.id)"/>
+        </div>
+
+
+        <div id="mapa" style="padding-top: 500px">
+            <img src="img/espana2.gif" alt="spain" usemap="#Map"/>
+            <map name="Map" id="Map">
+                <area id="comunidad1" alt="andalucia" title="Andalucia" ondrop="drop(event, this.id)" ondragover="allowDrop(event)" href="#" shape="poly" coords="422,638,489,664,525,640,524,653,543,639,537,618,581,585,642,622,784,605,803,633,794,650,843,675,851,715,872,728,826,797,794,780,780,799,708,796,637,798,615,820,568,829,547,865,507,855,478,819,452,766,418,747,398,742,382,749,375,714,373,705,396,664" />
+                <area id="comunidad2" alt="catalunya" title="Catalunya" ondrop="drop(event, this.id)" ondragover="allowDrop(event)" href="#" shape="poly" coords="1049,382,1058,372,1082,364,1066,354,1098,323,1106,323,1184,301,1196,281,1262,243,1280,225,1270,200,1273,189,1283,188,1288,181,1275,179,1276,169,1267,169,1260,164,1235,172,1232,181,1219,180,1197,170,1179,176,1157,164,1133,168,1124,139,1065,120,1070,150,1066,165,1070,179,1063,215,1057,222,1059,234,1036,254,1043,266,1039,277,1038,304,1026,320,1030,350,1023,361,1046,384" />
+                <area id="comunidad3" alt="galicia" title="Galicia" ondrop="drop(event, this.id)" ondragover="allowDrop(event)" href="#" shape="poly" coords="413,40,398,40,373,20,344,16,306,43,315,65,293,63,261,69,226,104,238,127,254,132,243,150,247,161,265,142,270,147,262,154,261,171,274,170,261,187,279,183,279,189,257,208,259,234,292,212,316,203,324,213,316,225,323,240,345,234,364,233,388,238,404,221,419,221,413,212,426,196,434,195,440,182,431,168,420,159,413,162,415,139,430,127,430,108,419,104,431,90,428,84,420,83,410,71,402,58,414,43" />
+                <area id="comunidad4" alt="castilla" title="Castilla" ondrop="drop(event, this.id)" ondragover="allowDrop(event)" href="#" shape="poly" coords="811,656,836,629,863,619,873,626,881,601,906,580,923,587,924,557,911,559,901,545,909,516,881,505,891,479,901,475,904,449,857,400,870,379,872,337,839,314,806,326,763,297,734,301,710,314,720,327,714,352,728,372,742,393,739,414,748,422,742,436,688,455,682,451,691,443,702,431,649,412,643,420,638,410,626,420,614,422,611,412,600,412,588,429,583,426,555,431,554,457,570,462,569,490,589,510,609,503,608,516,614,535,600,532,597,547,588,547,597,564,587,585,642,624,652,617,686,618,705,613,732,610,755,613,774,604,790,606,802,629,794,651,808,659" />
+            </map>
+        </div>
+        <script>
+          let contador;
+          if (localStorage.getItem("puntuacion")){
+            contador = localStorage.getItem("puntuacion");
+          }
+          else{
+            contador = 0;
+          }
+          function allowDrop(ev) {
+            ev.preventDefault();
+          }
+
+          function drag(ev, id) {
+            ev.dataTransfer.setData(id, ev.target.id);
+          }
+          function drop(ev, id) {
+            ev.preventDefault();
+            let data = ev.dataTransfer.getData(id);
+            if (data != "") {
+              contador++;
+              localStorage.setItem("puntuacion", contador);
+              ev.target.appendChild(document.getElementById(data));
+              document.getElementById(data).className = id;
+              if (contador === 4) {
+                alert("Fin del juego");
+              }
+            }
+          }
+        </script>
+    </body>
+</html>
