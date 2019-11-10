@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            #peces{
+                position: relative;
+                height: 500px;
+            }
+
+            #mapa{
+                position: relative;
+            }
+
+
+            .p1{
+                position: absolute;
+                top: 295px;
+                left: 550px;
+            }
+            
+            .p2{
+                position: absolute;
+                top: 580px;
+                left: 372px;
+            }
+            
+            .p3{
+                position: absolute;
+                top: 120px;
+                left: 1019px;
+            }
+            
+            .p4{
+                position: absolute;
+                top: 16px;
+                left: 223px;
+            }
+
+        </style>
+
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev, pos) {
+                ev.dataTransfer.setData(pos, ev.target.id);
+                console.log('drag' + pos);
+            }
+
+            function drop(ev, pos) {
+                console.log('drop' + pos);
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData(pos);
+                console.log(data);
+                if (data != "") {
+                    ev.target.appendChild(document.getElementById(data));
+                    document.getElementById(data).className=pos;
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+        <div id="peces">
+            <img id="img1" src="andalucia.png" alt="" draggable="true" ondragstart="drag(event,'p2')"/>
+            <img id="img2" src="galicia.png" alt="" draggable="true" ondragstart="drag(event,'p4')"/>
+            <img id="img3" src="catalunya.png" alt="" draggable="true" ondragstart="drag(event,'p3')"/>
+            <img id="img4" src="castellalamanxa.png" alt="" draggable="true" ondragstart="drag(event,'p1')"/>
+        </div>
+
+
+        <!-- Mapa Espanya -->
+        <div id="mapa">
+            <img src="espana.gif" alt="" usemap="#Map" />
+
+            <map name="Map" id="Map">
+                <!-- Catilla la Mancha -->
+                <area ondrop="drop(event, 'p1')" ondragover="allowDrop(event)" alt="" title="" shape="poly" coords="614,532,614,503,574,501,555,449,602,424,642,420,691,427,687,456,749,435,710,356,711,319,793,313,815,327,851,323,873,351,878,373,863,385,879,432,898,445,910,479,879,496,905,524,905,553,933,556,930,589,882,593,882,621,838,636,807,657,795,625,783,605,641,621,587,587,605,535" />
+                <!-- Andalucia -->
+                <area ondrop="drop(event, 'p2')" ondragover="allowDrop(event)" alt="" title="" href="#" shape="poly" coords="423,644,481,665,523,641,543,647,538,608,578,585,642,624,714,619,773,607,799,633,794,655,813,660,821,671,845,672,855,720,865,727,845,777,826,796,807,784,782,800,759,796,710,799,637,797,606,824,567,829,551,852,538,867,497,852,479,819,465,797,442,755,387,740,375,711,383,687,398,664" />
+                <!-- Catalunya -->
+                <area ondrop="drop(event, 'p3')" ondragover="allowDrop(event)" alt="" title="" href="#" shape="poly" coords="1047,377,1023,360,1025,316,1042,299,1046,267,1035,251,1059,229,1071,183,1071,155,1065,121,1117,140,1131,172,1174,175,1218,183,1246,172,1278,177,1283,189,1271,199,1275,219,1277,221,1278,227,1265,239,1254,252,1230,259,1202,281,1187,300,1150,307,1115,317,1090,325,1071,356,1081,368,1066,373,1047,381" />
+                <!-- Galicia -->
+                <area ondrop="drop(event, 'p4')" ondragover="allowDrop(event)" alt="" title="" href="#" shape="poly" coords="414,46,395,64,421,86,425,107,418,135,409,162,430,168,437,192,418,206,419,227,393,223,387,238,362,235,325,235,318,231,323,212,315,208,299,207,278,215,263,235,257,211,269,196,283,187,279,179,269,188,263,186,270,171,258,171,265,146,250,152,238,158,247,136,247,130,234,126,226,107,234,92,249,82,261,71,283,66,303,63,314,66,315,58,321,51,309,50,305,36,327,22,351,15,343,23,359,15,358,20,365,20,365,26,371,23,382,27,391,35,414,42" />
+            </map>
+        </div>
+
+
+    </body>
+</html>
+
