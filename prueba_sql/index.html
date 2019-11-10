@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+</head>
+<body>
+<div id="status" name="status"></div>
+
+<input type="text" id="nom" placeholder="nom">
+<select name="estado" id="estado">
+    <option value="seminuevo">SEMINUEVO</option>
+    <option value="nuevo">NUEVO</option>
+    <option value="no se sabe">NO SE SABE</option>
+    <option value="basura">BASURA</option>
+</select>
+
+<select name="marca" id="marca"></select>
+
+<input type="button" value="enviar" onclick="insertar()">
+
+<script type="text/javascript">
+  var contador = 0;
+  var db;
+  var msg = '<p>initializating...</p>';
+  document.querySelector('#status').innerHTML = msg;
+
+  db = openDatabase('juguetes','1.0','prueba juguetes', 2*1024*1024);
+  db.transaction(function (tx) {
+    tx.executeSql('DROP TABLE IF EXISTS MARCA');
+    tx.executeSql('DROP TABLE IF EXISTS JUGUETE');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MARCA (id unique, nom)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS JUGUETE (id unique, nom, estat, marca_idmarca)');
+
+    tx.executeSql('INSERT INTO MARCA (id, nom) VALUES ("1", "foobar")');
+    tx.executeSql('INSERT INTO MARCA (id, nom) VALUES ("2", "foobar2")');
+    tx.executeSql('INSERT INTO MARCA (id, nom) VALUES ("3", "foobar3")');
+    tx.executeSql('INSERT INTO MARCA (id, nom) VALUES ("4", "foobar4")');
+    tx.executeSql('INSERT INTO MARCA (id, nom) VALUES ("5", "foobar5")');
+
+    tx.executeSql('INSERT INTO JUGUETE (id, nom, estat, marca_idmarca) VALUES ("1", "play", "seminuevo", "2")');
+    tx.executeSql('INSERT INTO JUGUETE (id, nom, estat, marca_idmarca) VALUES ("2", "xbox", "seminuevo", "3")');
+    tx.executeSql('INSERT INTO JUGUETE (id, nom, estat, marca_idmarca) VALUES ("3", "pc", "nuevo", "5")');
+
+    msg = '<p>Log message created and row inserted.</p>';
+    document.querySelector('#status').innerHTML =  msg;
+  });
+  db.transaction(function (tx) {
+    tx.executeSql('SELECT * FROM MARCA', [], function (tx, results) {
+      var len = results.rows;
+      var i;
+      for (i = 0; i < len.length; i++){
+        let option = document.createElement("option");
+        option.value = len.item(i).id;
+        option.innerHTML = len.item(i).nom;
+        document.querySelector("#marca").appendChild(option);
+      }
+    }, null);
+  });
+
+  db.transaction(function (tx) {
+    tx.executeSql('SELECT * FROM JUGUETE', [], function (tx, results) {
+      contador = results.rows.length;
+    }, null);
+  });
+
+
+  function insertar(){
+    db = openDatabase('juguetes','1.0','prueba juguetes', 2*1024*1024);
+    db.transaction(function (tx) {
+      tx.executeSql('INSERT INTO JUGUETE VALUES ("'+contador+'", "'+document.getElementById("nom").value+'", "'+document.getElementById("estado").options[document.getElementById("estado").selectedIndex].text+'", "'+document.getElementById("marca").options[document.getElementById("marca").selectedIndex].value+'")');
+      contador++;
+    });
+  }
+</script>
+</body>
+</html>
