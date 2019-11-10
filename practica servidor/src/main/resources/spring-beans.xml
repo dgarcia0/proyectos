@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="userData" class="data.UserData">
+        <property name="users">
+            <list>
+                <bean class="data.User">
+                    <property name="name" value="admin"/>
+                    <property name="email" value="admin@mail.com"/>
+                    <property name="passwd" value="123"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="userDataException" class="data.UserNotFoundException" scope="prototype"/>
+
+    <bean id="loginUser" class="login.LoginUser">
+        <property name="data" ref="userData"/>
+    </bean>
+
+    <bean id="user" class="data.User" scope="prototype"/>
+
+    <context:component-scan base-package="beans" />
+</beans>
