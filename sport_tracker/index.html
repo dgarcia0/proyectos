@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #mapa {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="mapa"></div>
+<div id="chat"></div>
+
+<script>
+  let map;
+  let res;
+  let pos;
+  let obj;
+
+  if(typeof(EventSource) !== "undefined") {
+    let source = new EventSource("http://35.194.72.13/pra_SSE.php");
+    source.onmessage = function(event) {
+      pos = event.data;
+      console.log(pos);
+      res = pos.replace("lon", "lng");
+      console.log(res);
+      obj = JSON.parse(res);
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+  }
+
+  if(typeof(Worker) !== "undefined") {
+    if(typeof(w) == "undefined") {
+      w = new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("chat").innerHTML += event.data.message + "<br>";
+      if(window.Notification && Notification.permission !== "denied") {
+        Notification.requestPermission(function(status) {
+          var n = new Notification(event.data.user, {
+            body: event.data.message,
+            icon: 'img/icono.png'
+          });
+          setTimeout(n.close.bind(n),5000);
+        });
+      } else {
+        document.getElementById("chat").innerHTML = "Sorry, your browser does not support Web Workers...";
+        }
+      initMap();
+    }
+  }
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('mapa'), {
+      zoom: 15,
+      center: obj
+    });
+    var marker = new google.maps.Marker({
+      position: obj,
+      map: map,
+    });
+    marker.setMap(map);
+  }
+
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwK_1YThmCXXm3_NglUhtB4K9Dhejysvc&callback=initMap">
+</script>
+</body>
+</html>
