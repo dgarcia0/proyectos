@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VetPlusForm</title>
+</head>
+<body>
+
+<form>
+    <h3>nombre</h3>
+    <input type="text" id="nombre"><br>
+    <h3>sexo</h3>
+    <input type="radio" name="sexo" value="MASC" id="macho"> Macho<br>
+    <input type="radio" name="sexo" value="FEM" checked> Hembra<br>
+    <h3>numero de registro</h3>
+    <input type="text" id="numreg"><br>
+    <h3>tipo de animal</h3>
+    <select id="tipoAnimal"></select><br>
+    <br>
+    <input type="button" value="Insertar" id="enviar" onclick="enviardatos()">
+</form>
+
+<script>
+    const idurl = new URLSearchParams(window.location.search);
+    const cogeranimales = {
+      MethodName: 'getAnimals',
+      params: ''}
+    const cogertipos = {
+      MethodName: 'getTipus',
+      params: ''}
+    let array=[];
+
+    function conexion(obj) {
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          if (obj.MethodName === 'getTipus') {
+            array = JSON.parse(this.responseText);
+            rellenarSelect(array);
+          }
+          if (obj.MethodName === 'getAnimals') {
+            array = JSON.parse(this.responseText);
+            rellenar();
+          }
+        }
+      };
+      xhttp.open("POST", "http://35.194.72.13/vetplus/serveis.php", true);
+      if (obj.MethodName === 'updateAnimals' || obj.MethodName === 'insertAnimals') {
+        xhttp.send(obj);
+      }
+      else {
+        xhttp.send(JSON.stringify(obj));
+      }
+    }
+
+  function rellenarSelect(json) {
+    let desplegable = document.getElementById("tipoAnimal");
+    for (let i = 0; i < json.length; i++) {
+      let option = document.createElement("option");
+      option.value = json[i].idtipus;
+      option.text = json[i].nom;
+      desplegable.add(option);
+    }
+  }
+
+    function rellenar(){
+      let pos = 0;
+      for (let i=0;i<array.length;i++){
+        if (array[i].idanimal === idurl.get("id")){
+          pos = i;
+        }
+      }
+      if (idurl.get("id")){
+        document.getElementById("nombre").value = array[pos].nomAnimal;
+        if (array[pos].sexe === "MASC") {
+          document.getElementById("macho").checked = true;
+        }
+        document.getElementById("numreg").value = array[pos].numregistre;
+          let num = document.getElementById("tipoAnimal").options.length;
+          for (let i = 0; i < num; i++) {
+            let prueba = document.getElementById("tipoAnimal").options[i].text;
+            if (prueba == array[pos].nomTipus) {
+              document.getElementById("tipoAnimal").selectedIndex = i.toString();
+            }
+          }
+        }
+    }
+
+    function compruebasexo(){
+      if (document.getElementById("macho").checked = true){
+        return "MASC";
+      }
+      else{
+        return "FEM";
+      }
+    }
+
+    function enviardatos(){
+      if (idurl.get("id")){
+        const editaranimal = {
+          MethodName: 'updateAnimal',
+          params: {
+            id: idurl.get("id"),
+            nom: document.getElementById("nombre").value,
+            sexe: compruebasexo(),
+            reg: document.getElementById("numreg").value,
+            tipus: document.getElementById("tipoAnimal").options[document.getElementById("tipoAnimal").selectedIndex].value
+          }
+        }
+        conexion(editaranimal);
+      }
+      else{
+        const insertaranimal = {
+          MethodName: 'insertAnimal',
+          params: {
+            nom: document.getElementById("nombre").value,
+            sexe: compruebasexo(),
+            reg: document.getElementById("numreg").value,
+            tipus: document.getElementById("tipoAnimal").options[document.getElementById("tipoAnimal").selectedIndex].value
+          }
+        }
+        conexion(insertaranimal);
+      }
+    }
+    conexion(cogertipos);
+    conexion(cogeranimales);
+</script>
+</body>
+</html>

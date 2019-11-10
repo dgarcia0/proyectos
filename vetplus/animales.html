@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VetPlus</title>
+</head>
+<body>
+
+<input type="submit" value="nuevo animal" onclick="location.href = 'animalesForm.html';">
+
+<script>
+
+  const obj = {
+  MethodName: 'getAnimals',
+  params: ''}
+  let array=[];
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      array = JSON.parse(this.responseText);
+      creatabla(array);
+    }
+  };
+  xhttp.open("POST", "http://35.194.72.13/vetplus/serveis.php", true);
+  xhttp.send(JSON.stringify(obj));
+
+function creatabla(array) {
+  let table = document.createElement("table");
+  table.setAttribute("id", "tabla");
+  let cabecera = document.createElement("tr");
+  let nombre = document.createElement("th");
+  let sexo = document.createElement("th");
+  let num_reg = document.createElement("th");
+  let tipo = document.createElement("th");
+  nombre.innerHTML = "nombre";
+  sexo.innerHTML = "sexo";
+  num_reg.innerHTML = "numero registro";
+  tipo.innerHTML = "tipo animal";
+  cabecera.appendChild(nombre);
+  cabecera.appendChild(sexo);
+  cabecera.appendChild(num_reg);
+  cabecera.appendChild(tipo);
+  table.appendChild(cabecera);
+  for(let i = 0; i < array.length; i++) {
+    let fila = document.createElement("tr");
+    let nom = document.createElement("td");
+    let sexe = document.createElement("td");
+    let numero = document.createElement("td");
+    let tipus = document.createElement("td");
+    editar = document.createElement("input");
+    eliminar = document.createElement("input");
+    editar.setAttribute("type", "submit");
+    editar.setAttribute("value", "editar");
+    editar.setAttribute("id", array[i].idanimal);
+    eliminar.setAttribute("type", "submit");
+    eliminar.setAttribute("value", "eliminar");
+    eliminar.setAttribute("onclick", "borraranimal()");
+    editar.onclick = (e) => {
+      window.location = "animalesForm.html?id="+e.target.id;
+    }
+    nom.innerHTML = array[i].nomAnimal;
+    sexe.innerHTML = array[i].sexe;
+    if (array[i].numregistre == ""){numero.innerHTML = "sin numero";}
+    else {numero.innerHTML = array[i].numregistre;}
+    tipus.innerHTML = array[i].nomTipus;
+    fila.appendChild(nom);
+    fila.appendChild(sexe);
+    fila.appendChild(numero);
+    fila.appendChild(tipus);
+    fila.appendChild(editar);
+    fila.appendChild(eliminar);
+    table.appendChild(fila);
+    document.body.appendChild(table);
+  }
+}
+
+function borraranimal(){
+  let r = confirm("Estas seguro de que deseas eliminar?");
+  if (r == true) {
+    alert("animal borrado");
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tratamientos</title>
+</head>
+<body>
+<script>
+const cogeranimales = {
+  MethodName: 'getAnimals',
+  params: ''}
+const cogertratamientos = {
+  MethodName: 'getTractaments',
+  params: ''}
+const cogertipos = {
+  MethodName: 'getTipus',
+  params: ''}
+let array=[];
+let arrayanimales=[];
+let arraytipos=[];
+
+function conexion(obj) {
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+
+      if (obj.MethodName === 'getTractaments') {
+        array = JSON.parse(this.responseText);
+        creatabla(array);
+      }
+      if (obj.MethodName === 'getAnimals') {
+        arrayanimales = JSON.parse(this.responseText);
+      }
+      if (obj.MethodName === 'getTipus') {
+        arraytipos = JSON.parse(this.responseText);
+      }
+    }
+  };
+  xhttp.open("POST", "http://35.194.72.13/vetplus/serveis.php", true);
+  xhttp.send(JSON.stringify(obj));
+}
+
+function creatabla(array) {
+    let table = document.createElement("table");
+    let cabecera = document.createElement("tr");
+    let descripcion = document.createElement("th");
+    let fecha = document.createElement("th");
+    let nombre = document.createElement("th");
+    let numreg = document.createElement("th");
+    let tipo = document.createElement("th");
+    descripcion.innerHTML = "descripcion";
+    fecha.innerHTML = "fecha";
+    nombre.innerHTML = "nombre";
+    numreg.innerHTML = "numero registro";
+    tipo.innerHTML = "tipo animal";
+    cabecera.appendChild(descripcion);
+    cabecera.appendChild(fecha);
+    cabecera.appendChild(nombre);
+    cabecera.appendChild(numreg);
+    cabecera.appendChild(tipo);
+    table.appendChild(cabecera);
+
+    for(let i = 0; i < array.length; i++) {
+      let fila = document.createElement("tr");
+      let descr = document.createElement("td");
+      let data = document.createElement("td");
+      let nom = document.createElement("td");
+      let registre = document.createElement("td");
+      let tipus = document.createElement("td");
+      let editar = document.createElement("input");
+      let eliminar = document.createElement("input");
+      editar.setAttribute("type", "submit");
+      editar.setAttribute("value", "editar");
+      editar.setAttribute("id", array[i].idtractament);
+      eliminar.setAttribute("type", "submit");
+      eliminar.setAttribute("value", "eliminar");
+      eliminar.setAttribute("id", array[i].idtractament);
+      editar.onclick = (e) => {
+        window.location = "tratamientosForm.html?id="+e.target.id;
+      }
+      eliminar.onclick = (e) => {
+        borrartratamiento(e.target.id)
+      }
+      descr.innerHTML = array[i].descripcio;
+      data.innerHTML = array[i].data;
+      for (let j=0;j<=arrayanimales.length;j++){
+        if (array[i].animal_idanimal === arrayanimales[j].idanimal){
+          nom.innerHTML = arrayanimales[j].nomAnimal;
+          tipus.innerHTML = arrayanimales[j].nomTipus;
+          if (arrayanimales[j].numregistre == ""){registre.innerHTML = "sin numero";}
+          else {registre.innerHTML = arrayanimales[j].numregistre;}
+          break;
+        }
+      }
+      fila.appendChild(descr);
+      fila.appendChild(data);
+      fila.appendChild(nom);
+      fila.appendChild(registre);
+      fila.appendChild(tipus);
+      fila.appendChild(editar);
+      fila.appendChild(eliminar);
+      table.appendChild(fila);
+      document.body.appendChild(table);
+    }
+}
+function borrartratamiento(param) {
+  console.log(param)
+  const eliminartrat = {
+    MethodName: 'deleteTractament',
+    params:{id:param}}
+  conexion(eliminartrat)
+}
+conexion(cogertipos);
+conexion(cogeranimales);
+conexion(cogertratamientos);
+
+</script>
+</body>
+</html>

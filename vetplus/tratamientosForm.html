@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <h3>descripcion</h3>
+    <textarea name="desc" id="descripcion" cols="30" rows="10"></textarea><br>
+    <h3>fecha</h3>
+    <input type="datetime-local" id="data" step="1">
+    <h3>animal</h3>
+    <select id="animal"></select><br>
+    <br>
+    <input type="button" value="Insertar" id="enviar" onclick="enviardatos()">
+</form>
+
+<script>
+
+  const idurl = new URLSearchParams(window.location.search);
+  const cogeranimales = {
+    MethodName: 'getAnimals',
+    params: ''}
+  const cogertratamientos = {
+    MethodName: 'getTractamentById',
+    params: {id: idurl.get("id")}}
+  let array=[];
+  let arrayanimales=[];
+
+  function conexion(obj) {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        if (obj.MethodName === 'getTractamentById') {
+          array = JSON.parse(this.responseText);
+          rellenar();
+        }
+        if (obj.MethodName === 'getAnimals') {
+          arrayanimales = JSON.parse(this.responseText);
+          rellenarSelect(arrayanimales);
+        }
+      }
+    };
+    xhttp.open("POST", "http://35.194.72.13/vetplus/serveis.php", true);
+    xhttp.send(JSON.stringify(obj));
+  }
+
+  function rellenarSelect(json) {
+    let desplegable = document.getElementById("animal");
+    for (let i = 0; i < json.length; i++) {
+      let option = document.createElement("option");
+      option.text = json[i].nomAnimal;
+      let pos = 0;
+      for (let j=0;j<arrayanimales.length;j++){
+        if (arrayanimales[j].nomAnimal === json[i].nomAnimal){
+          pos = j;
+        }
+      }
+      option.value = arrayanimales[pos].idanimal;
+      desplegable.add(option);
+    }
+  }
+
+  function rellenar(){
+    if (idurl.get("id")){
+      document.getElementById("descripcion").value = array.descripcio;
+      let dataarreglado = array.data.replace(' ','T');
+      document.getElementById("data").value = dataarreglado;
+      let num = document.getElementById("animal").options.length;
+      for (let i = 0; i < num; i++) {
+        let prueba = document.getElementById("animal").options[i].text;
+        if (prueba == array.nomAnimal) {
+          document.getElementById("animal").selectedIndex = i.toString();
+        }
+      }
+    }
+  }
+
+  function enviardatos(){
+    if (idurl.get("id")){
+      console.log(document.getElementById("data").value.replace('T',' '))
+      const editartratamiento = {
+        MethodName: 'updateTractament',
+        params: {
+          id: idurl.get("id"),
+          descripcio: document.getElementById("descripcion").value,
+          idanimal: document.getElementById("animal").options[document.getElementById("animal").selectedIndex].value,
+          data: document.getElementById("data").value.replace('T',' ')
+        }
+      }
+      conexion(editartratamiento);
+    }
+    else{
+      const insertartratamiento = {
+        MethodName: 'insertTractament',
+        params: {
+          descripcio: document.getElementById("descripcion").value,
+          idanimal: document.getElementById("animal").options[document.getElementById("animal").selectedIndex].value,
+          data: array.data
+
+        }
+      }
+      conexion(insertartratamiento);
+    }
+  }
+  conexion(cogeranimales);
+  conexion(cogertratamientos);
+</script>
+</body>
+</html>
