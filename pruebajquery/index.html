@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Jquery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .esliceu{
+                text-decoration: underline;
+            }
+
+            #a{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="a" class="b"></div>
+        <div class="b esliceu"></div>
+        <div></div>
+        <button onclick="toggle()">Alterna</button>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+            //manera 1
+            $("div").html("ola k ase").css("color","red");
+            $(".b").css("color","blue");
+            $("#a").css("color","green");
+            //manera 2
+            $("div:last").html("ola k ase").css("color","red");
+            $("div:nth-child(2)").css("color","blue");
+            $("div:first-child").css("color","green");
+
+            function toggle () {
+              $("div").toggleClass("esliceu");
+              $("div").toggle();
+            }
+        </script>
+    </body>
+</html>
