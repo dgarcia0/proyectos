@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@each $tag in (p), (span), (h1), (h2), (h3), (h4), (h5), (h6){
+  @each $classname, $color, $background in
+          (warning, #f1c40f, darken(#f1c40f, 25%)),
+          (error, #e74c3c, darken(#e74c3c, 25%)),
+          (success, #23cc71, darken(#23cc71, 25%)){
+                  #{$tag}.#{$classname} {
+                  background: $background;
+                  color: $color;
+                }
+          }
+  #{$tag}{
+    background: #333;
+    color: lighten(#333, 50%);
+    @if($tag == p){
+      text-align: justify;
+    }
+  }
+}
+
+$em : 2;
+@for $i from 1 through 6 {
+  #{h#{$i}}{
+    font-size: #{$em}em;
+  }
+  $em : $em - 0.2;
+}
+
+$i : 0;
+@while $i <= 100 {
+  $j : 0;
+  @while $j <= 100 {
+    $k : 0;
+    @while $k <= 100{
+        .color-#{$i}-#{$j}-#{$k}{
+          color: rgb($i, $j, $k);
+        }
+        .#{colorbg-#{$i}-#{$j}-#{$k}}{
+          background-color: rgb($i, $j, $k);
+        }
+        $k : $k + 10;
+    }
+    $j : $j + 10;
+  }
+  $i : $i + 10;
+}
+
+table{
+  width:100%;
+  border-collapse: collapse;
+  tr,td,th{
+    border: 1px solid black;
+  }
+}
+
+@-webkit-keyframes image_blur {
+  0% { -webkit-filter: blur(0px);}
+  50% { -webkit-filter: blur(5px);}
+  100% { -webkit-filter: blur(0px);}
+}
+
+img {
+  border-radius: 45%;
+  width: 300px;
+}
+
+@each $class in (blur), (brightness), (contrast), (grayscale), (hue-rotate), (invert), (sepia){
+  .#{$class}{
+    -webkit-animation: $class 3s infinite;
+  }
+}
+
+@-webkit-keyframes blur {
+  0%, 100%  { -webkit-filter: blur(0px); }
+  50% { -webkit-filter: blur(5px); }
+}
+
+@-webkit-keyframes brightness {
+  0%, 100%  { -webkit-filter: brightness(100%); }
+  50% { -webkit-filter: brightness(50%); }
+}
+
+@-webkit-keyframes contrast {
+  0%, 100%  { -webkit-filter: contrast(100%); }
+  50% { -webkit-filter: contrast(200%); }
+}
+
+@-webkit-keyframes grayscale {
+  0%, 100%  { -webkit-filter: grayscale(0%); }
+  50% { -webkit-filter: grayscale(100%); }
+}
+
+@-webkit-keyframes hue-rotate {
+  0%, 100%  { -webkit-filter: hue-rotate(0deg); }
+  50% { -webkit-filter: hue-rotate(150deg); }
+}
+
+@-webkit-keyframes invert {
+  0%, 100%  { -webkit-filter: invert(0%); }
+  50% { -webkit-filter: invert(80%); }
+}
+
+@-webkit-keyframes sepia {
+  0%, 100%  { -webkit-filter: sepia(0%); }
+  50% { -webkit-filter: sepia(100%); }
+}

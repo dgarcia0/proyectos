@@ -1,0 +1,8218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+p.warning {
+  background: #796307;
+  color: #f1c40f; }
+
+p.error {
+  background: #921e12;
+  color: #e74c3c; }
+
+p.success {
+  background: #105f35;
+  color: #23cc71; }
+
+p {
+  background: #333;
+  color: #b3b3b3;
+  text-align: justify; }
+
+span.warning {
+  background: #796307;
+  color: #f1c40f; }
+
+span.error {
+  background: #921e12;
+  color: #e74c3c; }
+
+span.success {
+  background: #105f35;
+  color: #23cc71; }
+
+span {
+  background: #333;
+  color: #b3b3b3; }
+
+h1.warning {
+  background: #796307;
+  color: #f1c40f; }
+
+h1.error {
+  background: #921e12;
+  color: #e74c3c; }
+
+h1.success {
+  background: #105f35;
+  color: #23cc71; }
+
+h1 {
+  background: #333;
+  color: #b3b3b3; }
+
+h2.warning {
+  background: #796307;
+  color: #f1c40f; }
+
+h2.error {
+  background: #921e12;
+  color: #e74c3c; }
+
+h2.success {
+  background: #105f35;
+  color: #23cc71; }
+
+h2 {
+  background: #333;
+  color: #b3b3b3; }
+
+h3.warning {
+  background: #796307;
+  color: #f1c40f; }
+
+h3.error {
+  background: #921e12;
+  color: #e74c3c; }
+
+h3.success {
+  background: #105f35;
+  color: #23cc71; }
+
+h3 {
+  background: #333;
+  color: #b3b3b3; }
+
+h4.warning {
+  background: #796307;
+  color: #f1c40f; }
+
+h4.error {
+  background: #921e12;
+  color: #e74c3c; }
+
+h4.success {
+  background: #105f35;
+  color: #23cc71; }
+
+h4 {
+  background: #333;
+  color: #b3b3b3; }
+
+h5.warning {
+  background: #796307;
+  color: #f1c40f; }
+
+h5.error {
+  background: #921e12;
+  color: #e74c3c; }
+
+h5.success {
+  background: #105f35;
+  color: #23cc71; }
+
+h5 {
+  background: #333;
+  color: #b3b3b3; }
+
+h6.warning {
+  background: #796307;
+  color: #f1c40f; }
+
+h6.error {
+  background: #921e12;
+  color: #e74c3c; }
+
+h6.success {
+  background: #105f35;
+  color: #23cc71; }
+
+h6 {
+  background: #333;
+  color: #b3b3b3; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.8em; }
+
+h3 {
+  font-size: 1.6em; }
+
+h4 {
+  font-size: 1.4em; }
+
+h5 {
+  font-size: 1.2em; }
+
+h6 {
+  font-size: 1em; }
+
+.color-0-0-0 {
+  color: black; }
+
+.colorbg-0-0-0 {
+  background-color: black; }
+
+.color-0-0-10 {
+  color: #00000a; }
+
+.colorbg-0-0-10 {
+  background-color: #00000a; }
+
+.color-0-0-20 {
+  color: #000014; }
+
+.colorbg-0-0-20 {
+  background-color: #000014; }
+
+.color-0-0-30 {
+  color: #00001e; }
+
+.colorbg-0-0-30 {
+  background-color: #00001e; }
+
+.color-0-0-40 {
+  color: #000028; }
+
+.colorbg-0-0-40 {
+  background-color: #000028; }
+
+.color-0-0-50 {
+  color: #000032; }
+
+.colorbg-0-0-50 {
+  background-color: #000032; }
+
+.color-0-0-60 {
+  color: #00003c; }
+
+.colorbg-0-0-60 {
+  background-color: #00003c; }
+
+.color-0-0-70 {
+  color: #000046; }
+
+.colorbg-0-0-70 {
+  background-color: #000046; }
+
+.color-0-0-80 {
+  color: #000050; }
+
+.colorbg-0-0-80 {
+  background-color: #000050; }
+
+.color-0-0-90 {
+  color: #00005a; }
+
+.colorbg-0-0-90 {
+  background-color: #00005a; }
+
+.color-0-0-100 {
+  color: #000064; }
+
+.colorbg-0-0-100 {
+  background-color: #000064; }
+
+.color-0-10-0 {
+  color: #000a00; }
+
+.colorbg-0-10-0 {
+  background-color: #000a00; }
+
+.color-0-10-10 {
+  color: #000a0a; }
+
+.colorbg-0-10-10 {
+  background-color: #000a0a; }
+
+.color-0-10-20 {
+  color: #000a14; }
+
+.colorbg-0-10-20 {
+  background-color: #000a14; }
+
+.color-0-10-30 {
+  color: #000a1e; }
+
+.colorbg-0-10-30 {
+  background-color: #000a1e; }
+
+.color-0-10-40 {
+  color: #000a28; }
+
+.colorbg-0-10-40 {
+  background-color: #000a28; }
+
+.color-0-10-50 {
+  color: #000a32; }
+
+.colorbg-0-10-50 {
+  background-color: #000a32; }
+
+.color-0-10-60 {
+  color: #000a3c; }
+
+.colorbg-0-10-60 {
+  background-color: #000a3c; }
+
+.color-0-10-70 {
+  color: #000a46; }
+
+.colorbg-0-10-70 {
+  background-color: #000a46; }
+
+.color-0-10-80 {
+  color: #000a50; }
+
+.colorbg-0-10-80 {
+  background-color: #000a50; }
+
+.color-0-10-90 {
+  color: #000a5a; }
+
+.colorbg-0-10-90 {
+  background-color: #000a5a; }
+
+.color-0-10-100 {
+  color: #000a64; }
+
+.colorbg-0-10-100 {
+  background-color: #000a64; }
+
+.color-0-20-0 {
+  color: #001400; }
+
+.colorbg-0-20-0 {
+  background-color: #001400; }
+
+.color-0-20-10 {
+  color: #00140a; }
+
+.colorbg-0-20-10 {
+  background-color: #00140a; }
+
+.color-0-20-20 {
+  color: #001414; }
+
+.colorbg-0-20-20 {
+  background-color: #001414; }
+
+.color-0-20-30 {
+  color: #00141e; }
+
+.colorbg-0-20-30 {
+  background-color: #00141e; }
+
+.color-0-20-40 {
+  color: #001428; }
+
+.colorbg-0-20-40 {
+  background-color: #001428; }
+
+.color-0-20-50 {
+  color: #001432; }
+
+.colorbg-0-20-50 {
+  background-color: #001432; }
+
+.color-0-20-60 {
+  color: #00143c; }
+
+.colorbg-0-20-60 {
+  background-color: #00143c; }
+
+.color-0-20-70 {
+  color: #001446; }
+
+.colorbg-0-20-70 {
+  background-color: #001446; }
+
+.color-0-20-80 {
+  color: #001450; }
+
+.colorbg-0-20-80 {
+  background-color: #001450; }
+
+.color-0-20-90 {
+  color: #00145a; }
+
+.colorbg-0-20-90 {
+  background-color: #00145a; }
+
+.color-0-20-100 {
+  color: #001464; }
+
+.colorbg-0-20-100 {
+  background-color: #001464; }
+
+.color-0-30-0 {
+  color: #001e00; }
+
+.colorbg-0-30-0 {
+  background-color: #001e00; }
+
+.color-0-30-10 {
+  color: #001e0a; }
+
+.colorbg-0-30-10 {
+  background-color: #001e0a; }
+
+.color-0-30-20 {
+  color: #001e14; }
+
+.colorbg-0-30-20 {
+  background-color: #001e14; }
+
+.color-0-30-30 {
+  color: #001e1e; }
+
+.colorbg-0-30-30 {
+  background-color: #001e1e; }
+
+.color-0-30-40 {
+  color: #001e28; }
+
+.colorbg-0-30-40 {
+  background-color: #001e28; }
+
+.color-0-30-50 {
+  color: #001e32; }
+
+.colorbg-0-30-50 {
+  background-color: #001e32; }
+
+.color-0-30-60 {
+  color: #001e3c; }
+
+.colorbg-0-30-60 {
+  background-color: #001e3c; }
+
+.color-0-30-70 {
+  color: #001e46; }
+
+.colorbg-0-30-70 {
+  background-color: #001e46; }
+
+.color-0-30-80 {
+  color: #001e50; }
+
+.colorbg-0-30-80 {
+  background-color: #001e50; }
+
+.color-0-30-90 {
+  color: #001e5a; }
+
+.colorbg-0-30-90 {
+  background-color: #001e5a; }
+
+.color-0-30-100 {
+  color: #001e64; }
+
+.colorbg-0-30-100 {
+  background-color: #001e64; }
+
+.color-0-40-0 {
+  color: #002800; }
+
+.colorbg-0-40-0 {
+  background-color: #002800; }
+
+.color-0-40-10 {
+  color: #00280a; }
+
+.colorbg-0-40-10 {
+  background-color: #00280a; }
+
+.color-0-40-20 {
+  color: #002814; }
+
+.colorbg-0-40-20 {
+  background-color: #002814; }
+
+.color-0-40-30 {
+  color: #00281e; }
+
+.colorbg-0-40-30 {
+  background-color: #00281e; }
+
+.color-0-40-40 {
+  color: #002828; }
+
+.colorbg-0-40-40 {
+  background-color: #002828; }
+
+.color-0-40-50 {
+  color: #002832; }
+
+.colorbg-0-40-50 {
+  background-color: #002832; }
+
+.color-0-40-60 {
+  color: #00283c; }
+
+.colorbg-0-40-60 {
+  background-color: #00283c; }
+
+.color-0-40-70 {
+  color: #002846; }
+
+.colorbg-0-40-70 {
+  background-color: #002846; }
+
+.color-0-40-80 {
+  color: #002850; }
+
+.colorbg-0-40-80 {
+  background-color: #002850; }
+
+.color-0-40-90 {
+  color: #00285a; }
+
+.colorbg-0-40-90 {
+  background-color: #00285a; }
+
+.color-0-40-100 {
+  color: #002864; }
+
+.colorbg-0-40-100 {
+  background-color: #002864; }
+
+.color-0-50-0 {
+  color: #003200; }
+
+.colorbg-0-50-0 {
+  background-color: #003200; }
+
+.color-0-50-10 {
+  color: #00320a; }
+
+.colorbg-0-50-10 {
+  background-color: #00320a; }
+
+.color-0-50-20 {
+  color: #003214; }
+
+.colorbg-0-50-20 {
+  background-color: #003214; }
+
+.color-0-50-30 {
+  color: #00321e; }
+
+.colorbg-0-50-30 {
+  background-color: #00321e; }
+
+.color-0-50-40 {
+  color: #003228; }
+
+.colorbg-0-50-40 {
+  background-color: #003228; }
+
+.color-0-50-50 {
+  color: #003232; }
+
+.colorbg-0-50-50 {
+  background-color: #003232; }
+
+.color-0-50-60 {
+  color: #00323c; }
+
+.colorbg-0-50-60 {
+  background-color: #00323c; }
+
+.color-0-50-70 {
+  color: #003246; }
+
+.colorbg-0-50-70 {
+  background-color: #003246; }
+
+.color-0-50-80 {
+  color: #003250; }
+
+.colorbg-0-50-80 {
+  background-color: #003250; }
+
+.color-0-50-90 {
+  color: #00325a; }
+
+.colorbg-0-50-90 {
+  background-color: #00325a; }
+
+.color-0-50-100 {
+  color: #003264; }
+
+.colorbg-0-50-100 {
+  background-color: #003264; }
+
+.color-0-60-0 {
+  color: #003c00; }
+
+.colorbg-0-60-0 {
+  background-color: #003c00; }
+
+.color-0-60-10 {
+  color: #003c0a; }
+
+.colorbg-0-60-10 {
+  background-color: #003c0a; }
+
+.color-0-60-20 {
+  color: #003c14; }
+
+.colorbg-0-60-20 {
+  background-color: #003c14; }
+
+.color-0-60-30 {
+  color: #003c1e; }
+
+.colorbg-0-60-30 {
+  background-color: #003c1e; }
+
+.color-0-60-40 {
+  color: #003c28; }
+
+.colorbg-0-60-40 {
+  background-color: #003c28; }
+
+.color-0-60-50 {
+  color: #003c32; }
+
+.colorbg-0-60-50 {
+  background-color: #003c32; }
+
+.color-0-60-60 {
+  color: #003c3c; }
+
+.colorbg-0-60-60 {
+  background-color: #003c3c; }
+
+.color-0-60-70 {
+  color: #003c46; }
+
+.colorbg-0-60-70 {
+  background-color: #003c46; }
+
+.color-0-60-80 {
+  color: #003c50; }
+
+.colorbg-0-60-80 {
+  background-color: #003c50; }
+
+.color-0-60-90 {
+  color: #003c5a; }
+
+.colorbg-0-60-90 {
+  background-color: #003c5a; }
+
+.color-0-60-100 {
+  color: #003c64; }
+
+.colorbg-0-60-100 {
+  background-color: #003c64; }
+
+.color-0-70-0 {
+  color: #004600; }
+
+.colorbg-0-70-0 {
+  background-color: #004600; }
+
+.color-0-70-10 {
+  color: #00460a; }
+
+.colorbg-0-70-10 {
+  background-color: #00460a; }
+
+.color-0-70-20 {
+  color: #004614; }
+
+.colorbg-0-70-20 {
+  background-color: #004614; }
+
+.color-0-70-30 {
+  color: #00461e; }
+
+.colorbg-0-70-30 {
+  background-color: #00461e; }
+
+.color-0-70-40 {
+  color: #004628; }
+
+.colorbg-0-70-40 {
+  background-color: #004628; }
+
+.color-0-70-50 {
+  color: #004632; }
+
+.colorbg-0-70-50 {
+  background-color: #004632; }
+
+.color-0-70-60 {
+  color: #00463c; }
+
+.colorbg-0-70-60 {
+  background-color: #00463c; }
+
+.color-0-70-70 {
+  color: #004646; }
+
+.colorbg-0-70-70 {
+  background-color: #004646; }
+
+.color-0-70-80 {
+  color: #004650; }
+
+.colorbg-0-70-80 {
+  background-color: #004650; }
+
+.color-0-70-90 {
+  color: #00465a; }
+
+.colorbg-0-70-90 {
+  background-color: #00465a; }
+
+.color-0-70-100 {
+  color: #004664; }
+
+.colorbg-0-70-100 {
+  background-color: #004664; }
+
+.color-0-80-0 {
+  color: #005000; }
+
+.colorbg-0-80-0 {
+  background-color: #005000; }
+
+.color-0-80-10 {
+  color: #00500a; }
+
+.colorbg-0-80-10 {
+  background-color: #00500a; }
+
+.color-0-80-20 {
+  color: #005014; }
+
+.colorbg-0-80-20 {
+  background-color: #005014; }
+
+.color-0-80-30 {
+  color: #00501e; }
+
+.colorbg-0-80-30 {
+  background-color: #00501e; }
+
+.color-0-80-40 {
+  color: #005028; }
+
+.colorbg-0-80-40 {
+  background-color: #005028; }
+
+.color-0-80-50 {
+  color: #005032; }
+
+.colorbg-0-80-50 {
+  background-color: #005032; }
+
+.color-0-80-60 {
+  color: #00503c; }
+
+.colorbg-0-80-60 {
+  background-color: #00503c; }
+
+.color-0-80-70 {
+  color: #005046; }
+
+.colorbg-0-80-70 {
+  background-color: #005046; }
+
+.color-0-80-80 {
+  color: #005050; }
+
+.colorbg-0-80-80 {
+  background-color: #005050; }
+
+.color-0-80-90 {
+  color: #00505a; }
+
+.colorbg-0-80-90 {
+  background-color: #00505a; }
+
+.color-0-80-100 {
+  color: #005064; }
+
+.colorbg-0-80-100 {
+  background-color: #005064; }
+
+.color-0-90-0 {
+  color: #005a00; }
+
+.colorbg-0-90-0 {
+  background-color: #005a00; }
+
+.color-0-90-10 {
+  color: #005a0a; }
+
+.colorbg-0-90-10 {
+  background-color: #005a0a; }
+
+.color-0-90-20 {
+  color: #005a14; }
+
+.colorbg-0-90-20 {
+  background-color: #005a14; }
+
+.color-0-90-30 {
+  color: #005a1e; }
+
+.colorbg-0-90-30 {
+  background-color: #005a1e; }
+
+.color-0-90-40 {
+  color: #005a28; }
+
+.colorbg-0-90-40 {
+  background-color: #005a28; }
+
+.color-0-90-50 {
+  color: #005a32; }
+
+.colorbg-0-90-50 {
+  background-color: #005a32; }
+
+.color-0-90-60 {
+  color: #005a3c; }
+
+.colorbg-0-90-60 {
+  background-color: #005a3c; }
+
+.color-0-90-70 {
+  color: #005a46; }
+
+.colorbg-0-90-70 {
+  background-color: #005a46; }
+
+.color-0-90-80 {
+  color: #005a50; }
+
+.colorbg-0-90-80 {
+  background-color: #005a50; }
+
+.color-0-90-90 {
+  color: #005a5a; }
+
+.colorbg-0-90-90 {
+  background-color: #005a5a; }
+
+.color-0-90-100 {
+  color: #005a64; }
+
+.colorbg-0-90-100 {
+  background-color: #005a64; }
+
+.color-0-100-0 {
+  color: darkgreen; }
+
+.colorbg-0-100-0 {
+  background-color: darkgreen; }
+
+.color-0-100-10 {
+  color: #00640a; }
+
+.colorbg-0-100-10 {
+  background-color: #00640a; }
+
+.color-0-100-20 {
+  color: #006414; }
+
+.colorbg-0-100-20 {
+  background-color: #006414; }
+
+.color-0-100-30 {
+  color: #00641e; }
+
+.colorbg-0-100-30 {
+  background-color: #00641e; }
+
+.color-0-100-40 {
+  color: #006428; }
+
+.colorbg-0-100-40 {
+  background-color: #006428; }
+
+.color-0-100-50 {
+  color: #006432; }
+
+.colorbg-0-100-50 {
+  background-color: #006432; }
+
+.color-0-100-60 {
+  color: #00643c; }
+
+.colorbg-0-100-60 {
+  background-color: #00643c; }
+
+.color-0-100-70 {
+  color: #006446; }
+
+.colorbg-0-100-70 {
+  background-color: #006446; }
+
+.color-0-100-80 {
+  color: #006450; }
+
+.colorbg-0-100-80 {
+  background-color: #006450; }
+
+.color-0-100-90 {
+  color: #00645a; }
+
+.colorbg-0-100-90 {
+  background-color: #00645a; }
+
+.color-0-100-100 {
+  color: #006464; }
+
+.colorbg-0-100-100 {
+  background-color: #006464; }
+
+.color-10-0-0 {
+  color: #0a0000; }
+
+.colorbg-10-0-0 {
+  background-color: #0a0000; }
+
+.color-10-0-10 {
+  color: #0a000a; }
+
+.colorbg-10-0-10 {
+  background-color: #0a000a; }
+
+.color-10-0-20 {
+  color: #0a0014; }
+
+.colorbg-10-0-20 {
+  background-color: #0a0014; }
+
+.color-10-0-30 {
+  color: #0a001e; }
+
+.colorbg-10-0-30 {
+  background-color: #0a001e; }
+
+.color-10-0-40 {
+  color: #0a0028; }
+
+.colorbg-10-0-40 {
+  background-color: #0a0028; }
+
+.color-10-0-50 {
+  color: #0a0032; }
+
+.colorbg-10-0-50 {
+  background-color: #0a0032; }
+
+.color-10-0-60 {
+  color: #0a003c; }
+
+.colorbg-10-0-60 {
+  background-color: #0a003c; }
+
+.color-10-0-70 {
+  color: #0a0046; }
+
+.colorbg-10-0-70 {
+  background-color: #0a0046; }
+
+.color-10-0-80 {
+  color: #0a0050; }
+
+.colorbg-10-0-80 {
+  background-color: #0a0050; }
+
+.color-10-0-90 {
+  color: #0a005a; }
+
+.colorbg-10-0-90 {
+  background-color: #0a005a; }
+
+.color-10-0-100 {
+  color: #0a0064; }
+
+.colorbg-10-0-100 {
+  background-color: #0a0064; }
+
+.color-10-10-0 {
+  color: #0a0a00; }
+
+.colorbg-10-10-0 {
+  background-color: #0a0a00; }
+
+.color-10-10-10 {
+  color: #0a0a0a; }
+
+.colorbg-10-10-10 {
+  background-color: #0a0a0a; }
+
+.color-10-10-20 {
+  color: #0a0a14; }
+
+.colorbg-10-10-20 {
+  background-color: #0a0a14; }
+
+.color-10-10-30 {
+  color: #0a0a1e; }
+
+.colorbg-10-10-30 {
+  background-color: #0a0a1e; }
+
+.color-10-10-40 {
+  color: #0a0a28; }
+
+.colorbg-10-10-40 {
+  background-color: #0a0a28; }
+
+.color-10-10-50 {
+  color: #0a0a32; }
+
+.colorbg-10-10-50 {
+  background-color: #0a0a32; }
+
+.color-10-10-60 {
+  color: #0a0a3c; }
+
+.colorbg-10-10-60 {
+  background-color: #0a0a3c; }
+
+.color-10-10-70 {
+  color: #0a0a46; }
+
+.colorbg-10-10-70 {
+  background-color: #0a0a46; }
+
+.color-10-10-80 {
+  color: #0a0a50; }
+
+.colorbg-10-10-80 {
+  background-color: #0a0a50; }
+
+.color-10-10-90 {
+  color: #0a0a5a; }
+
+.colorbg-10-10-90 {
+  background-color: #0a0a5a; }
+
+.color-10-10-100 {
+  color: #0a0a64; }
+
+.colorbg-10-10-100 {
+  background-color: #0a0a64; }
+
+.color-10-20-0 {
+  color: #0a1400; }
+
+.colorbg-10-20-0 {
+  background-color: #0a1400; }
+
+.color-10-20-10 {
+  color: #0a140a; }
+
+.colorbg-10-20-10 {
+  background-color: #0a140a; }
+
+.color-10-20-20 {
+  color: #0a1414; }
+
+.colorbg-10-20-20 {
+  background-color: #0a1414; }
+
+.color-10-20-30 {
+  color: #0a141e; }
+
+.colorbg-10-20-30 {
+  background-color: #0a141e; }
+
+.color-10-20-40 {
+  color: #0a1428; }
+
+.colorbg-10-20-40 {
+  background-color: #0a1428; }
+
+.color-10-20-50 {
+  color: #0a1432; }
+
+.colorbg-10-20-50 {
+  background-color: #0a1432; }
+
+.color-10-20-60 {
+  color: #0a143c; }
+
+.colorbg-10-20-60 {
+  background-color: #0a143c; }
+
+.color-10-20-70 {
+  color: #0a1446; }
+
+.colorbg-10-20-70 {
+  background-color: #0a1446; }
+
+.color-10-20-80 {
+  color: #0a1450; }
+
+.colorbg-10-20-80 {
+  background-color: #0a1450; }
+
+.color-10-20-90 {
+  color: #0a145a; }
+
+.colorbg-10-20-90 {
+  background-color: #0a145a; }
+
+.color-10-20-100 {
+  color: #0a1464; }
+
+.colorbg-10-20-100 {
+  background-color: #0a1464; }
+
+.color-10-30-0 {
+  color: #0a1e00; }
+
+.colorbg-10-30-0 {
+  background-color: #0a1e00; }
+
+.color-10-30-10 {
+  color: #0a1e0a; }
+
+.colorbg-10-30-10 {
+  background-color: #0a1e0a; }
+
+.color-10-30-20 {
+  color: #0a1e14; }
+
+.colorbg-10-30-20 {
+  background-color: #0a1e14; }
+
+.color-10-30-30 {
+  color: #0a1e1e; }
+
+.colorbg-10-30-30 {
+  background-color: #0a1e1e; }
+
+.color-10-30-40 {
+  color: #0a1e28; }
+
+.colorbg-10-30-40 {
+  background-color: #0a1e28; }
+
+.color-10-30-50 {
+  color: #0a1e32; }
+
+.colorbg-10-30-50 {
+  background-color: #0a1e32; }
+
+.color-10-30-60 {
+  color: #0a1e3c; }
+
+.colorbg-10-30-60 {
+  background-color: #0a1e3c; }
+
+.color-10-30-70 {
+  color: #0a1e46; }
+
+.colorbg-10-30-70 {
+  background-color: #0a1e46; }
+
+.color-10-30-80 {
+  color: #0a1e50; }
+
+.colorbg-10-30-80 {
+  background-color: #0a1e50; }
+
+.color-10-30-90 {
+  color: #0a1e5a; }
+
+.colorbg-10-30-90 {
+  background-color: #0a1e5a; }
+
+.color-10-30-100 {
+  color: #0a1e64; }
+
+.colorbg-10-30-100 {
+  background-color: #0a1e64; }
+
+.color-10-40-0 {
+  color: #0a2800; }
+
+.colorbg-10-40-0 {
+  background-color: #0a2800; }
+
+.color-10-40-10 {
+  color: #0a280a; }
+
+.colorbg-10-40-10 {
+  background-color: #0a280a; }
+
+.color-10-40-20 {
+  color: #0a2814; }
+
+.colorbg-10-40-20 {
+  background-color: #0a2814; }
+
+.color-10-40-30 {
+  color: #0a281e; }
+
+.colorbg-10-40-30 {
+  background-color: #0a281e; }
+
+.color-10-40-40 {
+  color: #0a2828; }
+
+.colorbg-10-40-40 {
+  background-color: #0a2828; }
+
+.color-10-40-50 {
+  color: #0a2832; }
+
+.colorbg-10-40-50 {
+  background-color: #0a2832; }
+
+.color-10-40-60 {
+  color: #0a283c; }
+
+.colorbg-10-40-60 {
+  background-color: #0a283c; }
+
+.color-10-40-70 {
+  color: #0a2846; }
+
+.colorbg-10-40-70 {
+  background-color: #0a2846; }
+
+.color-10-40-80 {
+  color: #0a2850; }
+
+.colorbg-10-40-80 {
+  background-color: #0a2850; }
+
+.color-10-40-90 {
+  color: #0a285a; }
+
+.colorbg-10-40-90 {
+  background-color: #0a285a; }
+
+.color-10-40-100 {
+  color: #0a2864; }
+
+.colorbg-10-40-100 {
+  background-color: #0a2864; }
+
+.color-10-50-0 {
+  color: #0a3200; }
+
+.colorbg-10-50-0 {
+  background-color: #0a3200; }
+
+.color-10-50-10 {
+  color: #0a320a; }
+
+.colorbg-10-50-10 {
+  background-color: #0a320a; }
+
+.color-10-50-20 {
+  color: #0a3214; }
+
+.colorbg-10-50-20 {
+  background-color: #0a3214; }
+
+.color-10-50-30 {
+  color: #0a321e; }
+
+.colorbg-10-50-30 {
+  background-color: #0a321e; }
+
+.color-10-50-40 {
+  color: #0a3228; }
+
+.colorbg-10-50-40 {
+  background-color: #0a3228; }
+
+.color-10-50-50 {
+  color: #0a3232; }
+
+.colorbg-10-50-50 {
+  background-color: #0a3232; }
+
+.color-10-50-60 {
+  color: #0a323c; }
+
+.colorbg-10-50-60 {
+  background-color: #0a323c; }
+
+.color-10-50-70 {
+  color: #0a3246; }
+
+.colorbg-10-50-70 {
+  background-color: #0a3246; }
+
+.color-10-50-80 {
+  color: #0a3250; }
+
+.colorbg-10-50-80 {
+  background-color: #0a3250; }
+
+.color-10-50-90 {
+  color: #0a325a; }
+
+.colorbg-10-50-90 {
+  background-color: #0a325a; }
+
+.color-10-50-100 {
+  color: #0a3264; }
+
+.colorbg-10-50-100 {
+  background-color: #0a3264; }
+
+.color-10-60-0 {
+  color: #0a3c00; }
+
+.colorbg-10-60-0 {
+  background-color: #0a3c00; }
+
+.color-10-60-10 {
+  color: #0a3c0a; }
+
+.colorbg-10-60-10 {
+  background-color: #0a3c0a; }
+
+.color-10-60-20 {
+  color: #0a3c14; }
+
+.colorbg-10-60-20 {
+  background-color: #0a3c14; }
+
+.color-10-60-30 {
+  color: #0a3c1e; }
+
+.colorbg-10-60-30 {
+  background-color: #0a3c1e; }
+
+.color-10-60-40 {
+  color: #0a3c28; }
+
+.colorbg-10-60-40 {
+  background-color: #0a3c28; }
+
+.color-10-60-50 {
+  color: #0a3c32; }
+
+.colorbg-10-60-50 {
+  background-color: #0a3c32; }
+
+.color-10-60-60 {
+  color: #0a3c3c; }
+
+.colorbg-10-60-60 {
+  background-color: #0a3c3c; }
+
+.color-10-60-70 {
+  color: #0a3c46; }
+
+.colorbg-10-60-70 {
+  background-color: #0a3c46; }
+
+.color-10-60-80 {
+  color: #0a3c50; }
+
+.colorbg-10-60-80 {
+  background-color: #0a3c50; }
+
+.color-10-60-90 {
+  color: #0a3c5a; }
+
+.colorbg-10-60-90 {
+  background-color: #0a3c5a; }
+
+.color-10-60-100 {
+  color: #0a3c64; }
+
+.colorbg-10-60-100 {
+  background-color: #0a3c64; }
+
+.color-10-70-0 {
+  color: #0a4600; }
+
+.colorbg-10-70-0 {
+  background-color: #0a4600; }
+
+.color-10-70-10 {
+  color: #0a460a; }
+
+.colorbg-10-70-10 {
+  background-color: #0a460a; }
+
+.color-10-70-20 {
+  color: #0a4614; }
+
+.colorbg-10-70-20 {
+  background-color: #0a4614; }
+
+.color-10-70-30 {
+  color: #0a461e; }
+
+.colorbg-10-70-30 {
+  background-color: #0a461e; }
+
+.color-10-70-40 {
+  color: #0a4628; }
+
+.colorbg-10-70-40 {
+  background-color: #0a4628; }
+
+.color-10-70-50 {
+  color: #0a4632; }
+
+.colorbg-10-70-50 {
+  background-color: #0a4632; }
+
+.color-10-70-60 {
+  color: #0a463c; }
+
+.colorbg-10-70-60 {
+  background-color: #0a463c; }
+
+.color-10-70-70 {
+  color: #0a4646; }
+
+.colorbg-10-70-70 {
+  background-color: #0a4646; }
+
+.color-10-70-80 {
+  color: #0a4650; }
+
+.colorbg-10-70-80 {
+  background-color: #0a4650; }
+
+.color-10-70-90 {
+  color: #0a465a; }
+
+.colorbg-10-70-90 {
+  background-color: #0a465a; }
+
+.color-10-70-100 {
+  color: #0a4664; }
+
+.colorbg-10-70-100 {
+  background-color: #0a4664; }
+
+.color-10-80-0 {
+  color: #0a5000; }
+
+.colorbg-10-80-0 {
+  background-color: #0a5000; }
+
+.color-10-80-10 {
+  color: #0a500a; }
+
+.colorbg-10-80-10 {
+  background-color: #0a500a; }
+
+.color-10-80-20 {
+  color: #0a5014; }
+
+.colorbg-10-80-20 {
+  background-color: #0a5014; }
+
+.color-10-80-30 {
+  color: #0a501e; }
+
+.colorbg-10-80-30 {
+  background-color: #0a501e; }
+
+.color-10-80-40 {
+  color: #0a5028; }
+
+.colorbg-10-80-40 {
+  background-color: #0a5028; }
+
+.color-10-80-50 {
+  color: #0a5032; }
+
+.colorbg-10-80-50 {
+  background-color: #0a5032; }
+
+.color-10-80-60 {
+  color: #0a503c; }
+
+.colorbg-10-80-60 {
+  background-color: #0a503c; }
+
+.color-10-80-70 {
+  color: #0a5046; }
+
+.colorbg-10-80-70 {
+  background-color: #0a5046; }
+
+.color-10-80-80 {
+  color: #0a5050; }
+
+.colorbg-10-80-80 {
+  background-color: #0a5050; }
+
+.color-10-80-90 {
+  color: #0a505a; }
+
+.colorbg-10-80-90 {
+  background-color: #0a505a; }
+
+.color-10-80-100 {
+  color: #0a5064; }
+
+.colorbg-10-80-100 {
+  background-color: #0a5064; }
+
+.color-10-90-0 {
+  color: #0a5a00; }
+
+.colorbg-10-90-0 {
+  background-color: #0a5a00; }
+
+.color-10-90-10 {
+  color: #0a5a0a; }
+
+.colorbg-10-90-10 {
+  background-color: #0a5a0a; }
+
+.color-10-90-20 {
+  color: #0a5a14; }
+
+.colorbg-10-90-20 {
+  background-color: #0a5a14; }
+
+.color-10-90-30 {
+  color: #0a5a1e; }
+
+.colorbg-10-90-30 {
+  background-color: #0a5a1e; }
+
+.color-10-90-40 {
+  color: #0a5a28; }
+
+.colorbg-10-90-40 {
+  background-color: #0a5a28; }
+
+.color-10-90-50 {
+  color: #0a5a32; }
+
+.colorbg-10-90-50 {
+  background-color: #0a5a32; }
+
+.color-10-90-60 {
+  color: #0a5a3c; }
+
+.colorbg-10-90-60 {
+  background-color: #0a5a3c; }
+
+.color-10-90-70 {
+  color: #0a5a46; }
+
+.colorbg-10-90-70 {
+  background-color: #0a5a46; }
+
+.color-10-90-80 {
+  color: #0a5a50; }
+
+.colorbg-10-90-80 {
+  background-color: #0a5a50; }
+
+.color-10-90-90 {
+  color: #0a5a5a; }
+
+.colorbg-10-90-90 {
+  background-color: #0a5a5a; }
+
+.color-10-90-100 {
+  color: #0a5a64; }
+
+.colorbg-10-90-100 {
+  background-color: #0a5a64; }
+
+.color-10-100-0 {
+  color: #0a6400; }
+
+.colorbg-10-100-0 {
+  background-color: #0a6400; }
+
+.color-10-100-10 {
+  color: #0a640a; }
+
+.colorbg-10-100-10 {
+  background-color: #0a640a; }
+
+.color-10-100-20 {
+  color: #0a6414; }
+
+.colorbg-10-100-20 {
+  background-color: #0a6414; }
+
+.color-10-100-30 {
+  color: #0a641e; }
+
+.colorbg-10-100-30 {
+  background-color: #0a641e; }
+
+.color-10-100-40 {
+  color: #0a6428; }
+
+.colorbg-10-100-40 {
+  background-color: #0a6428; }
+
+.color-10-100-50 {
+  color: #0a6432; }
+
+.colorbg-10-100-50 {
+  background-color: #0a6432; }
+
+.color-10-100-60 {
+  color: #0a643c; }
+
+.colorbg-10-100-60 {
+  background-color: #0a643c; }
+
+.color-10-100-70 {
+  color: #0a6446; }
+
+.colorbg-10-100-70 {
+  background-color: #0a6446; }
+
+.color-10-100-80 {
+  color: #0a6450; }
+
+.colorbg-10-100-80 {
+  background-color: #0a6450; }
+
+.color-10-100-90 {
+  color: #0a645a; }
+
+.colorbg-10-100-90 {
+  background-color: #0a645a; }
+
+.color-10-100-100 {
+  color: #0a6464; }
+
+.colorbg-10-100-100 {
+  background-color: #0a6464; }
+
+.color-20-0-0 {
+  color: #140000; }
+
+.colorbg-20-0-0 {
+  background-color: #140000; }
+
+.color-20-0-10 {
+  color: #14000a; }
+
+.colorbg-20-0-10 {
+  background-color: #14000a; }
+
+.color-20-0-20 {
+  color: #140014; }
+
+.colorbg-20-0-20 {
+  background-color: #140014; }
+
+.color-20-0-30 {
+  color: #14001e; }
+
+.colorbg-20-0-30 {
+  background-color: #14001e; }
+
+.color-20-0-40 {
+  color: #140028; }
+
+.colorbg-20-0-40 {
+  background-color: #140028; }
+
+.color-20-0-50 {
+  color: #140032; }
+
+.colorbg-20-0-50 {
+  background-color: #140032; }
+
+.color-20-0-60 {
+  color: #14003c; }
+
+.colorbg-20-0-60 {
+  background-color: #14003c; }
+
+.color-20-0-70 {
+  color: #140046; }
+
+.colorbg-20-0-70 {
+  background-color: #140046; }
+
+.color-20-0-80 {
+  color: #140050; }
+
+.colorbg-20-0-80 {
+  background-color: #140050; }
+
+.color-20-0-90 {
+  color: #14005a; }
+
+.colorbg-20-0-90 {
+  background-color: #14005a; }
+
+.color-20-0-100 {
+  color: #140064; }
+
+.colorbg-20-0-100 {
+  background-color: #140064; }
+
+.color-20-10-0 {
+  color: #140a00; }
+
+.colorbg-20-10-0 {
+  background-color: #140a00; }
+
+.color-20-10-10 {
+  color: #140a0a; }
+
+.colorbg-20-10-10 {
+  background-color: #140a0a; }
+
+.color-20-10-20 {
+  color: #140a14; }
+
+.colorbg-20-10-20 {
+  background-color: #140a14; }
+
+.color-20-10-30 {
+  color: #140a1e; }
+
+.colorbg-20-10-30 {
+  background-color: #140a1e; }
+
+.color-20-10-40 {
+  color: #140a28; }
+
+.colorbg-20-10-40 {
+  background-color: #140a28; }
+
+.color-20-10-50 {
+  color: #140a32; }
+
+.colorbg-20-10-50 {
+  background-color: #140a32; }
+
+.color-20-10-60 {
+  color: #140a3c; }
+
+.colorbg-20-10-60 {
+  background-color: #140a3c; }
+
+.color-20-10-70 {
+  color: #140a46; }
+
+.colorbg-20-10-70 {
+  background-color: #140a46; }
+
+.color-20-10-80 {
+  color: #140a50; }
+
+.colorbg-20-10-80 {
+  background-color: #140a50; }
+
+.color-20-10-90 {
+  color: #140a5a; }
+
+.colorbg-20-10-90 {
+  background-color: #140a5a; }
+
+.color-20-10-100 {
+  color: #140a64; }
+
+.colorbg-20-10-100 {
+  background-color: #140a64; }
+
+.color-20-20-0 {
+  color: #141400; }
+
+.colorbg-20-20-0 {
+  background-color: #141400; }
+
+.color-20-20-10 {
+  color: #14140a; }
+
+.colorbg-20-20-10 {
+  background-color: #14140a; }
+
+.color-20-20-20 {
+  color: #141414; }
+
+.colorbg-20-20-20 {
+  background-color: #141414; }
+
+.color-20-20-30 {
+  color: #14141e; }
+
+.colorbg-20-20-30 {
+  background-color: #14141e; }
+
+.color-20-20-40 {
+  color: #141428; }
+
+.colorbg-20-20-40 {
+  background-color: #141428; }
+
+.color-20-20-50 {
+  color: #141432; }
+
+.colorbg-20-20-50 {
+  background-color: #141432; }
+
+.color-20-20-60 {
+  color: #14143c; }
+
+.colorbg-20-20-60 {
+  background-color: #14143c; }
+
+.color-20-20-70 {
+  color: #141446; }
+
+.colorbg-20-20-70 {
+  background-color: #141446; }
+
+.color-20-20-80 {
+  color: #141450; }
+
+.colorbg-20-20-80 {
+  background-color: #141450; }
+
+.color-20-20-90 {
+  color: #14145a; }
+
+.colorbg-20-20-90 {
+  background-color: #14145a; }
+
+.color-20-20-100 {
+  color: #141464; }
+
+.colorbg-20-20-100 {
+  background-color: #141464; }
+
+.color-20-30-0 {
+  color: #141e00; }
+
+.colorbg-20-30-0 {
+  background-color: #141e00; }
+
+.color-20-30-10 {
+  color: #141e0a; }
+
+.colorbg-20-30-10 {
+  background-color: #141e0a; }
+
+.color-20-30-20 {
+  color: #141e14; }
+
+.colorbg-20-30-20 {
+  background-color: #141e14; }
+
+.color-20-30-30 {
+  color: #141e1e; }
+
+.colorbg-20-30-30 {
+  background-color: #141e1e; }
+
+.color-20-30-40 {
+  color: #141e28; }
+
+.colorbg-20-30-40 {
+  background-color: #141e28; }
+
+.color-20-30-50 {
+  color: #141e32; }
+
+.colorbg-20-30-50 {
+  background-color: #141e32; }
+
+.color-20-30-60 {
+  color: #141e3c; }
+
+.colorbg-20-30-60 {
+  background-color: #141e3c; }
+
+.color-20-30-70 {
+  color: #141e46; }
+
+.colorbg-20-30-70 {
+  background-color: #141e46; }
+
+.color-20-30-80 {
+  color: #141e50; }
+
+.colorbg-20-30-80 {
+  background-color: #141e50; }
+
+.color-20-30-90 {
+  color: #141e5a; }
+
+.colorbg-20-30-90 {
+  background-color: #141e5a; }
+
+.color-20-30-100 {
+  color: #141e64; }
+
+.colorbg-20-30-100 {
+  background-color: #141e64; }
+
+.color-20-40-0 {
+  color: #142800; }
+
+.colorbg-20-40-0 {
+  background-color: #142800; }
+
+.color-20-40-10 {
+  color: #14280a; }
+
+.colorbg-20-40-10 {
+  background-color: #14280a; }
+
+.color-20-40-20 {
+  color: #142814; }
+
+.colorbg-20-40-20 {
+  background-color: #142814; }
+
+.color-20-40-30 {
+  color: #14281e; }
+
+.colorbg-20-40-30 {
+  background-color: #14281e; }
+
+.color-20-40-40 {
+  color: #142828; }
+
+.colorbg-20-40-40 {
+  background-color: #142828; }
+
+.color-20-40-50 {
+  color: #142832; }
+
+.colorbg-20-40-50 {
+  background-color: #142832; }
+
+.color-20-40-60 {
+  color: #14283c; }
+
+.colorbg-20-40-60 {
+  background-color: #14283c; }
+
+.color-20-40-70 {
+  color: #142846; }
+
+.colorbg-20-40-70 {
+  background-color: #142846; }
+
+.color-20-40-80 {
+  color: #142850; }
+
+.colorbg-20-40-80 {
+  background-color: #142850; }
+
+.color-20-40-90 {
+  color: #14285a; }
+
+.colorbg-20-40-90 {
+  background-color: #14285a; }
+
+.color-20-40-100 {
+  color: #142864; }
+
+.colorbg-20-40-100 {
+  background-color: #142864; }
+
+.color-20-50-0 {
+  color: #143200; }
+
+.colorbg-20-50-0 {
+  background-color: #143200; }
+
+.color-20-50-10 {
+  color: #14320a; }
+
+.colorbg-20-50-10 {
+  background-color: #14320a; }
+
+.color-20-50-20 {
+  color: #143214; }
+
+.colorbg-20-50-20 {
+  background-color: #143214; }
+
+.color-20-50-30 {
+  color: #14321e; }
+
+.colorbg-20-50-30 {
+  background-color: #14321e; }
+
+.color-20-50-40 {
+  color: #143228; }
+
+.colorbg-20-50-40 {
+  background-color: #143228; }
+
+.color-20-50-50 {
+  color: #143232; }
+
+.colorbg-20-50-50 {
+  background-color: #143232; }
+
+.color-20-50-60 {
+  color: #14323c; }
+
+.colorbg-20-50-60 {
+  background-color: #14323c; }
+
+.color-20-50-70 {
+  color: #143246; }
+
+.colorbg-20-50-70 {
+  background-color: #143246; }
+
+.color-20-50-80 {
+  color: #143250; }
+
+.colorbg-20-50-80 {
+  background-color: #143250; }
+
+.color-20-50-90 {
+  color: #14325a; }
+
+.colorbg-20-50-90 {
+  background-color: #14325a; }
+
+.color-20-50-100 {
+  color: #143264; }
+
+.colorbg-20-50-100 {
+  background-color: #143264; }
+
+.color-20-60-0 {
+  color: #143c00; }
+
+.colorbg-20-60-0 {
+  background-color: #143c00; }
+
+.color-20-60-10 {
+  color: #143c0a; }
+
+.colorbg-20-60-10 {
+  background-color: #143c0a; }
+
+.color-20-60-20 {
+  color: #143c14; }
+
+.colorbg-20-60-20 {
+  background-color: #143c14; }
+
+.color-20-60-30 {
+  color: #143c1e; }
+
+.colorbg-20-60-30 {
+  background-color: #143c1e; }
+
+.color-20-60-40 {
+  color: #143c28; }
+
+.colorbg-20-60-40 {
+  background-color: #143c28; }
+
+.color-20-60-50 {
+  color: #143c32; }
+
+.colorbg-20-60-50 {
+  background-color: #143c32; }
+
+.color-20-60-60 {
+  color: #143c3c; }
+
+.colorbg-20-60-60 {
+  background-color: #143c3c; }
+
+.color-20-60-70 {
+  color: #143c46; }
+
+.colorbg-20-60-70 {
+  background-color: #143c46; }
+
+.color-20-60-80 {
+  color: #143c50; }
+
+.colorbg-20-60-80 {
+  background-color: #143c50; }
+
+.color-20-60-90 {
+  color: #143c5a; }
+
+.colorbg-20-60-90 {
+  background-color: #143c5a; }
+
+.color-20-60-100 {
+  color: #143c64; }
+
+.colorbg-20-60-100 {
+  background-color: #143c64; }
+
+.color-20-70-0 {
+  color: #144600; }
+
+.colorbg-20-70-0 {
+  background-color: #144600; }
+
+.color-20-70-10 {
+  color: #14460a; }
+
+.colorbg-20-70-10 {
+  background-color: #14460a; }
+
+.color-20-70-20 {
+  color: #144614; }
+
+.colorbg-20-70-20 {
+  background-color: #144614; }
+
+.color-20-70-30 {
+  color: #14461e; }
+
+.colorbg-20-70-30 {
+  background-color: #14461e; }
+
+.color-20-70-40 {
+  color: #144628; }
+
+.colorbg-20-70-40 {
+  background-color: #144628; }
+
+.color-20-70-50 {
+  color: #144632; }
+
+.colorbg-20-70-50 {
+  background-color: #144632; }
+
+.color-20-70-60 {
+  color: #14463c; }
+
+.colorbg-20-70-60 {
+  background-color: #14463c; }
+
+.color-20-70-70 {
+  color: #144646; }
+
+.colorbg-20-70-70 {
+  background-color: #144646; }
+
+.color-20-70-80 {
+  color: #144650; }
+
+.colorbg-20-70-80 {
+  background-color: #144650; }
+
+.color-20-70-90 {
+  color: #14465a; }
+
+.colorbg-20-70-90 {
+  background-color: #14465a; }
+
+.color-20-70-100 {
+  color: #144664; }
+
+.colorbg-20-70-100 {
+  background-color: #144664; }
+
+.color-20-80-0 {
+  color: #145000; }
+
+.colorbg-20-80-0 {
+  background-color: #145000; }
+
+.color-20-80-10 {
+  color: #14500a; }
+
+.colorbg-20-80-10 {
+  background-color: #14500a; }
+
+.color-20-80-20 {
+  color: #145014; }
+
+.colorbg-20-80-20 {
+  background-color: #145014; }
+
+.color-20-80-30 {
+  color: #14501e; }
+
+.colorbg-20-80-30 {
+  background-color: #14501e; }
+
+.color-20-80-40 {
+  color: #145028; }
+
+.colorbg-20-80-40 {
+  background-color: #145028; }
+
+.color-20-80-50 {
+  color: #145032; }
+
+.colorbg-20-80-50 {
+  background-color: #145032; }
+
+.color-20-80-60 {
+  color: #14503c; }
+
+.colorbg-20-80-60 {
+  background-color: #14503c; }
+
+.color-20-80-70 {
+  color: #145046; }
+
+.colorbg-20-80-70 {
+  background-color: #145046; }
+
+.color-20-80-80 {
+  color: #145050; }
+
+.colorbg-20-80-80 {
+  background-color: #145050; }
+
+.color-20-80-90 {
+  color: #14505a; }
+
+.colorbg-20-80-90 {
+  background-color: #14505a; }
+
+.color-20-80-100 {
+  color: #145064; }
+
+.colorbg-20-80-100 {
+  background-color: #145064; }
+
+.color-20-90-0 {
+  color: #145a00; }
+
+.colorbg-20-90-0 {
+  background-color: #145a00; }
+
+.color-20-90-10 {
+  color: #145a0a; }
+
+.colorbg-20-90-10 {
+  background-color: #145a0a; }
+
+.color-20-90-20 {
+  color: #145a14; }
+
+.colorbg-20-90-20 {
+  background-color: #145a14; }
+
+.color-20-90-30 {
+  color: #145a1e; }
+
+.colorbg-20-90-30 {
+  background-color: #145a1e; }
+
+.color-20-90-40 {
+  color: #145a28; }
+
+.colorbg-20-90-40 {
+  background-color: #145a28; }
+
+.color-20-90-50 {
+  color: #145a32; }
+
+.colorbg-20-90-50 {
+  background-color: #145a32; }
+
+.color-20-90-60 {
+  color: #145a3c; }
+
+.colorbg-20-90-60 {
+  background-color: #145a3c; }
+
+.color-20-90-70 {
+  color: #145a46; }
+
+.colorbg-20-90-70 {
+  background-color: #145a46; }
+
+.color-20-90-80 {
+  color: #145a50; }
+
+.colorbg-20-90-80 {
+  background-color: #145a50; }
+
+.color-20-90-90 {
+  color: #145a5a; }
+
+.colorbg-20-90-90 {
+  background-color: #145a5a; }
+
+.color-20-90-100 {
+  color: #145a64; }
+
+.colorbg-20-90-100 {
+  background-color: #145a64; }
+
+.color-20-100-0 {
+  color: #146400; }
+
+.colorbg-20-100-0 {
+  background-color: #146400; }
+
+.color-20-100-10 {
+  color: #14640a; }
+
+.colorbg-20-100-10 {
+  background-color: #14640a; }
+
+.color-20-100-20 {
+  color: #146414; }
+
+.colorbg-20-100-20 {
+  background-color: #146414; }
+
+.color-20-100-30 {
+  color: #14641e; }
+
+.colorbg-20-100-30 {
+  background-color: #14641e; }
+
+.color-20-100-40 {
+  color: #146428; }
+
+.colorbg-20-100-40 {
+  background-color: #146428; }
+
+.color-20-100-50 {
+  color: #146432; }
+
+.colorbg-20-100-50 {
+  background-color: #146432; }
+
+.color-20-100-60 {
+  color: #14643c; }
+
+.colorbg-20-100-60 {
+  background-color: #14643c; }
+
+.color-20-100-70 {
+  color: #146446; }
+
+.colorbg-20-100-70 {
+  background-color: #146446; }
+
+.color-20-100-80 {
+  color: #146450; }
+
+.colorbg-20-100-80 {
+  background-color: #146450; }
+
+.color-20-100-90 {
+  color: #14645a; }
+
+.colorbg-20-100-90 {
+  background-color: #14645a; }
+
+.color-20-100-100 {
+  color: #146464; }
+
+.colorbg-20-100-100 {
+  background-color: #146464; }
+
+.color-30-0-0 {
+  color: #1e0000; }
+
+.colorbg-30-0-0 {
+  background-color: #1e0000; }
+
+.color-30-0-10 {
+  color: #1e000a; }
+
+.colorbg-30-0-10 {
+  background-color: #1e000a; }
+
+.color-30-0-20 {
+  color: #1e0014; }
+
+.colorbg-30-0-20 {
+  background-color: #1e0014; }
+
+.color-30-0-30 {
+  color: #1e001e; }
+
+.colorbg-30-0-30 {
+  background-color: #1e001e; }
+
+.color-30-0-40 {
+  color: #1e0028; }
+
+.colorbg-30-0-40 {
+  background-color: #1e0028; }
+
+.color-30-0-50 {
+  color: #1e0032; }
+
+.colorbg-30-0-50 {
+  background-color: #1e0032; }
+
+.color-30-0-60 {
+  color: #1e003c; }
+
+.colorbg-30-0-60 {
+  background-color: #1e003c; }
+
+.color-30-0-70 {
+  color: #1e0046; }
+
+.colorbg-30-0-70 {
+  background-color: #1e0046; }
+
+.color-30-0-80 {
+  color: #1e0050; }
+
+.colorbg-30-0-80 {
+  background-color: #1e0050; }
+
+.color-30-0-90 {
+  color: #1e005a; }
+
+.colorbg-30-0-90 {
+  background-color: #1e005a; }
+
+.color-30-0-100 {
+  color: #1e0064; }
+
+.colorbg-30-0-100 {
+  background-color: #1e0064; }
+
+.color-30-10-0 {
+  color: #1e0a00; }
+
+.colorbg-30-10-0 {
+  background-color: #1e0a00; }
+
+.color-30-10-10 {
+  color: #1e0a0a; }
+
+.colorbg-30-10-10 {
+  background-color: #1e0a0a; }
+
+.color-30-10-20 {
+  color: #1e0a14; }
+
+.colorbg-30-10-20 {
+  background-color: #1e0a14; }
+
+.color-30-10-30 {
+  color: #1e0a1e; }
+
+.colorbg-30-10-30 {
+  background-color: #1e0a1e; }
+
+.color-30-10-40 {
+  color: #1e0a28; }
+
+.colorbg-30-10-40 {
+  background-color: #1e0a28; }
+
+.color-30-10-50 {
+  color: #1e0a32; }
+
+.colorbg-30-10-50 {
+  background-color: #1e0a32; }
+
+.color-30-10-60 {
+  color: #1e0a3c; }
+
+.colorbg-30-10-60 {
+  background-color: #1e0a3c; }
+
+.color-30-10-70 {
+  color: #1e0a46; }
+
+.colorbg-30-10-70 {
+  background-color: #1e0a46; }
+
+.color-30-10-80 {
+  color: #1e0a50; }
+
+.colorbg-30-10-80 {
+  background-color: #1e0a50; }
+
+.color-30-10-90 {
+  color: #1e0a5a; }
+
+.colorbg-30-10-90 {
+  background-color: #1e0a5a; }
+
+.color-30-10-100 {
+  color: #1e0a64; }
+
+.colorbg-30-10-100 {
+  background-color: #1e0a64; }
+
+.color-30-20-0 {
+  color: #1e1400; }
+
+.colorbg-30-20-0 {
+  background-color: #1e1400; }
+
+.color-30-20-10 {
+  color: #1e140a; }
+
+.colorbg-30-20-10 {
+  background-color: #1e140a; }
+
+.color-30-20-20 {
+  color: #1e1414; }
+
+.colorbg-30-20-20 {
+  background-color: #1e1414; }
+
+.color-30-20-30 {
+  color: #1e141e; }
+
+.colorbg-30-20-30 {
+  background-color: #1e141e; }
+
+.color-30-20-40 {
+  color: #1e1428; }
+
+.colorbg-30-20-40 {
+  background-color: #1e1428; }
+
+.color-30-20-50 {
+  color: #1e1432; }
+
+.colorbg-30-20-50 {
+  background-color: #1e1432; }
+
+.color-30-20-60 {
+  color: #1e143c; }
+
+.colorbg-30-20-60 {
+  background-color: #1e143c; }
+
+.color-30-20-70 {
+  color: #1e1446; }
+
+.colorbg-30-20-70 {
+  background-color: #1e1446; }
+
+.color-30-20-80 {
+  color: #1e1450; }
+
+.colorbg-30-20-80 {
+  background-color: #1e1450; }
+
+.color-30-20-90 {
+  color: #1e145a; }
+
+.colorbg-30-20-90 {
+  background-color: #1e145a; }
+
+.color-30-20-100 {
+  color: #1e1464; }
+
+.colorbg-30-20-100 {
+  background-color: #1e1464; }
+
+.color-30-30-0 {
+  color: #1e1e00; }
+
+.colorbg-30-30-0 {
+  background-color: #1e1e00; }
+
+.color-30-30-10 {
+  color: #1e1e0a; }
+
+.colorbg-30-30-10 {
+  background-color: #1e1e0a; }
+
+.color-30-30-20 {
+  color: #1e1e14; }
+
+.colorbg-30-30-20 {
+  background-color: #1e1e14; }
+
+.color-30-30-30 {
+  color: #1e1e1e; }
+
+.colorbg-30-30-30 {
+  background-color: #1e1e1e; }
+
+.color-30-30-40 {
+  color: #1e1e28; }
+
+.colorbg-30-30-40 {
+  background-color: #1e1e28; }
+
+.color-30-30-50 {
+  color: #1e1e32; }
+
+.colorbg-30-30-50 {
+  background-color: #1e1e32; }
+
+.color-30-30-60 {
+  color: #1e1e3c; }
+
+.colorbg-30-30-60 {
+  background-color: #1e1e3c; }
+
+.color-30-30-70 {
+  color: #1e1e46; }
+
+.colorbg-30-30-70 {
+  background-color: #1e1e46; }
+
+.color-30-30-80 {
+  color: #1e1e50; }
+
+.colorbg-30-30-80 {
+  background-color: #1e1e50; }
+
+.color-30-30-90 {
+  color: #1e1e5a; }
+
+.colorbg-30-30-90 {
+  background-color: #1e1e5a; }
+
+.color-30-30-100 {
+  color: #1e1e64; }
+
+.colorbg-30-30-100 {
+  background-color: #1e1e64; }
+
+.color-30-40-0 {
+  color: #1e2800; }
+
+.colorbg-30-40-0 {
+  background-color: #1e2800; }
+
+.color-30-40-10 {
+  color: #1e280a; }
+
+.colorbg-30-40-10 {
+  background-color: #1e280a; }
+
+.color-30-40-20 {
+  color: #1e2814; }
+
+.colorbg-30-40-20 {
+  background-color: #1e2814; }
+
+.color-30-40-30 {
+  color: #1e281e; }
+
+.colorbg-30-40-30 {
+  background-color: #1e281e; }
+
+.color-30-40-40 {
+  color: #1e2828; }
+
+.colorbg-30-40-40 {
+  background-color: #1e2828; }
+
+.color-30-40-50 {
+  color: #1e2832; }
+
+.colorbg-30-40-50 {
+  background-color: #1e2832; }
+
+.color-30-40-60 {
+  color: #1e283c; }
+
+.colorbg-30-40-60 {
+  background-color: #1e283c; }
+
+.color-30-40-70 {
+  color: #1e2846; }
+
+.colorbg-30-40-70 {
+  background-color: #1e2846; }
+
+.color-30-40-80 {
+  color: #1e2850; }
+
+.colorbg-30-40-80 {
+  background-color: #1e2850; }
+
+.color-30-40-90 {
+  color: #1e285a; }
+
+.colorbg-30-40-90 {
+  background-color: #1e285a; }
+
+.color-30-40-100 {
+  color: #1e2864; }
+
+.colorbg-30-40-100 {
+  background-color: #1e2864; }
+
+.color-30-50-0 {
+  color: #1e3200; }
+
+.colorbg-30-50-0 {
+  background-color: #1e3200; }
+
+.color-30-50-10 {
+  color: #1e320a; }
+
+.colorbg-30-50-10 {
+  background-color: #1e320a; }
+
+.color-30-50-20 {
+  color: #1e3214; }
+
+.colorbg-30-50-20 {
+  background-color: #1e3214; }
+
+.color-30-50-30 {
+  color: #1e321e; }
+
+.colorbg-30-50-30 {
+  background-color: #1e321e; }
+
+.color-30-50-40 {
+  color: #1e3228; }
+
+.colorbg-30-50-40 {
+  background-color: #1e3228; }
+
+.color-30-50-50 {
+  color: #1e3232; }
+
+.colorbg-30-50-50 {
+  background-color: #1e3232; }
+
+.color-30-50-60 {
+  color: #1e323c; }
+
+.colorbg-30-50-60 {
+  background-color: #1e323c; }
+
+.color-30-50-70 {
+  color: #1e3246; }
+
+.colorbg-30-50-70 {
+  background-color: #1e3246; }
+
+.color-30-50-80 {
+  color: #1e3250; }
+
+.colorbg-30-50-80 {
+  background-color: #1e3250; }
+
+.color-30-50-90 {
+  color: #1e325a; }
+
+.colorbg-30-50-90 {
+  background-color: #1e325a; }
+
+.color-30-50-100 {
+  color: #1e3264; }
+
+.colorbg-30-50-100 {
+  background-color: #1e3264; }
+
+.color-30-60-0 {
+  color: #1e3c00; }
+
+.colorbg-30-60-0 {
+  background-color: #1e3c00; }
+
+.color-30-60-10 {
+  color: #1e3c0a; }
+
+.colorbg-30-60-10 {
+  background-color: #1e3c0a; }
+
+.color-30-60-20 {
+  color: #1e3c14; }
+
+.colorbg-30-60-20 {
+  background-color: #1e3c14; }
+
+.color-30-60-30 {
+  color: #1e3c1e; }
+
+.colorbg-30-60-30 {
+  background-color: #1e3c1e; }
+
+.color-30-60-40 {
+  color: #1e3c28; }
+
+.colorbg-30-60-40 {
+  background-color: #1e3c28; }
+
+.color-30-60-50 {
+  color: #1e3c32; }
+
+.colorbg-30-60-50 {
+  background-color: #1e3c32; }
+
+.color-30-60-60 {
+  color: #1e3c3c; }
+
+.colorbg-30-60-60 {
+  background-color: #1e3c3c; }
+
+.color-30-60-70 {
+  color: #1e3c46; }
+
+.colorbg-30-60-70 {
+  background-color: #1e3c46; }
+
+.color-30-60-80 {
+  color: #1e3c50; }
+
+.colorbg-30-60-80 {
+  background-color: #1e3c50; }
+
+.color-30-60-90 {
+  color: #1e3c5a; }
+
+.colorbg-30-60-90 {
+  background-color: #1e3c5a; }
+
+.color-30-60-100 {
+  color: #1e3c64; }
+
+.colorbg-30-60-100 {
+  background-color: #1e3c64; }
+
+.color-30-70-0 {
+  color: #1e4600; }
+
+.colorbg-30-70-0 {
+  background-color: #1e4600; }
+
+.color-30-70-10 {
+  color: #1e460a; }
+
+.colorbg-30-70-10 {
+  background-color: #1e460a; }
+
+.color-30-70-20 {
+  color: #1e4614; }
+
+.colorbg-30-70-20 {
+  background-color: #1e4614; }
+
+.color-30-70-30 {
+  color: #1e461e; }
+
+.colorbg-30-70-30 {
+  background-color: #1e461e; }
+
+.color-30-70-40 {
+  color: #1e4628; }
+
+.colorbg-30-70-40 {
+  background-color: #1e4628; }
+
+.color-30-70-50 {
+  color: #1e4632; }
+
+.colorbg-30-70-50 {
+  background-color: #1e4632; }
+
+.color-30-70-60 {
+  color: #1e463c; }
+
+.colorbg-30-70-60 {
+  background-color: #1e463c; }
+
+.color-30-70-70 {
+  color: #1e4646; }
+
+.colorbg-30-70-70 {
+  background-color: #1e4646; }
+
+.color-30-70-80 {
+  color: #1e4650; }
+
+.colorbg-30-70-80 {
+  background-color: #1e4650; }
+
+.color-30-70-90 {
+  color: #1e465a; }
+
+.colorbg-30-70-90 {
+  background-color: #1e465a; }
+
+.color-30-70-100 {
+  color: #1e4664; }
+
+.colorbg-30-70-100 {
+  background-color: #1e4664; }
+
+.color-30-80-0 {
+  color: #1e5000; }
+
+.colorbg-30-80-0 {
+  background-color: #1e5000; }
+
+.color-30-80-10 {
+  color: #1e500a; }
+
+.colorbg-30-80-10 {
+  background-color: #1e500a; }
+
+.color-30-80-20 {
+  color: #1e5014; }
+
+.colorbg-30-80-20 {
+  background-color: #1e5014; }
+
+.color-30-80-30 {
+  color: #1e501e; }
+
+.colorbg-30-80-30 {
+  background-color: #1e501e; }
+
+.color-30-80-40 {
+  color: #1e5028; }
+
+.colorbg-30-80-40 {
+  background-color: #1e5028; }
+
+.color-30-80-50 {
+  color: #1e5032; }
+
+.colorbg-30-80-50 {
+  background-color: #1e5032; }
+
+.color-30-80-60 {
+  color: #1e503c; }
+
+.colorbg-30-80-60 {
+  background-color: #1e503c; }
+
+.color-30-80-70 {
+  color: #1e5046; }
+
+.colorbg-30-80-70 {
+  background-color: #1e5046; }
+
+.color-30-80-80 {
+  color: #1e5050; }
+
+.colorbg-30-80-80 {
+  background-color: #1e5050; }
+
+.color-30-80-90 {
+  color: #1e505a; }
+
+.colorbg-30-80-90 {
+  background-color: #1e505a; }
+
+.color-30-80-100 {
+  color: #1e5064; }
+
+.colorbg-30-80-100 {
+  background-color: #1e5064; }
+
+.color-30-90-0 {
+  color: #1e5a00; }
+
+.colorbg-30-90-0 {
+  background-color: #1e5a00; }
+
+.color-30-90-10 {
+  color: #1e5a0a; }
+
+.colorbg-30-90-10 {
+  background-color: #1e5a0a; }
+
+.color-30-90-20 {
+  color: #1e5a14; }
+
+.colorbg-30-90-20 {
+  background-color: #1e5a14; }
+
+.color-30-90-30 {
+  color: #1e5a1e; }
+
+.colorbg-30-90-30 {
+  background-color: #1e5a1e; }
+
+.color-30-90-40 {
+  color: #1e5a28; }
+
+.colorbg-30-90-40 {
+  background-color: #1e5a28; }
+
+.color-30-90-50 {
+  color: #1e5a32; }
+
+.colorbg-30-90-50 {
+  background-color: #1e5a32; }
+
+.color-30-90-60 {
+  color: #1e5a3c; }
+
+.colorbg-30-90-60 {
+  background-color: #1e5a3c; }
+
+.color-30-90-70 {
+  color: #1e5a46; }
+
+.colorbg-30-90-70 {
+  background-color: #1e5a46; }
+
+.color-30-90-80 {
+  color: #1e5a50; }
+
+.colorbg-30-90-80 {
+  background-color: #1e5a50; }
+
+.color-30-90-90 {
+  color: #1e5a5a; }
+
+.colorbg-30-90-90 {
+  background-color: #1e5a5a; }
+
+.color-30-90-100 {
+  color: #1e5a64; }
+
+.colorbg-30-90-100 {
+  background-color: #1e5a64; }
+
+.color-30-100-0 {
+  color: #1e6400; }
+
+.colorbg-30-100-0 {
+  background-color: #1e6400; }
+
+.color-30-100-10 {
+  color: #1e640a; }
+
+.colorbg-30-100-10 {
+  background-color: #1e640a; }
+
+.color-30-100-20 {
+  color: #1e6414; }
+
+.colorbg-30-100-20 {
+  background-color: #1e6414; }
+
+.color-30-100-30 {
+  color: #1e641e; }
+
+.colorbg-30-100-30 {
+  background-color: #1e641e; }
+
+.color-30-100-40 {
+  color: #1e6428; }
+
+.colorbg-30-100-40 {
+  background-color: #1e6428; }
+
+.color-30-100-50 {
+  color: #1e6432; }
+
+.colorbg-30-100-50 {
+  background-color: #1e6432; }
+
+.color-30-100-60 {
+  color: #1e643c; }
+
+.colorbg-30-100-60 {
+  background-color: #1e643c; }
+
+.color-30-100-70 {
+  color: #1e6446; }
+
+.colorbg-30-100-70 {
+  background-color: #1e6446; }
+
+.color-30-100-80 {
+  color: #1e6450; }
+
+.colorbg-30-100-80 {
+  background-color: #1e6450; }
+
+.color-30-100-90 {
+  color: #1e645a; }
+
+.colorbg-30-100-90 {
+  background-color: #1e645a; }
+
+.color-30-100-100 {
+  color: #1e6464; }
+
+.colorbg-30-100-100 {
+  background-color: #1e6464; }
+
+.color-40-0-0 {
+  color: #280000; }
+
+.colorbg-40-0-0 {
+  background-color: #280000; }
+
+.color-40-0-10 {
+  color: #28000a; }
+
+.colorbg-40-0-10 {
+  background-color: #28000a; }
+
+.color-40-0-20 {
+  color: #280014; }
+
+.colorbg-40-0-20 {
+  background-color: #280014; }
+
+.color-40-0-30 {
+  color: #28001e; }
+
+.colorbg-40-0-30 {
+  background-color: #28001e; }
+
+.color-40-0-40 {
+  color: #280028; }
+
+.colorbg-40-0-40 {
+  background-color: #280028; }
+
+.color-40-0-50 {
+  color: #280032; }
+
+.colorbg-40-0-50 {
+  background-color: #280032; }
+
+.color-40-0-60 {
+  color: #28003c; }
+
+.colorbg-40-0-60 {
+  background-color: #28003c; }
+
+.color-40-0-70 {
+  color: #280046; }
+
+.colorbg-40-0-70 {
+  background-color: #280046; }
+
+.color-40-0-80 {
+  color: #280050; }
+
+.colorbg-40-0-80 {
+  background-color: #280050; }
+
+.color-40-0-90 {
+  color: #28005a; }
+
+.colorbg-40-0-90 {
+  background-color: #28005a; }
+
+.color-40-0-100 {
+  color: #280064; }
+
+.colorbg-40-0-100 {
+  background-color: #280064; }
+
+.color-40-10-0 {
+  color: #280a00; }
+
+.colorbg-40-10-0 {
+  background-color: #280a00; }
+
+.color-40-10-10 {
+  color: #280a0a; }
+
+.colorbg-40-10-10 {
+  background-color: #280a0a; }
+
+.color-40-10-20 {
+  color: #280a14; }
+
+.colorbg-40-10-20 {
+  background-color: #280a14; }
+
+.color-40-10-30 {
+  color: #280a1e; }
+
+.colorbg-40-10-30 {
+  background-color: #280a1e; }
+
+.color-40-10-40 {
+  color: #280a28; }
+
+.colorbg-40-10-40 {
+  background-color: #280a28; }
+
+.color-40-10-50 {
+  color: #280a32; }
+
+.colorbg-40-10-50 {
+  background-color: #280a32; }
+
+.color-40-10-60 {
+  color: #280a3c; }
+
+.colorbg-40-10-60 {
+  background-color: #280a3c; }
+
+.color-40-10-70 {
+  color: #280a46; }
+
+.colorbg-40-10-70 {
+  background-color: #280a46; }
+
+.color-40-10-80 {
+  color: #280a50; }
+
+.colorbg-40-10-80 {
+  background-color: #280a50; }
+
+.color-40-10-90 {
+  color: #280a5a; }
+
+.colorbg-40-10-90 {
+  background-color: #280a5a; }
+
+.color-40-10-100 {
+  color: #280a64; }
+
+.colorbg-40-10-100 {
+  background-color: #280a64; }
+
+.color-40-20-0 {
+  color: #281400; }
+
+.colorbg-40-20-0 {
+  background-color: #281400; }
+
+.color-40-20-10 {
+  color: #28140a; }
+
+.colorbg-40-20-10 {
+  background-color: #28140a; }
+
+.color-40-20-20 {
+  color: #281414; }
+
+.colorbg-40-20-20 {
+  background-color: #281414; }
+
+.color-40-20-30 {
+  color: #28141e; }
+
+.colorbg-40-20-30 {
+  background-color: #28141e; }
+
+.color-40-20-40 {
+  color: #281428; }
+
+.colorbg-40-20-40 {
+  background-color: #281428; }
+
+.color-40-20-50 {
+  color: #281432; }
+
+.colorbg-40-20-50 {
+  background-color: #281432; }
+
+.color-40-20-60 {
+  color: #28143c; }
+
+.colorbg-40-20-60 {
+  background-color: #28143c; }
+
+.color-40-20-70 {
+  color: #281446; }
+
+.colorbg-40-20-70 {
+  background-color: #281446; }
+
+.color-40-20-80 {
+  color: #281450; }
+
+.colorbg-40-20-80 {
+  background-color: #281450; }
+
+.color-40-20-90 {
+  color: #28145a; }
+
+.colorbg-40-20-90 {
+  background-color: #28145a; }
+
+.color-40-20-100 {
+  color: #281464; }
+
+.colorbg-40-20-100 {
+  background-color: #281464; }
+
+.color-40-30-0 {
+  color: #281e00; }
+
+.colorbg-40-30-0 {
+  background-color: #281e00; }
+
+.color-40-30-10 {
+  color: #281e0a; }
+
+.colorbg-40-30-10 {
+  background-color: #281e0a; }
+
+.color-40-30-20 {
+  color: #281e14; }
+
+.colorbg-40-30-20 {
+  background-color: #281e14; }
+
+.color-40-30-30 {
+  color: #281e1e; }
+
+.colorbg-40-30-30 {
+  background-color: #281e1e; }
+
+.color-40-30-40 {
+  color: #281e28; }
+
+.colorbg-40-30-40 {
+  background-color: #281e28; }
+
+.color-40-30-50 {
+  color: #281e32; }
+
+.colorbg-40-30-50 {
+  background-color: #281e32; }
+
+.color-40-30-60 {
+  color: #281e3c; }
+
+.colorbg-40-30-60 {
+  background-color: #281e3c; }
+
+.color-40-30-70 {
+  color: #281e46; }
+
+.colorbg-40-30-70 {
+  background-color: #281e46; }
+
+.color-40-30-80 {
+  color: #281e50; }
+
+.colorbg-40-30-80 {
+  background-color: #281e50; }
+
+.color-40-30-90 {
+  color: #281e5a; }
+
+.colorbg-40-30-90 {
+  background-color: #281e5a; }
+
+.color-40-30-100 {
+  color: #281e64; }
+
+.colorbg-40-30-100 {
+  background-color: #281e64; }
+
+.color-40-40-0 {
+  color: #282800; }
+
+.colorbg-40-40-0 {
+  background-color: #282800; }
+
+.color-40-40-10 {
+  color: #28280a; }
+
+.colorbg-40-40-10 {
+  background-color: #28280a; }
+
+.color-40-40-20 {
+  color: #282814; }
+
+.colorbg-40-40-20 {
+  background-color: #282814; }
+
+.color-40-40-30 {
+  color: #28281e; }
+
+.colorbg-40-40-30 {
+  background-color: #28281e; }
+
+.color-40-40-40 {
+  color: #282828; }
+
+.colorbg-40-40-40 {
+  background-color: #282828; }
+
+.color-40-40-50 {
+  color: #282832; }
+
+.colorbg-40-40-50 {
+  background-color: #282832; }
+
+.color-40-40-60 {
+  color: #28283c; }
+
+.colorbg-40-40-60 {
+  background-color: #28283c; }
+
+.color-40-40-70 {
+  color: #282846; }
+
+.colorbg-40-40-70 {
+  background-color: #282846; }
+
+.color-40-40-80 {
+  color: #282850; }
+
+.colorbg-40-40-80 {
+  background-color: #282850; }
+
+.color-40-40-90 {
+  color: #28285a; }
+
+.colorbg-40-40-90 {
+  background-color: #28285a; }
+
+.color-40-40-100 {
+  color: #282864; }
+
+.colorbg-40-40-100 {
+  background-color: #282864; }
+
+.color-40-50-0 {
+  color: #283200; }
+
+.colorbg-40-50-0 {
+  background-color: #283200; }
+
+.color-40-50-10 {
+  color: #28320a; }
+
+.colorbg-40-50-10 {
+  background-color: #28320a; }
+
+.color-40-50-20 {
+  color: #283214; }
+
+.colorbg-40-50-20 {
+  background-color: #283214; }
+
+.color-40-50-30 {
+  color: #28321e; }
+
+.colorbg-40-50-30 {
+  background-color: #28321e; }
+
+.color-40-50-40 {
+  color: #283228; }
+
+.colorbg-40-50-40 {
+  background-color: #283228; }
+
+.color-40-50-50 {
+  color: #283232; }
+
+.colorbg-40-50-50 {
+  background-color: #283232; }
+
+.color-40-50-60 {
+  color: #28323c; }
+
+.colorbg-40-50-60 {
+  background-color: #28323c; }
+
+.color-40-50-70 {
+  color: #283246; }
+
+.colorbg-40-50-70 {
+  background-color: #283246; }
+
+.color-40-50-80 {
+  color: #283250; }
+
+.colorbg-40-50-80 {
+  background-color: #283250; }
+
+.color-40-50-90 {
+  color: #28325a; }
+
+.colorbg-40-50-90 {
+  background-color: #28325a; }
+
+.color-40-50-100 {
+  color: #283264; }
+
+.colorbg-40-50-100 {
+  background-color: #283264; }
+
+.color-40-60-0 {
+  color: #283c00; }
+
+.colorbg-40-60-0 {
+  background-color: #283c00; }
+
+.color-40-60-10 {
+  color: #283c0a; }
+
+.colorbg-40-60-10 {
+  background-color: #283c0a; }
+
+.color-40-60-20 {
+  color: #283c14; }
+
+.colorbg-40-60-20 {
+  background-color: #283c14; }
+
+.color-40-60-30 {
+  color: #283c1e; }
+
+.colorbg-40-60-30 {
+  background-color: #283c1e; }
+
+.color-40-60-40 {
+  color: #283c28; }
+
+.colorbg-40-60-40 {
+  background-color: #283c28; }
+
+.color-40-60-50 {
+  color: #283c32; }
+
+.colorbg-40-60-50 {
+  background-color: #283c32; }
+
+.color-40-60-60 {
+  color: #283c3c; }
+
+.colorbg-40-60-60 {
+  background-color: #283c3c; }
+
+.color-40-60-70 {
+  color: #283c46; }
+
+.colorbg-40-60-70 {
+  background-color: #283c46; }
+
+.color-40-60-80 {
+  color: #283c50; }
+
+.colorbg-40-60-80 {
+  background-color: #283c50; }
+
+.color-40-60-90 {
+  color: #283c5a; }
+
+.colorbg-40-60-90 {
+  background-color: #283c5a; }
+
+.color-40-60-100 {
+  color: #283c64; }
+
+.colorbg-40-60-100 {
+  background-color: #283c64; }
+
+.color-40-70-0 {
+  color: #284600; }
+
+.colorbg-40-70-0 {
+  background-color: #284600; }
+
+.color-40-70-10 {
+  color: #28460a; }
+
+.colorbg-40-70-10 {
+  background-color: #28460a; }
+
+.color-40-70-20 {
+  color: #284614; }
+
+.colorbg-40-70-20 {
+  background-color: #284614; }
+
+.color-40-70-30 {
+  color: #28461e; }
+
+.colorbg-40-70-30 {
+  background-color: #28461e; }
+
+.color-40-70-40 {
+  color: #284628; }
+
+.colorbg-40-70-40 {
+  background-color: #284628; }
+
+.color-40-70-50 {
+  color: #284632; }
+
+.colorbg-40-70-50 {
+  background-color: #284632; }
+
+.color-40-70-60 {
+  color: #28463c; }
+
+.colorbg-40-70-60 {
+  background-color: #28463c; }
+
+.color-40-70-70 {
+  color: #284646; }
+
+.colorbg-40-70-70 {
+  background-color: #284646; }
+
+.color-40-70-80 {
+  color: #284650; }
+
+.colorbg-40-70-80 {
+  background-color: #284650; }
+
+.color-40-70-90 {
+  color: #28465a; }
+
+.colorbg-40-70-90 {
+  background-color: #28465a; }
+
+.color-40-70-100 {
+  color: #284664; }
+
+.colorbg-40-70-100 {
+  background-color: #284664; }
+
+.color-40-80-0 {
+  color: #285000; }
+
+.colorbg-40-80-0 {
+  background-color: #285000; }
+
+.color-40-80-10 {
+  color: #28500a; }
+
+.colorbg-40-80-10 {
+  background-color: #28500a; }
+
+.color-40-80-20 {
+  color: #285014; }
+
+.colorbg-40-80-20 {
+  background-color: #285014; }
+
+.color-40-80-30 {
+  color: #28501e; }
+
+.colorbg-40-80-30 {
+  background-color: #28501e; }
+
+.color-40-80-40 {
+  color: #285028; }
+
+.colorbg-40-80-40 {
+  background-color: #285028; }
+
+.color-40-80-50 {
+  color: #285032; }
+
+.colorbg-40-80-50 {
+  background-color: #285032; }
+
+.color-40-80-60 {
+  color: #28503c; }
+
+.colorbg-40-80-60 {
+  background-color: #28503c; }
+
+.color-40-80-70 {
+  color: #285046; }
+
+.colorbg-40-80-70 {
+  background-color: #285046; }
+
+.color-40-80-80 {
+  color: #285050; }
+
+.colorbg-40-80-80 {
+  background-color: #285050; }
+
+.color-40-80-90 {
+  color: #28505a; }
+
+.colorbg-40-80-90 {
+  background-color: #28505a; }
+
+.color-40-80-100 {
+  color: #285064; }
+
+.colorbg-40-80-100 {
+  background-color: #285064; }
+
+.color-40-90-0 {
+  color: #285a00; }
+
+.colorbg-40-90-0 {
+  background-color: #285a00; }
+
+.color-40-90-10 {
+  color: #285a0a; }
+
+.colorbg-40-90-10 {
+  background-color: #285a0a; }
+
+.color-40-90-20 {
+  color: #285a14; }
+
+.colorbg-40-90-20 {
+  background-color: #285a14; }
+
+.color-40-90-30 {
+  color: #285a1e; }
+
+.colorbg-40-90-30 {
+  background-color: #285a1e; }
+
+.color-40-90-40 {
+  color: #285a28; }
+
+.colorbg-40-90-40 {
+  background-color: #285a28; }
+
+.color-40-90-50 {
+  color: #285a32; }
+
+.colorbg-40-90-50 {
+  background-color: #285a32; }
+
+.color-40-90-60 {
+  color: #285a3c; }
+
+.colorbg-40-90-60 {
+  background-color: #285a3c; }
+
+.color-40-90-70 {
+  color: #285a46; }
+
+.colorbg-40-90-70 {
+  background-color: #285a46; }
+
+.color-40-90-80 {
+  color: #285a50; }
+
+.colorbg-40-90-80 {
+  background-color: #285a50; }
+
+.color-40-90-90 {
+  color: #285a5a; }
+
+.colorbg-40-90-90 {
+  background-color: #285a5a; }
+
+.color-40-90-100 {
+  color: #285a64; }
+
+.colorbg-40-90-100 {
+  background-color: #285a64; }
+
+.color-40-100-0 {
+  color: #286400; }
+
+.colorbg-40-100-0 {
+  background-color: #286400; }
+
+.color-40-100-10 {
+  color: #28640a; }
+
+.colorbg-40-100-10 {
+  background-color: #28640a; }
+
+.color-40-100-20 {
+  color: #286414; }
+
+.colorbg-40-100-20 {
+  background-color: #286414; }
+
+.color-40-100-30 {
+  color: #28641e; }
+
+.colorbg-40-100-30 {
+  background-color: #28641e; }
+
+.color-40-100-40 {
+  color: #286428; }
+
+.colorbg-40-100-40 {
+  background-color: #286428; }
+
+.color-40-100-50 {
+  color: #286432; }
+
+.colorbg-40-100-50 {
+  background-color: #286432; }
+
+.color-40-100-60 {
+  color: #28643c; }
+
+.colorbg-40-100-60 {
+  background-color: #28643c; }
+
+.color-40-100-70 {
+  color: #286446; }
+
+.colorbg-40-100-70 {
+  background-color: #286446; }
+
+.color-40-100-80 {
+  color: #286450; }
+
+.colorbg-40-100-80 {
+  background-color: #286450; }
+
+.color-40-100-90 {
+  color: #28645a; }
+
+.colorbg-40-100-90 {
+  background-color: #28645a; }
+
+.color-40-100-100 {
+  color: #286464; }
+
+.colorbg-40-100-100 {
+  background-color: #286464; }
+
+.color-50-0-0 {
+  color: #320000; }
+
+.colorbg-50-0-0 {
+  background-color: #320000; }
+
+.color-50-0-10 {
+  color: #32000a; }
+
+.colorbg-50-0-10 {
+  background-color: #32000a; }
+
+.color-50-0-20 {
+  color: #320014; }
+
+.colorbg-50-0-20 {
+  background-color: #320014; }
+
+.color-50-0-30 {
+  color: #32001e; }
+
+.colorbg-50-0-30 {
+  background-color: #32001e; }
+
+.color-50-0-40 {
+  color: #320028; }
+
+.colorbg-50-0-40 {
+  background-color: #320028; }
+
+.color-50-0-50 {
+  color: #320032; }
+
+.colorbg-50-0-50 {
+  background-color: #320032; }
+
+.color-50-0-60 {
+  color: #32003c; }
+
+.colorbg-50-0-60 {
+  background-color: #32003c; }
+
+.color-50-0-70 {
+  color: #320046; }
+
+.colorbg-50-0-70 {
+  background-color: #320046; }
+
+.color-50-0-80 {
+  color: #320050; }
+
+.colorbg-50-0-80 {
+  background-color: #320050; }
+
+.color-50-0-90 {
+  color: #32005a; }
+
+.colorbg-50-0-90 {
+  background-color: #32005a; }
+
+.color-50-0-100 {
+  color: #320064; }
+
+.colorbg-50-0-100 {
+  background-color: #320064; }
+
+.color-50-10-0 {
+  color: #320a00; }
+
+.colorbg-50-10-0 {
+  background-color: #320a00; }
+
+.color-50-10-10 {
+  color: #320a0a; }
+
+.colorbg-50-10-10 {
+  background-color: #320a0a; }
+
+.color-50-10-20 {
+  color: #320a14; }
+
+.colorbg-50-10-20 {
+  background-color: #320a14; }
+
+.color-50-10-30 {
+  color: #320a1e; }
+
+.colorbg-50-10-30 {
+  background-color: #320a1e; }
+
+.color-50-10-40 {
+  color: #320a28; }
+
+.colorbg-50-10-40 {
+  background-color: #320a28; }
+
+.color-50-10-50 {
+  color: #320a32; }
+
+.colorbg-50-10-50 {
+  background-color: #320a32; }
+
+.color-50-10-60 {
+  color: #320a3c; }
+
+.colorbg-50-10-60 {
+  background-color: #320a3c; }
+
+.color-50-10-70 {
+  color: #320a46; }
+
+.colorbg-50-10-70 {
+  background-color: #320a46; }
+
+.color-50-10-80 {
+  color: #320a50; }
+
+.colorbg-50-10-80 {
+  background-color: #320a50; }
+
+.color-50-10-90 {
+  color: #320a5a; }
+
+.colorbg-50-10-90 {
+  background-color: #320a5a; }
+
+.color-50-10-100 {
+  color: #320a64; }
+
+.colorbg-50-10-100 {
+  background-color: #320a64; }
+
+.color-50-20-0 {
+  color: #321400; }
+
+.colorbg-50-20-0 {
+  background-color: #321400; }
+
+.color-50-20-10 {
+  color: #32140a; }
+
+.colorbg-50-20-10 {
+  background-color: #32140a; }
+
+.color-50-20-20 {
+  color: #321414; }
+
+.colorbg-50-20-20 {
+  background-color: #321414; }
+
+.color-50-20-30 {
+  color: #32141e; }
+
+.colorbg-50-20-30 {
+  background-color: #32141e; }
+
+.color-50-20-40 {
+  color: #321428; }
+
+.colorbg-50-20-40 {
+  background-color: #321428; }
+
+.color-50-20-50 {
+  color: #321432; }
+
+.colorbg-50-20-50 {
+  background-color: #321432; }
+
+.color-50-20-60 {
+  color: #32143c; }
+
+.colorbg-50-20-60 {
+  background-color: #32143c; }
+
+.color-50-20-70 {
+  color: #321446; }
+
+.colorbg-50-20-70 {
+  background-color: #321446; }
+
+.color-50-20-80 {
+  color: #321450; }
+
+.colorbg-50-20-80 {
+  background-color: #321450; }
+
+.color-50-20-90 {
+  color: #32145a; }
+
+.colorbg-50-20-90 {
+  background-color: #32145a; }
+
+.color-50-20-100 {
+  color: #321464; }
+
+.colorbg-50-20-100 {
+  background-color: #321464; }
+
+.color-50-30-0 {
+  color: #321e00; }
+
+.colorbg-50-30-0 {
+  background-color: #321e00; }
+
+.color-50-30-10 {
+  color: #321e0a; }
+
+.colorbg-50-30-10 {
+  background-color: #321e0a; }
+
+.color-50-30-20 {
+  color: #321e14; }
+
+.colorbg-50-30-20 {
+  background-color: #321e14; }
+
+.color-50-30-30 {
+  color: #321e1e; }
+
+.colorbg-50-30-30 {
+  background-color: #321e1e; }
+
+.color-50-30-40 {
+  color: #321e28; }
+
+.colorbg-50-30-40 {
+  background-color: #321e28; }
+
+.color-50-30-50 {
+  color: #321e32; }
+
+.colorbg-50-30-50 {
+  background-color: #321e32; }
+
+.color-50-30-60 {
+  color: #321e3c; }
+
+.colorbg-50-30-60 {
+  background-color: #321e3c; }
+
+.color-50-30-70 {
+  color: #321e46; }
+
+.colorbg-50-30-70 {
+  background-color: #321e46; }
+
+.color-50-30-80 {
+  color: #321e50; }
+
+.colorbg-50-30-80 {
+  background-color: #321e50; }
+
+.color-50-30-90 {
+  color: #321e5a; }
+
+.colorbg-50-30-90 {
+  background-color: #321e5a; }
+
+.color-50-30-100 {
+  color: #321e64; }
+
+.colorbg-50-30-100 {
+  background-color: #321e64; }
+
+.color-50-40-0 {
+  color: #322800; }
+
+.colorbg-50-40-0 {
+  background-color: #322800; }
+
+.color-50-40-10 {
+  color: #32280a; }
+
+.colorbg-50-40-10 {
+  background-color: #32280a; }
+
+.color-50-40-20 {
+  color: #322814; }
+
+.colorbg-50-40-20 {
+  background-color: #322814; }
+
+.color-50-40-30 {
+  color: #32281e; }
+
+.colorbg-50-40-30 {
+  background-color: #32281e; }
+
+.color-50-40-40 {
+  color: #322828; }
+
+.colorbg-50-40-40 {
+  background-color: #322828; }
+
+.color-50-40-50 {
+  color: #322832; }
+
+.colorbg-50-40-50 {
+  background-color: #322832; }
+
+.color-50-40-60 {
+  color: #32283c; }
+
+.colorbg-50-40-60 {
+  background-color: #32283c; }
+
+.color-50-40-70 {
+  color: #322846; }
+
+.colorbg-50-40-70 {
+  background-color: #322846; }
+
+.color-50-40-80 {
+  color: #322850; }
+
+.colorbg-50-40-80 {
+  background-color: #322850; }
+
+.color-50-40-90 {
+  color: #32285a; }
+
+.colorbg-50-40-90 {
+  background-color: #32285a; }
+
+.color-50-40-100 {
+  color: #322864; }
+
+.colorbg-50-40-100 {
+  background-color: #322864; }
+
+.color-50-50-0 {
+  color: #323200; }
+
+.colorbg-50-50-0 {
+  background-color: #323200; }
+
+.color-50-50-10 {
+  color: #32320a; }
+
+.colorbg-50-50-10 {
+  background-color: #32320a; }
+
+.color-50-50-20 {
+  color: #323214; }
+
+.colorbg-50-50-20 {
+  background-color: #323214; }
+
+.color-50-50-30 {
+  color: #32321e; }
+
+.colorbg-50-50-30 {
+  background-color: #32321e; }
+
+.color-50-50-40 {
+  color: #323228; }
+
+.colorbg-50-50-40 {
+  background-color: #323228; }
+
+.color-50-50-50 {
+  color: #323232; }
+
+.colorbg-50-50-50 {
+  background-color: #323232; }
+
+.color-50-50-60 {
+  color: #32323c; }
+
+.colorbg-50-50-60 {
+  background-color: #32323c; }
+
+.color-50-50-70 {
+  color: #323246; }
+
+.colorbg-50-50-70 {
+  background-color: #323246; }
+
+.color-50-50-80 {
+  color: #323250; }
+
+.colorbg-50-50-80 {
+  background-color: #323250; }
+
+.color-50-50-90 {
+  color: #32325a; }
+
+.colorbg-50-50-90 {
+  background-color: #32325a; }
+
+.color-50-50-100 {
+  color: #323264; }
+
+.colorbg-50-50-100 {
+  background-color: #323264; }
+
+.color-50-60-0 {
+  color: #323c00; }
+
+.colorbg-50-60-0 {
+  background-color: #323c00; }
+
+.color-50-60-10 {
+  color: #323c0a; }
+
+.colorbg-50-60-10 {
+  background-color: #323c0a; }
+
+.color-50-60-20 {
+  color: #323c14; }
+
+.colorbg-50-60-20 {
+  background-color: #323c14; }
+
+.color-50-60-30 {
+  color: #323c1e; }
+
+.colorbg-50-60-30 {
+  background-color: #323c1e; }
+
+.color-50-60-40 {
+  color: #323c28; }
+
+.colorbg-50-60-40 {
+  background-color: #323c28; }
+
+.color-50-60-50 {
+  color: #323c32; }
+
+.colorbg-50-60-50 {
+  background-color: #323c32; }
+
+.color-50-60-60 {
+  color: #323c3c; }
+
+.colorbg-50-60-60 {
+  background-color: #323c3c; }
+
+.color-50-60-70 {
+  color: #323c46; }
+
+.colorbg-50-60-70 {
+  background-color: #323c46; }
+
+.color-50-60-80 {
+  color: #323c50; }
+
+.colorbg-50-60-80 {
+  background-color: #323c50; }
+
+.color-50-60-90 {
+  color: #323c5a; }
+
+.colorbg-50-60-90 {
+  background-color: #323c5a; }
+
+.color-50-60-100 {
+  color: #323c64; }
+
+.colorbg-50-60-100 {
+  background-color: #323c64; }
+
+.color-50-70-0 {
+  color: #324600; }
+
+.colorbg-50-70-0 {
+  background-color: #324600; }
+
+.color-50-70-10 {
+  color: #32460a; }
+
+.colorbg-50-70-10 {
+  background-color: #32460a; }
+
+.color-50-70-20 {
+  color: #324614; }
+
+.colorbg-50-70-20 {
+  background-color: #324614; }
+
+.color-50-70-30 {
+  color: #32461e; }
+
+.colorbg-50-70-30 {
+  background-color: #32461e; }
+
+.color-50-70-40 {
+  color: #324628; }
+
+.colorbg-50-70-40 {
+  background-color: #324628; }
+
+.color-50-70-50 {
+  color: #324632; }
+
+.colorbg-50-70-50 {
+  background-color: #324632; }
+
+.color-50-70-60 {
+  color: #32463c; }
+
+.colorbg-50-70-60 {
+  background-color: #32463c; }
+
+.color-50-70-70 {
+  color: #324646; }
+
+.colorbg-50-70-70 {
+  background-color: #324646; }
+
+.color-50-70-80 {
+  color: #324650; }
+
+.colorbg-50-70-80 {
+  background-color: #324650; }
+
+.color-50-70-90 {
+  color: #32465a; }
+
+.colorbg-50-70-90 {
+  background-color: #32465a; }
+
+.color-50-70-100 {
+  color: #324664; }
+
+.colorbg-50-70-100 {
+  background-color: #324664; }
+
+.color-50-80-0 {
+  color: #325000; }
+
+.colorbg-50-80-0 {
+  background-color: #325000; }
+
+.color-50-80-10 {
+  color: #32500a; }
+
+.colorbg-50-80-10 {
+  background-color: #32500a; }
+
+.color-50-80-20 {
+  color: #325014; }
+
+.colorbg-50-80-20 {
+  background-color: #325014; }
+
+.color-50-80-30 {
+  color: #32501e; }
+
+.colorbg-50-80-30 {
+  background-color: #32501e; }
+
+.color-50-80-40 {
+  color: #325028; }
+
+.colorbg-50-80-40 {
+  background-color: #325028; }
+
+.color-50-80-50 {
+  color: #325032; }
+
+.colorbg-50-80-50 {
+  background-color: #325032; }
+
+.color-50-80-60 {
+  color: #32503c; }
+
+.colorbg-50-80-60 {
+  background-color: #32503c; }
+
+.color-50-80-70 {
+  color: #325046; }
+
+.colorbg-50-80-70 {
+  background-color: #325046; }
+
+.color-50-80-80 {
+  color: #325050; }
+
+.colorbg-50-80-80 {
+  background-color: #325050; }
+
+.color-50-80-90 {
+  color: #32505a; }
+
+.colorbg-50-80-90 {
+  background-color: #32505a; }
+
+.color-50-80-100 {
+  color: #325064; }
+
+.colorbg-50-80-100 {
+  background-color: #325064; }
+
+.color-50-90-0 {
+  color: #325a00; }
+
+.colorbg-50-90-0 {
+  background-color: #325a00; }
+
+.color-50-90-10 {
+  color: #325a0a; }
+
+.colorbg-50-90-10 {
+  background-color: #325a0a; }
+
+.color-50-90-20 {
+  color: #325a14; }
+
+.colorbg-50-90-20 {
+  background-color: #325a14; }
+
+.color-50-90-30 {
+  color: #325a1e; }
+
+.colorbg-50-90-30 {
+  background-color: #325a1e; }
+
+.color-50-90-40 {
+  color: #325a28; }
+
+.colorbg-50-90-40 {
+  background-color: #325a28; }
+
+.color-50-90-50 {
+  color: #325a32; }
+
+.colorbg-50-90-50 {
+  background-color: #325a32; }
+
+.color-50-90-60 {
+  color: #325a3c; }
+
+.colorbg-50-90-60 {
+  background-color: #325a3c; }
+
+.color-50-90-70 {
+  color: #325a46; }
+
+.colorbg-50-90-70 {
+  background-color: #325a46; }
+
+.color-50-90-80 {
+  color: #325a50; }
+
+.colorbg-50-90-80 {
+  background-color: #325a50; }
+
+.color-50-90-90 {
+  color: #325a5a; }
+
+.colorbg-50-90-90 {
+  background-color: #325a5a; }
+
+.color-50-90-100 {
+  color: #325a64; }
+
+.colorbg-50-90-100 {
+  background-color: #325a64; }
+
+.color-50-100-0 {
+  color: #326400; }
+
+.colorbg-50-100-0 {
+  background-color: #326400; }
+
+.color-50-100-10 {
+  color: #32640a; }
+
+.colorbg-50-100-10 {
+  background-color: #32640a; }
+
+.color-50-100-20 {
+  color: #326414; }
+
+.colorbg-50-100-20 {
+  background-color: #326414; }
+
+.color-50-100-30 {
+  color: #32641e; }
+
+.colorbg-50-100-30 {
+  background-color: #32641e; }
+
+.color-50-100-40 {
+  color: #326428; }
+
+.colorbg-50-100-40 {
+  background-color: #326428; }
+
+.color-50-100-50 {
+  color: #326432; }
+
+.colorbg-50-100-50 {
+  background-color: #326432; }
+
+.color-50-100-60 {
+  color: #32643c; }
+
+.colorbg-50-100-60 {
+  background-color: #32643c; }
+
+.color-50-100-70 {
+  color: #326446; }
+
+.colorbg-50-100-70 {
+  background-color: #326446; }
+
+.color-50-100-80 {
+  color: #326450; }
+
+.colorbg-50-100-80 {
+  background-color: #326450; }
+
+.color-50-100-90 {
+  color: #32645a; }
+
+.colorbg-50-100-90 {
+  background-color: #32645a; }
+
+.color-50-100-100 {
+  color: #326464; }
+
+.colorbg-50-100-100 {
+  background-color: #326464; }
+
+.color-60-0-0 {
+  color: #3c0000; }
+
+.colorbg-60-0-0 {
+  background-color: #3c0000; }
+
+.color-60-0-10 {
+  color: #3c000a; }
+
+.colorbg-60-0-10 {
+  background-color: #3c000a; }
+
+.color-60-0-20 {
+  color: #3c0014; }
+
+.colorbg-60-0-20 {
+  background-color: #3c0014; }
+
+.color-60-0-30 {
+  color: #3c001e; }
+
+.colorbg-60-0-30 {
+  background-color: #3c001e; }
+
+.color-60-0-40 {
+  color: #3c0028; }
+
+.colorbg-60-0-40 {
+  background-color: #3c0028; }
+
+.color-60-0-50 {
+  color: #3c0032; }
+
+.colorbg-60-0-50 {
+  background-color: #3c0032; }
+
+.color-60-0-60 {
+  color: #3c003c; }
+
+.colorbg-60-0-60 {
+  background-color: #3c003c; }
+
+.color-60-0-70 {
+  color: #3c0046; }
+
+.colorbg-60-0-70 {
+  background-color: #3c0046; }
+
+.color-60-0-80 {
+  color: #3c0050; }
+
+.colorbg-60-0-80 {
+  background-color: #3c0050; }
+
+.color-60-0-90 {
+  color: #3c005a; }
+
+.colorbg-60-0-90 {
+  background-color: #3c005a; }
+
+.color-60-0-100 {
+  color: #3c0064; }
+
+.colorbg-60-0-100 {
+  background-color: #3c0064; }
+
+.color-60-10-0 {
+  color: #3c0a00; }
+
+.colorbg-60-10-0 {
+  background-color: #3c0a00; }
+
+.color-60-10-10 {
+  color: #3c0a0a; }
+
+.colorbg-60-10-10 {
+  background-color: #3c0a0a; }
+
+.color-60-10-20 {
+  color: #3c0a14; }
+
+.colorbg-60-10-20 {
+  background-color: #3c0a14; }
+
+.color-60-10-30 {
+  color: #3c0a1e; }
+
+.colorbg-60-10-30 {
+  background-color: #3c0a1e; }
+
+.color-60-10-40 {
+  color: #3c0a28; }
+
+.colorbg-60-10-40 {
+  background-color: #3c0a28; }
+
+.color-60-10-50 {
+  color: #3c0a32; }
+
+.colorbg-60-10-50 {
+  background-color: #3c0a32; }
+
+.color-60-10-60 {
+  color: #3c0a3c; }
+
+.colorbg-60-10-60 {
+  background-color: #3c0a3c; }
+
+.color-60-10-70 {
+  color: #3c0a46; }
+
+.colorbg-60-10-70 {
+  background-color: #3c0a46; }
+
+.color-60-10-80 {
+  color: #3c0a50; }
+
+.colorbg-60-10-80 {
+  background-color: #3c0a50; }
+
+.color-60-10-90 {
+  color: #3c0a5a; }
+
+.colorbg-60-10-90 {
+  background-color: #3c0a5a; }
+
+.color-60-10-100 {
+  color: #3c0a64; }
+
+.colorbg-60-10-100 {
+  background-color: #3c0a64; }
+
+.color-60-20-0 {
+  color: #3c1400; }
+
+.colorbg-60-20-0 {
+  background-color: #3c1400; }
+
+.color-60-20-10 {
+  color: #3c140a; }
+
+.colorbg-60-20-10 {
+  background-color: #3c140a; }
+
+.color-60-20-20 {
+  color: #3c1414; }
+
+.colorbg-60-20-20 {
+  background-color: #3c1414; }
+
+.color-60-20-30 {
+  color: #3c141e; }
+
+.colorbg-60-20-30 {
+  background-color: #3c141e; }
+
+.color-60-20-40 {
+  color: #3c1428; }
+
+.colorbg-60-20-40 {
+  background-color: #3c1428; }
+
+.color-60-20-50 {
+  color: #3c1432; }
+
+.colorbg-60-20-50 {
+  background-color: #3c1432; }
+
+.color-60-20-60 {
+  color: #3c143c; }
+
+.colorbg-60-20-60 {
+  background-color: #3c143c; }
+
+.color-60-20-70 {
+  color: #3c1446; }
+
+.colorbg-60-20-70 {
+  background-color: #3c1446; }
+
+.color-60-20-80 {
+  color: #3c1450; }
+
+.colorbg-60-20-80 {
+  background-color: #3c1450; }
+
+.color-60-20-90 {
+  color: #3c145a; }
+
+.colorbg-60-20-90 {
+  background-color: #3c145a; }
+
+.color-60-20-100 {
+  color: #3c1464; }
+
+.colorbg-60-20-100 {
+  background-color: #3c1464; }
+
+.color-60-30-0 {
+  color: #3c1e00; }
+
+.colorbg-60-30-0 {
+  background-color: #3c1e00; }
+
+.color-60-30-10 {
+  color: #3c1e0a; }
+
+.colorbg-60-30-10 {
+  background-color: #3c1e0a; }
+
+.color-60-30-20 {
+  color: #3c1e14; }
+
+.colorbg-60-30-20 {
+  background-color: #3c1e14; }
+
+.color-60-30-30 {
+  color: #3c1e1e; }
+
+.colorbg-60-30-30 {
+  background-color: #3c1e1e; }
+
+.color-60-30-40 {
+  color: #3c1e28; }
+
+.colorbg-60-30-40 {
+  background-color: #3c1e28; }
+
+.color-60-30-50 {
+  color: #3c1e32; }
+
+.colorbg-60-30-50 {
+  background-color: #3c1e32; }
+
+.color-60-30-60 {
+  color: #3c1e3c; }
+
+.colorbg-60-30-60 {
+  background-color: #3c1e3c; }
+
+.color-60-30-70 {
+  color: #3c1e46; }
+
+.colorbg-60-30-70 {
+  background-color: #3c1e46; }
+
+.color-60-30-80 {
+  color: #3c1e50; }
+
+.colorbg-60-30-80 {
+  background-color: #3c1e50; }
+
+.color-60-30-90 {
+  color: #3c1e5a; }
+
+.colorbg-60-30-90 {
+  background-color: #3c1e5a; }
+
+.color-60-30-100 {
+  color: #3c1e64; }
+
+.colorbg-60-30-100 {
+  background-color: #3c1e64; }
+
+.color-60-40-0 {
+  color: #3c2800; }
+
+.colorbg-60-40-0 {
+  background-color: #3c2800; }
+
+.color-60-40-10 {
+  color: #3c280a; }
+
+.colorbg-60-40-10 {
+  background-color: #3c280a; }
+
+.color-60-40-20 {
+  color: #3c2814; }
+
+.colorbg-60-40-20 {
+  background-color: #3c2814; }
+
+.color-60-40-30 {
+  color: #3c281e; }
+
+.colorbg-60-40-30 {
+  background-color: #3c281e; }
+
+.color-60-40-40 {
+  color: #3c2828; }
+
+.colorbg-60-40-40 {
+  background-color: #3c2828; }
+
+.color-60-40-50 {
+  color: #3c2832; }
+
+.colorbg-60-40-50 {
+  background-color: #3c2832; }
+
+.color-60-40-60 {
+  color: #3c283c; }
+
+.colorbg-60-40-60 {
+  background-color: #3c283c; }
+
+.color-60-40-70 {
+  color: #3c2846; }
+
+.colorbg-60-40-70 {
+  background-color: #3c2846; }
+
+.color-60-40-80 {
+  color: #3c2850; }
+
+.colorbg-60-40-80 {
+  background-color: #3c2850; }
+
+.color-60-40-90 {
+  color: #3c285a; }
+
+.colorbg-60-40-90 {
+  background-color: #3c285a; }
+
+.color-60-40-100 {
+  color: #3c2864; }
+
+.colorbg-60-40-100 {
+  background-color: #3c2864; }
+
+.color-60-50-0 {
+  color: #3c3200; }
+
+.colorbg-60-50-0 {
+  background-color: #3c3200; }
+
+.color-60-50-10 {
+  color: #3c320a; }
+
+.colorbg-60-50-10 {
+  background-color: #3c320a; }
+
+.color-60-50-20 {
+  color: #3c3214; }
+
+.colorbg-60-50-20 {
+  background-color: #3c3214; }
+
+.color-60-50-30 {
+  color: #3c321e; }
+
+.colorbg-60-50-30 {
+  background-color: #3c321e; }
+
+.color-60-50-40 {
+  color: #3c3228; }
+
+.colorbg-60-50-40 {
+  background-color: #3c3228; }
+
+.color-60-50-50 {
+  color: #3c3232; }
+
+.colorbg-60-50-50 {
+  background-color: #3c3232; }
+
+.color-60-50-60 {
+  color: #3c323c; }
+
+.colorbg-60-50-60 {
+  background-color: #3c323c; }
+
+.color-60-50-70 {
+  color: #3c3246; }
+
+.colorbg-60-50-70 {
+  background-color: #3c3246; }
+
+.color-60-50-80 {
+  color: #3c3250; }
+
+.colorbg-60-50-80 {
+  background-color: #3c3250; }
+
+.color-60-50-90 {
+  color: #3c325a; }
+
+.colorbg-60-50-90 {
+  background-color: #3c325a; }
+
+.color-60-50-100 {
+  color: #3c3264; }
+
+.colorbg-60-50-100 {
+  background-color: #3c3264; }
+
+.color-60-60-0 {
+  color: #3c3c00; }
+
+.colorbg-60-60-0 {
+  background-color: #3c3c00; }
+
+.color-60-60-10 {
+  color: #3c3c0a; }
+
+.colorbg-60-60-10 {
+  background-color: #3c3c0a; }
+
+.color-60-60-20 {
+  color: #3c3c14; }
+
+.colorbg-60-60-20 {
+  background-color: #3c3c14; }
+
+.color-60-60-30 {
+  color: #3c3c1e; }
+
+.colorbg-60-60-30 {
+  background-color: #3c3c1e; }
+
+.color-60-60-40 {
+  color: #3c3c28; }
+
+.colorbg-60-60-40 {
+  background-color: #3c3c28; }
+
+.color-60-60-50 {
+  color: #3c3c32; }
+
+.colorbg-60-60-50 {
+  background-color: #3c3c32; }
+
+.color-60-60-60 {
+  color: #3c3c3c; }
+
+.colorbg-60-60-60 {
+  background-color: #3c3c3c; }
+
+.color-60-60-70 {
+  color: #3c3c46; }
+
+.colorbg-60-60-70 {
+  background-color: #3c3c46; }
+
+.color-60-60-80 {
+  color: #3c3c50; }
+
+.colorbg-60-60-80 {
+  background-color: #3c3c50; }
+
+.color-60-60-90 {
+  color: #3c3c5a; }
+
+.colorbg-60-60-90 {
+  background-color: #3c3c5a; }
+
+.color-60-60-100 {
+  color: #3c3c64; }
+
+.colorbg-60-60-100 {
+  background-color: #3c3c64; }
+
+.color-60-70-0 {
+  color: #3c4600; }
+
+.colorbg-60-70-0 {
+  background-color: #3c4600; }
+
+.color-60-70-10 {
+  color: #3c460a; }
+
+.colorbg-60-70-10 {
+  background-color: #3c460a; }
+
+.color-60-70-20 {
+  color: #3c4614; }
+
+.colorbg-60-70-20 {
+  background-color: #3c4614; }
+
+.color-60-70-30 {
+  color: #3c461e; }
+
+.colorbg-60-70-30 {
+  background-color: #3c461e; }
+
+.color-60-70-40 {
+  color: #3c4628; }
+
+.colorbg-60-70-40 {
+  background-color: #3c4628; }
+
+.color-60-70-50 {
+  color: #3c4632; }
+
+.colorbg-60-70-50 {
+  background-color: #3c4632; }
+
+.color-60-70-60 {
+  color: #3c463c; }
+
+.colorbg-60-70-60 {
+  background-color: #3c463c; }
+
+.color-60-70-70 {
+  color: #3c4646; }
+
+.colorbg-60-70-70 {
+  background-color: #3c4646; }
+
+.color-60-70-80 {
+  color: #3c4650; }
+
+.colorbg-60-70-80 {
+  background-color: #3c4650; }
+
+.color-60-70-90 {
+  color: #3c465a; }
+
+.colorbg-60-70-90 {
+  background-color: #3c465a; }
+
+.color-60-70-100 {
+  color: #3c4664; }
+
+.colorbg-60-70-100 {
+  background-color: #3c4664; }
+
+.color-60-80-0 {
+  color: #3c5000; }
+
+.colorbg-60-80-0 {
+  background-color: #3c5000; }
+
+.color-60-80-10 {
+  color: #3c500a; }
+
+.colorbg-60-80-10 {
+  background-color: #3c500a; }
+
+.color-60-80-20 {
+  color: #3c5014; }
+
+.colorbg-60-80-20 {
+  background-color: #3c5014; }
+
+.color-60-80-30 {
+  color: #3c501e; }
+
+.colorbg-60-80-30 {
+  background-color: #3c501e; }
+
+.color-60-80-40 {
+  color: #3c5028; }
+
+.colorbg-60-80-40 {
+  background-color: #3c5028; }
+
+.color-60-80-50 {
+  color: #3c5032; }
+
+.colorbg-60-80-50 {
+  background-color: #3c5032; }
+
+.color-60-80-60 {
+  color: #3c503c; }
+
+.colorbg-60-80-60 {
+  background-color: #3c503c; }
+
+.color-60-80-70 {
+  color: #3c5046; }
+
+.colorbg-60-80-70 {
+  background-color: #3c5046; }
+
+.color-60-80-80 {
+  color: #3c5050; }
+
+.colorbg-60-80-80 {
+  background-color: #3c5050; }
+
+.color-60-80-90 {
+  color: #3c505a; }
+
+.colorbg-60-80-90 {
+  background-color: #3c505a; }
+
+.color-60-80-100 {
+  color: #3c5064; }
+
+.colorbg-60-80-100 {
+  background-color: #3c5064; }
+
+.color-60-90-0 {
+  color: #3c5a00; }
+
+.colorbg-60-90-0 {
+  background-color: #3c5a00; }
+
+.color-60-90-10 {
+  color: #3c5a0a; }
+
+.colorbg-60-90-10 {
+  background-color: #3c5a0a; }
+
+.color-60-90-20 {
+  color: #3c5a14; }
+
+.colorbg-60-90-20 {
+  background-color: #3c5a14; }
+
+.color-60-90-30 {
+  color: #3c5a1e; }
+
+.colorbg-60-90-30 {
+  background-color: #3c5a1e; }
+
+.color-60-90-40 {
+  color: #3c5a28; }
+
+.colorbg-60-90-40 {
+  background-color: #3c5a28; }
+
+.color-60-90-50 {
+  color: #3c5a32; }
+
+.colorbg-60-90-50 {
+  background-color: #3c5a32; }
+
+.color-60-90-60 {
+  color: #3c5a3c; }
+
+.colorbg-60-90-60 {
+  background-color: #3c5a3c; }
+
+.color-60-90-70 {
+  color: #3c5a46; }
+
+.colorbg-60-90-70 {
+  background-color: #3c5a46; }
+
+.color-60-90-80 {
+  color: #3c5a50; }
+
+.colorbg-60-90-80 {
+  background-color: #3c5a50; }
+
+.color-60-90-90 {
+  color: #3c5a5a; }
+
+.colorbg-60-90-90 {
+  background-color: #3c5a5a; }
+
+.color-60-90-100 {
+  color: #3c5a64; }
+
+.colorbg-60-90-100 {
+  background-color: #3c5a64; }
+
+.color-60-100-0 {
+  color: #3c6400; }
+
+.colorbg-60-100-0 {
+  background-color: #3c6400; }
+
+.color-60-100-10 {
+  color: #3c640a; }
+
+.colorbg-60-100-10 {
+  background-color: #3c640a; }
+
+.color-60-100-20 {
+  color: #3c6414; }
+
+.colorbg-60-100-20 {
+  background-color: #3c6414; }
+
+.color-60-100-30 {
+  color: #3c641e; }
+
+.colorbg-60-100-30 {
+  background-color: #3c641e; }
+
+.color-60-100-40 {
+  color: #3c6428; }
+
+.colorbg-60-100-40 {
+  background-color: #3c6428; }
+
+.color-60-100-50 {
+  color: #3c6432; }
+
+.colorbg-60-100-50 {
+  background-color: #3c6432; }
+
+.color-60-100-60 {
+  color: #3c643c; }
+
+.colorbg-60-100-60 {
+  background-color: #3c643c; }
+
+.color-60-100-70 {
+  color: #3c6446; }
+
+.colorbg-60-100-70 {
+  background-color: #3c6446; }
+
+.color-60-100-80 {
+  color: #3c6450; }
+
+.colorbg-60-100-80 {
+  background-color: #3c6450; }
+
+.color-60-100-90 {
+  color: #3c645a; }
+
+.colorbg-60-100-90 {
+  background-color: #3c645a; }
+
+.color-60-100-100 {
+  color: #3c6464; }
+
+.colorbg-60-100-100 {
+  background-color: #3c6464; }
+
+.color-70-0-0 {
+  color: #460000; }
+
+.colorbg-70-0-0 {
+  background-color: #460000; }
+
+.color-70-0-10 {
+  color: #46000a; }
+
+.colorbg-70-0-10 {
+  background-color: #46000a; }
+
+.color-70-0-20 {
+  color: #460014; }
+
+.colorbg-70-0-20 {
+  background-color: #460014; }
+
+.color-70-0-30 {
+  color: #46001e; }
+
+.colorbg-70-0-30 {
+  background-color: #46001e; }
+
+.color-70-0-40 {
+  color: #460028; }
+
+.colorbg-70-0-40 {
+  background-color: #460028; }
+
+.color-70-0-50 {
+  color: #460032; }
+
+.colorbg-70-0-50 {
+  background-color: #460032; }
+
+.color-70-0-60 {
+  color: #46003c; }
+
+.colorbg-70-0-60 {
+  background-color: #46003c; }
+
+.color-70-0-70 {
+  color: #460046; }
+
+.colorbg-70-0-70 {
+  background-color: #460046; }
+
+.color-70-0-80 {
+  color: #460050; }
+
+.colorbg-70-0-80 {
+  background-color: #460050; }
+
+.color-70-0-90 {
+  color: #46005a; }
+
+.colorbg-70-0-90 {
+  background-color: #46005a; }
+
+.color-70-0-100 {
+  color: #460064; }
+
+.colorbg-70-0-100 {
+  background-color: #460064; }
+
+.color-70-10-0 {
+  color: #460a00; }
+
+.colorbg-70-10-0 {
+  background-color: #460a00; }
+
+.color-70-10-10 {
+  color: #460a0a; }
+
+.colorbg-70-10-10 {
+  background-color: #460a0a; }
+
+.color-70-10-20 {
+  color: #460a14; }
+
+.colorbg-70-10-20 {
+  background-color: #460a14; }
+
+.color-70-10-30 {
+  color: #460a1e; }
+
+.colorbg-70-10-30 {
+  background-color: #460a1e; }
+
+.color-70-10-40 {
+  color: #460a28; }
+
+.colorbg-70-10-40 {
+  background-color: #460a28; }
+
+.color-70-10-50 {
+  color: #460a32; }
+
+.colorbg-70-10-50 {
+  background-color: #460a32; }
+
+.color-70-10-60 {
+  color: #460a3c; }
+
+.colorbg-70-10-60 {
+  background-color: #460a3c; }
+
+.color-70-10-70 {
+  color: #460a46; }
+
+.colorbg-70-10-70 {
+  background-color: #460a46; }
+
+.color-70-10-80 {
+  color: #460a50; }
+
+.colorbg-70-10-80 {
+  background-color: #460a50; }
+
+.color-70-10-90 {
+  color: #460a5a; }
+
+.colorbg-70-10-90 {
+  background-color: #460a5a; }
+
+.color-70-10-100 {
+  color: #460a64; }
+
+.colorbg-70-10-100 {
+  background-color: #460a64; }
+
+.color-70-20-0 {
+  color: #461400; }
+
+.colorbg-70-20-0 {
+  background-color: #461400; }
+
+.color-70-20-10 {
+  color: #46140a; }
+
+.colorbg-70-20-10 {
+  background-color: #46140a; }
+
+.color-70-20-20 {
+  color: #461414; }
+
+.colorbg-70-20-20 {
+  background-color: #461414; }
+
+.color-70-20-30 {
+  color: #46141e; }
+
+.colorbg-70-20-30 {
+  background-color: #46141e; }
+
+.color-70-20-40 {
+  color: #461428; }
+
+.colorbg-70-20-40 {
+  background-color: #461428; }
+
+.color-70-20-50 {
+  color: #461432; }
+
+.colorbg-70-20-50 {
+  background-color: #461432; }
+
+.color-70-20-60 {
+  color: #46143c; }
+
+.colorbg-70-20-60 {
+  background-color: #46143c; }
+
+.color-70-20-70 {
+  color: #461446; }
+
+.colorbg-70-20-70 {
+  background-color: #461446; }
+
+.color-70-20-80 {
+  color: #461450; }
+
+.colorbg-70-20-80 {
+  background-color: #461450; }
+
+.color-70-20-90 {
+  color: #46145a; }
+
+.colorbg-70-20-90 {
+  background-color: #46145a; }
+
+.color-70-20-100 {
+  color: #461464; }
+
+.colorbg-70-20-100 {
+  background-color: #461464; }
+
+.color-70-30-0 {
+  color: #461e00; }
+
+.colorbg-70-30-0 {
+  background-color: #461e00; }
+
+.color-70-30-10 {
+  color: #461e0a; }
+
+.colorbg-70-30-10 {
+  background-color: #461e0a; }
+
+.color-70-30-20 {
+  color: #461e14; }
+
+.colorbg-70-30-20 {
+  background-color: #461e14; }
+
+.color-70-30-30 {
+  color: #461e1e; }
+
+.colorbg-70-30-30 {
+  background-color: #461e1e; }
+
+.color-70-30-40 {
+  color: #461e28; }
+
+.colorbg-70-30-40 {
+  background-color: #461e28; }
+
+.color-70-30-50 {
+  color: #461e32; }
+
+.colorbg-70-30-50 {
+  background-color: #461e32; }
+
+.color-70-30-60 {
+  color: #461e3c; }
+
+.colorbg-70-30-60 {
+  background-color: #461e3c; }
+
+.color-70-30-70 {
+  color: #461e46; }
+
+.colorbg-70-30-70 {
+  background-color: #461e46; }
+
+.color-70-30-80 {
+  color: #461e50; }
+
+.colorbg-70-30-80 {
+  background-color: #461e50; }
+
+.color-70-30-90 {
+  color: #461e5a; }
+
+.colorbg-70-30-90 {
+  background-color: #461e5a; }
+
+.color-70-30-100 {
+  color: #461e64; }
+
+.colorbg-70-30-100 {
+  background-color: #461e64; }
+
+.color-70-40-0 {
+  color: #462800; }
+
+.colorbg-70-40-0 {
+  background-color: #462800; }
+
+.color-70-40-10 {
+  color: #46280a; }
+
+.colorbg-70-40-10 {
+  background-color: #46280a; }
+
+.color-70-40-20 {
+  color: #462814; }
+
+.colorbg-70-40-20 {
+  background-color: #462814; }
+
+.color-70-40-30 {
+  color: #46281e; }
+
+.colorbg-70-40-30 {
+  background-color: #46281e; }
+
+.color-70-40-40 {
+  color: #462828; }
+
+.colorbg-70-40-40 {
+  background-color: #462828; }
+
+.color-70-40-50 {
+  color: #462832; }
+
+.colorbg-70-40-50 {
+  background-color: #462832; }
+
+.color-70-40-60 {
+  color: #46283c; }
+
+.colorbg-70-40-60 {
+  background-color: #46283c; }
+
+.color-70-40-70 {
+  color: #462846; }
+
+.colorbg-70-40-70 {
+  background-color: #462846; }
+
+.color-70-40-80 {
+  color: #462850; }
+
+.colorbg-70-40-80 {
+  background-color: #462850; }
+
+.color-70-40-90 {
+  color: #46285a; }
+
+.colorbg-70-40-90 {
+  background-color: #46285a; }
+
+.color-70-40-100 {
+  color: #462864; }
+
+.colorbg-70-40-100 {
+  background-color: #462864; }
+
+.color-70-50-0 {
+  color: #463200; }
+
+.colorbg-70-50-0 {
+  background-color: #463200; }
+
+.color-70-50-10 {
+  color: #46320a; }
+
+.colorbg-70-50-10 {
+  background-color: #46320a; }
+
+.color-70-50-20 {
+  color: #463214; }
+
+.colorbg-70-50-20 {
+  background-color: #463214; }
+
+.color-70-50-30 {
+  color: #46321e; }
+
+.colorbg-70-50-30 {
+  background-color: #46321e; }
+
+.color-70-50-40 {
+  color: #463228; }
+
+.colorbg-70-50-40 {
+  background-color: #463228; }
+
+.color-70-50-50 {
+  color: #463232; }
+
+.colorbg-70-50-50 {
+  background-color: #463232; }
+
+.color-70-50-60 {
+  color: #46323c; }
+
+.colorbg-70-50-60 {
+  background-color: #46323c; }
+
+.color-70-50-70 {
+  color: #463246; }
+
+.colorbg-70-50-70 {
+  background-color: #463246; }
+
+.color-70-50-80 {
+  color: #463250; }
+
+.colorbg-70-50-80 {
+  background-color: #463250; }
+
+.color-70-50-90 {
+  color: #46325a; }
+
+.colorbg-70-50-90 {
+  background-color: #46325a; }
+
+.color-70-50-100 {
+  color: #463264; }
+
+.colorbg-70-50-100 {
+  background-color: #463264; }
+
+.color-70-60-0 {
+  color: #463c00; }
+
+.colorbg-70-60-0 {
+  background-color: #463c00; }
+
+.color-70-60-10 {
+  color: #463c0a; }
+
+.colorbg-70-60-10 {
+  background-color: #463c0a; }
+
+.color-70-60-20 {
+  color: #463c14; }
+
+.colorbg-70-60-20 {
+  background-color: #463c14; }
+
+.color-70-60-30 {
+  color: #463c1e; }
+
+.colorbg-70-60-30 {
+  background-color: #463c1e; }
+
+.color-70-60-40 {
+  color: #463c28; }
+
+.colorbg-70-60-40 {
+  background-color: #463c28; }
+
+.color-70-60-50 {
+  color: #463c32; }
+
+.colorbg-70-60-50 {
+  background-color: #463c32; }
+
+.color-70-60-60 {
+  color: #463c3c; }
+
+.colorbg-70-60-60 {
+  background-color: #463c3c; }
+
+.color-70-60-70 {
+  color: #463c46; }
+
+.colorbg-70-60-70 {
+  background-color: #463c46; }
+
+.color-70-60-80 {
+  color: #463c50; }
+
+.colorbg-70-60-80 {
+  background-color: #463c50; }
+
+.color-70-60-90 {
+  color: #463c5a; }
+
+.colorbg-70-60-90 {
+  background-color: #463c5a; }
+
+.color-70-60-100 {
+  color: #463c64; }
+
+.colorbg-70-60-100 {
+  background-color: #463c64; }
+
+.color-70-70-0 {
+  color: #464600; }
+
+.colorbg-70-70-0 {
+  background-color: #464600; }
+
+.color-70-70-10 {
+  color: #46460a; }
+
+.colorbg-70-70-10 {
+  background-color: #46460a; }
+
+.color-70-70-20 {
+  color: #464614; }
+
+.colorbg-70-70-20 {
+  background-color: #464614; }
+
+.color-70-70-30 {
+  color: #46461e; }
+
+.colorbg-70-70-30 {
+  background-color: #46461e; }
+
+.color-70-70-40 {
+  color: #464628; }
+
+.colorbg-70-70-40 {
+  background-color: #464628; }
+
+.color-70-70-50 {
+  color: #464632; }
+
+.colorbg-70-70-50 {
+  background-color: #464632; }
+
+.color-70-70-60 {
+  color: #46463c; }
+
+.colorbg-70-70-60 {
+  background-color: #46463c; }
+
+.color-70-70-70 {
+  color: #464646; }
+
+.colorbg-70-70-70 {
+  background-color: #464646; }
+
+.color-70-70-80 {
+  color: #464650; }
+
+.colorbg-70-70-80 {
+  background-color: #464650; }
+
+.color-70-70-90 {
+  color: #46465a; }
+
+.colorbg-70-70-90 {
+  background-color: #46465a; }
+
+.color-70-70-100 {
+  color: #464664; }
+
+.colorbg-70-70-100 {
+  background-color: #464664; }
+
+.color-70-80-0 {
+  color: #465000; }
+
+.colorbg-70-80-0 {
+  background-color: #465000; }
+
+.color-70-80-10 {
+  color: #46500a; }
+
+.colorbg-70-80-10 {
+  background-color: #46500a; }
+
+.color-70-80-20 {
+  color: #465014; }
+
+.colorbg-70-80-20 {
+  background-color: #465014; }
+
+.color-70-80-30 {
+  color: #46501e; }
+
+.colorbg-70-80-30 {
+  background-color: #46501e; }
+
+.color-70-80-40 {
+  color: #465028; }
+
+.colorbg-70-80-40 {
+  background-color: #465028; }
+
+.color-70-80-50 {
+  color: #465032; }
+
+.colorbg-70-80-50 {
+  background-color: #465032; }
+
+.color-70-80-60 {
+  color: #46503c; }
+
+.colorbg-70-80-60 {
+  background-color: #46503c; }
+
+.color-70-80-70 {
+  color: #465046; }
+
+.colorbg-70-80-70 {
+  background-color: #465046; }
+
+.color-70-80-80 {
+  color: #465050; }
+
+.colorbg-70-80-80 {
+  background-color: #465050; }
+
+.color-70-80-90 {
+  color: #46505a; }
+
+.colorbg-70-80-90 {
+  background-color: #46505a; }
+
+.color-70-80-100 {
+  color: #465064; }
+
+.colorbg-70-80-100 {
+  background-color: #465064; }
+
+.color-70-90-0 {
+  color: #465a00; }
+
+.colorbg-70-90-0 {
+  background-color: #465a00; }
+
+.color-70-90-10 {
+  color: #465a0a; }
+
+.colorbg-70-90-10 {
+  background-color: #465a0a; }
+
+.color-70-90-20 {
+  color: #465a14; }
+
+.colorbg-70-90-20 {
+  background-color: #465a14; }
+
+.color-70-90-30 {
+  color: #465a1e; }
+
+.colorbg-70-90-30 {
+  background-color: #465a1e; }
+
+.color-70-90-40 {
+  color: #465a28; }
+
+.colorbg-70-90-40 {
+  background-color: #465a28; }
+
+.color-70-90-50 {
+  color: #465a32; }
+
+.colorbg-70-90-50 {
+  background-color: #465a32; }
+
+.color-70-90-60 {
+  color: #465a3c; }
+
+.colorbg-70-90-60 {
+  background-color: #465a3c; }
+
+.color-70-90-70 {
+  color: #465a46; }
+
+.colorbg-70-90-70 {
+  background-color: #465a46; }
+
+.color-70-90-80 {
+  color: #465a50; }
+
+.colorbg-70-90-80 {
+  background-color: #465a50; }
+
+.color-70-90-90 {
+  color: #465a5a; }
+
+.colorbg-70-90-90 {
+  background-color: #465a5a; }
+
+.color-70-90-100 {
+  color: #465a64; }
+
+.colorbg-70-90-100 {
+  background-color: #465a64; }
+
+.color-70-100-0 {
+  color: #466400; }
+
+.colorbg-70-100-0 {
+  background-color: #466400; }
+
+.color-70-100-10 {
+  color: #46640a; }
+
+.colorbg-70-100-10 {
+  background-color: #46640a; }
+
+.color-70-100-20 {
+  color: #466414; }
+
+.colorbg-70-100-20 {
+  background-color: #466414; }
+
+.color-70-100-30 {
+  color: #46641e; }
+
+.colorbg-70-100-30 {
+  background-color: #46641e; }
+
+.color-70-100-40 {
+  color: #466428; }
+
+.colorbg-70-100-40 {
+  background-color: #466428; }
+
+.color-70-100-50 {
+  color: #466432; }
+
+.colorbg-70-100-50 {
+  background-color: #466432; }
+
+.color-70-100-60 {
+  color: #46643c; }
+
+.colorbg-70-100-60 {
+  background-color: #46643c; }
+
+.color-70-100-70 {
+  color: #466446; }
+
+.colorbg-70-100-70 {
+  background-color: #466446; }
+
+.color-70-100-80 {
+  color: #466450; }
+
+.colorbg-70-100-80 {
+  background-color: #466450; }
+
+.color-70-100-90 {
+  color: #46645a; }
+
+.colorbg-70-100-90 {
+  background-color: #46645a; }
+
+.color-70-100-100 {
+  color: #466464; }
+
+.colorbg-70-100-100 {
+  background-color: #466464; }
+
+.color-80-0-0 {
+  color: #500000; }
+
+.colorbg-80-0-0 {
+  background-color: #500000; }
+
+.color-80-0-10 {
+  color: #50000a; }
+
+.colorbg-80-0-10 {
+  background-color: #50000a; }
+
+.color-80-0-20 {
+  color: #500014; }
+
+.colorbg-80-0-20 {
+  background-color: #500014; }
+
+.color-80-0-30 {
+  color: #50001e; }
+
+.colorbg-80-0-30 {
+  background-color: #50001e; }
+
+.color-80-0-40 {
+  color: #500028; }
+
+.colorbg-80-0-40 {
+  background-color: #500028; }
+
+.color-80-0-50 {
+  color: #500032; }
+
+.colorbg-80-0-50 {
+  background-color: #500032; }
+
+.color-80-0-60 {
+  color: #50003c; }
+
+.colorbg-80-0-60 {
+  background-color: #50003c; }
+
+.color-80-0-70 {
+  color: #500046; }
+
+.colorbg-80-0-70 {
+  background-color: #500046; }
+
+.color-80-0-80 {
+  color: #500050; }
+
+.colorbg-80-0-80 {
+  background-color: #500050; }
+
+.color-80-0-90 {
+  color: #50005a; }
+
+.colorbg-80-0-90 {
+  background-color: #50005a; }
+
+.color-80-0-100 {
+  color: #500064; }
+
+.colorbg-80-0-100 {
+  background-color: #500064; }
+
+.color-80-10-0 {
+  color: #500a00; }
+
+.colorbg-80-10-0 {
+  background-color: #500a00; }
+
+.color-80-10-10 {
+  color: #500a0a; }
+
+.colorbg-80-10-10 {
+  background-color: #500a0a; }
+
+.color-80-10-20 {
+  color: #500a14; }
+
+.colorbg-80-10-20 {
+  background-color: #500a14; }
+
+.color-80-10-30 {
+  color: #500a1e; }
+
+.colorbg-80-10-30 {
+  background-color: #500a1e; }
+
+.color-80-10-40 {
+  color: #500a28; }
+
+.colorbg-80-10-40 {
+  background-color: #500a28; }
+
+.color-80-10-50 {
+  color: #500a32; }
+
+.colorbg-80-10-50 {
+  background-color: #500a32; }
+
+.color-80-10-60 {
+  color: #500a3c; }
+
+.colorbg-80-10-60 {
+  background-color: #500a3c; }
+
+.color-80-10-70 {
+  color: #500a46; }
+
+.colorbg-80-10-70 {
+  background-color: #500a46; }
+
+.color-80-10-80 {
+  color: #500a50; }
+
+.colorbg-80-10-80 {
+  background-color: #500a50; }
+
+.color-80-10-90 {
+  color: #500a5a; }
+
+.colorbg-80-10-90 {
+  background-color: #500a5a; }
+
+.color-80-10-100 {
+  color: #500a64; }
+
+.colorbg-80-10-100 {
+  background-color: #500a64; }
+
+.color-80-20-0 {
+  color: #501400; }
+
+.colorbg-80-20-0 {
+  background-color: #501400; }
+
+.color-80-20-10 {
+  color: #50140a; }
+
+.colorbg-80-20-10 {
+  background-color: #50140a; }
+
+.color-80-20-20 {
+  color: #501414; }
+
+.colorbg-80-20-20 {
+  background-color: #501414; }
+
+.color-80-20-30 {
+  color: #50141e; }
+
+.colorbg-80-20-30 {
+  background-color: #50141e; }
+
+.color-80-20-40 {
+  color: #501428; }
+
+.colorbg-80-20-40 {
+  background-color: #501428; }
+
+.color-80-20-50 {
+  color: #501432; }
+
+.colorbg-80-20-50 {
+  background-color: #501432; }
+
+.color-80-20-60 {
+  color: #50143c; }
+
+.colorbg-80-20-60 {
+  background-color: #50143c; }
+
+.color-80-20-70 {
+  color: #501446; }
+
+.colorbg-80-20-70 {
+  background-color: #501446; }
+
+.color-80-20-80 {
+  color: #501450; }
+
+.colorbg-80-20-80 {
+  background-color: #501450; }
+
+.color-80-20-90 {
+  color: #50145a; }
+
+.colorbg-80-20-90 {
+  background-color: #50145a; }
+
+.color-80-20-100 {
+  color: #501464; }
+
+.colorbg-80-20-100 {
+  background-color: #501464; }
+
+.color-80-30-0 {
+  color: #501e00; }
+
+.colorbg-80-30-0 {
+  background-color: #501e00; }
+
+.color-80-30-10 {
+  color: #501e0a; }
+
+.colorbg-80-30-10 {
+  background-color: #501e0a; }
+
+.color-80-30-20 {
+  color: #501e14; }
+
+.colorbg-80-30-20 {
+  background-color: #501e14; }
+
+.color-80-30-30 {
+  color: #501e1e; }
+
+.colorbg-80-30-30 {
+  background-color: #501e1e; }
+
+.color-80-30-40 {
+  color: #501e28; }
+
+.colorbg-80-30-40 {
+  background-color: #501e28; }
+
+.color-80-30-50 {
+  color: #501e32; }
+
+.colorbg-80-30-50 {
+  background-color: #501e32; }
+
+.color-80-30-60 {
+  color: #501e3c; }
+
+.colorbg-80-30-60 {
+  background-color: #501e3c; }
+
+.color-80-30-70 {
+  color: #501e46; }
+
+.colorbg-80-30-70 {
+  background-color: #501e46; }
+
+.color-80-30-80 {
+  color: #501e50; }
+
+.colorbg-80-30-80 {
+  background-color: #501e50; }
+
+.color-80-30-90 {
+  color: #501e5a; }
+
+.colorbg-80-30-90 {
+  background-color: #501e5a; }
+
+.color-80-30-100 {
+  color: #501e64; }
+
+.colorbg-80-30-100 {
+  background-color: #501e64; }
+
+.color-80-40-0 {
+  color: #502800; }
+
+.colorbg-80-40-0 {
+  background-color: #502800; }
+
+.color-80-40-10 {
+  color: #50280a; }
+
+.colorbg-80-40-10 {
+  background-color: #50280a; }
+
+.color-80-40-20 {
+  color: #502814; }
+
+.colorbg-80-40-20 {
+  background-color: #502814; }
+
+.color-80-40-30 {
+  color: #50281e; }
+
+.colorbg-80-40-30 {
+  background-color: #50281e; }
+
+.color-80-40-40 {
+  color: #502828; }
+
+.colorbg-80-40-40 {
+  background-color: #502828; }
+
+.color-80-40-50 {
+  color: #502832; }
+
+.colorbg-80-40-50 {
+  background-color: #502832; }
+
+.color-80-40-60 {
+  color: #50283c; }
+
+.colorbg-80-40-60 {
+  background-color: #50283c; }
+
+.color-80-40-70 {
+  color: #502846; }
+
+.colorbg-80-40-70 {
+  background-color: #502846; }
+
+.color-80-40-80 {
+  color: #502850; }
+
+.colorbg-80-40-80 {
+  background-color: #502850; }
+
+.color-80-40-90 {
+  color: #50285a; }
+
+.colorbg-80-40-90 {
+  background-color: #50285a; }
+
+.color-80-40-100 {
+  color: #502864; }
+
+.colorbg-80-40-100 {
+  background-color: #502864; }
+
+.color-80-50-0 {
+  color: #503200; }
+
+.colorbg-80-50-0 {
+  background-color: #503200; }
+
+.color-80-50-10 {
+  color: #50320a; }
+
+.colorbg-80-50-10 {
+  background-color: #50320a; }
+
+.color-80-50-20 {
+  color: #503214; }
+
+.colorbg-80-50-20 {
+  background-color: #503214; }
+
+.color-80-50-30 {
+  color: #50321e; }
+
+.colorbg-80-50-30 {
+  background-color: #50321e; }
+
+.color-80-50-40 {
+  color: #503228; }
+
+.colorbg-80-50-40 {
+  background-color: #503228; }
+
+.color-80-50-50 {
+  color: #503232; }
+
+.colorbg-80-50-50 {
+  background-color: #503232; }
+
+.color-80-50-60 {
+  color: #50323c; }
+
+.colorbg-80-50-60 {
+  background-color: #50323c; }
+
+.color-80-50-70 {
+  color: #503246; }
+
+.colorbg-80-50-70 {
+  background-color: #503246; }
+
+.color-80-50-80 {
+  color: #503250; }
+
+.colorbg-80-50-80 {
+  background-color: #503250; }
+
+.color-80-50-90 {
+  color: #50325a; }
+
+.colorbg-80-50-90 {
+  background-color: #50325a; }
+
+.color-80-50-100 {
+  color: #503264; }
+
+.colorbg-80-50-100 {
+  background-color: #503264; }
+
+.color-80-60-0 {
+  color: #503c00; }
+
+.colorbg-80-60-0 {
+  background-color: #503c00; }
+
+.color-80-60-10 {
+  color: #503c0a; }
+
+.colorbg-80-60-10 {
+  background-color: #503c0a; }
+
+.color-80-60-20 {
+  color: #503c14; }
+
+.colorbg-80-60-20 {
+  background-color: #503c14; }
+
+.color-80-60-30 {
+  color: #503c1e; }
+
+.colorbg-80-60-30 {
+  background-color: #503c1e; }
+
+.color-80-60-40 {
+  color: #503c28; }
+
+.colorbg-80-60-40 {
+  background-color: #503c28; }
+
+.color-80-60-50 {
+  color: #503c32; }
+
+.colorbg-80-60-50 {
+  background-color: #503c32; }
+
+.color-80-60-60 {
+  color: #503c3c; }
+
+.colorbg-80-60-60 {
+  background-color: #503c3c; }
+
+.color-80-60-70 {
+  color: #503c46; }
+
+.colorbg-80-60-70 {
+  background-color: #503c46; }
+
+.color-80-60-80 {
+  color: #503c50; }
+
+.colorbg-80-60-80 {
+  background-color: #503c50; }
+
+.color-80-60-90 {
+  color: #503c5a; }
+
+.colorbg-80-60-90 {
+  background-color: #503c5a; }
+
+.color-80-60-100 {
+  color: #503c64; }
+
+.colorbg-80-60-100 {
+  background-color: #503c64; }
+
+.color-80-70-0 {
+  color: #504600; }
+
+.colorbg-80-70-0 {
+  background-color: #504600; }
+
+.color-80-70-10 {
+  color: #50460a; }
+
+.colorbg-80-70-10 {
+  background-color: #50460a; }
+
+.color-80-70-20 {
+  color: #504614; }
+
+.colorbg-80-70-20 {
+  background-color: #504614; }
+
+.color-80-70-30 {
+  color: #50461e; }
+
+.colorbg-80-70-30 {
+  background-color: #50461e; }
+
+.color-80-70-40 {
+  color: #504628; }
+
+.colorbg-80-70-40 {
+  background-color: #504628; }
+
+.color-80-70-50 {
+  color: #504632; }
+
+.colorbg-80-70-50 {
+  background-color: #504632; }
+
+.color-80-70-60 {
+  color: #50463c; }
+
+.colorbg-80-70-60 {
+  background-color: #50463c; }
+
+.color-80-70-70 {
+  color: #504646; }
+
+.colorbg-80-70-70 {
+  background-color: #504646; }
+
+.color-80-70-80 {
+  color: #504650; }
+
+.colorbg-80-70-80 {
+  background-color: #504650; }
+
+.color-80-70-90 {
+  color: #50465a; }
+
+.colorbg-80-70-90 {
+  background-color: #50465a; }
+
+.color-80-70-100 {
+  color: #504664; }
+
+.colorbg-80-70-100 {
+  background-color: #504664; }
+
+.color-80-80-0 {
+  color: #505000; }
+
+.colorbg-80-80-0 {
+  background-color: #505000; }
+
+.color-80-80-10 {
+  color: #50500a; }
+
+.colorbg-80-80-10 {
+  background-color: #50500a; }
+
+.color-80-80-20 {
+  color: #505014; }
+
+.colorbg-80-80-20 {
+  background-color: #505014; }
+
+.color-80-80-30 {
+  color: #50501e; }
+
+.colorbg-80-80-30 {
+  background-color: #50501e; }
+
+.color-80-80-40 {
+  color: #505028; }
+
+.colorbg-80-80-40 {
+  background-color: #505028; }
+
+.color-80-80-50 {
+  color: #505032; }
+
+.colorbg-80-80-50 {
+  background-color: #505032; }
+
+.color-80-80-60 {
+  color: #50503c; }
+
+.colorbg-80-80-60 {
+  background-color: #50503c; }
+
+.color-80-80-70 {
+  color: #505046; }
+
+.colorbg-80-80-70 {
+  background-color: #505046; }
+
+.color-80-80-80 {
+  color: #505050; }
+
+.colorbg-80-80-80 {
+  background-color: #505050; }
+
+.color-80-80-90 {
+  color: #50505a; }
+
+.colorbg-80-80-90 {
+  background-color: #50505a; }
+
+.color-80-80-100 {
+  color: #505064; }
+
+.colorbg-80-80-100 {
+  background-color: #505064; }
+
+.color-80-90-0 {
+  color: #505a00; }
+
+.colorbg-80-90-0 {
+  background-color: #505a00; }
+
+.color-80-90-10 {
+  color: #505a0a; }
+
+.colorbg-80-90-10 {
+  background-color: #505a0a; }
+
+.color-80-90-20 {
+  color: #505a14; }
+
+.colorbg-80-90-20 {
+  background-color: #505a14; }
+
+.color-80-90-30 {
+  color: #505a1e; }
+
+.colorbg-80-90-30 {
+  background-color: #505a1e; }
+
+.color-80-90-40 {
+  color: #505a28; }
+
+.colorbg-80-90-40 {
+  background-color: #505a28; }
+
+.color-80-90-50 {
+  color: #505a32; }
+
+.colorbg-80-90-50 {
+  background-color: #505a32; }
+
+.color-80-90-60 {
+  color: #505a3c; }
+
+.colorbg-80-90-60 {
+  background-color: #505a3c; }
+
+.color-80-90-70 {
+  color: #505a46; }
+
+.colorbg-80-90-70 {
+  background-color: #505a46; }
+
+.color-80-90-80 {
+  color: #505a50; }
+
+.colorbg-80-90-80 {
+  background-color: #505a50; }
+
+.color-80-90-90 {
+  color: #505a5a; }
+
+.colorbg-80-90-90 {
+  background-color: #505a5a; }
+
+.color-80-90-100 {
+  color: #505a64; }
+
+.colorbg-80-90-100 {
+  background-color: #505a64; }
+
+.color-80-100-0 {
+  color: #506400; }
+
+.colorbg-80-100-0 {
+  background-color: #506400; }
+
+.color-80-100-10 {
+  color: #50640a; }
+
+.colorbg-80-100-10 {
+  background-color: #50640a; }
+
+.color-80-100-20 {
+  color: #506414; }
+
+.colorbg-80-100-20 {
+  background-color: #506414; }
+
+.color-80-100-30 {
+  color: #50641e; }
+
+.colorbg-80-100-30 {
+  background-color: #50641e; }
+
+.color-80-100-40 {
+  color: #506428; }
+
+.colorbg-80-100-40 {
+  background-color: #506428; }
+
+.color-80-100-50 {
+  color: #506432; }
+
+.colorbg-80-100-50 {
+  background-color: #506432; }
+
+.color-80-100-60 {
+  color: #50643c; }
+
+.colorbg-80-100-60 {
+  background-color: #50643c; }
+
+.color-80-100-70 {
+  color: #506446; }
+
+.colorbg-80-100-70 {
+  background-color: #506446; }
+
+.color-80-100-80 {
+  color: #506450; }
+
+.colorbg-80-100-80 {
+  background-color: #506450; }
+
+.color-80-100-90 {
+  color: #50645a; }
+
+.colorbg-80-100-90 {
+  background-color: #50645a; }
+
+.color-80-100-100 {
+  color: #506464; }
+
+.colorbg-80-100-100 {
+  background-color: #506464; }
+
+.color-90-0-0 {
+  color: #5a0000; }
+
+.colorbg-90-0-0 {
+  background-color: #5a0000; }
+
+.color-90-0-10 {
+  color: #5a000a; }
+
+.colorbg-90-0-10 {
+  background-color: #5a000a; }
+
+.color-90-0-20 {
+  color: #5a0014; }
+
+.colorbg-90-0-20 {
+  background-color: #5a0014; }
+
+.color-90-0-30 {
+  color: #5a001e; }
+
+.colorbg-90-0-30 {
+  background-color: #5a001e; }
+
+.color-90-0-40 {
+  color: #5a0028; }
+
+.colorbg-90-0-40 {
+  background-color: #5a0028; }
+
+.color-90-0-50 {
+  color: #5a0032; }
+
+.colorbg-90-0-50 {
+  background-color: #5a0032; }
+
+.color-90-0-60 {
+  color: #5a003c; }
+
+.colorbg-90-0-60 {
+  background-color: #5a003c; }
+
+.color-90-0-70 {
+  color: #5a0046; }
+
+.colorbg-90-0-70 {
+  background-color: #5a0046; }
+
+.color-90-0-80 {
+  color: #5a0050; }
+
+.colorbg-90-0-80 {
+  background-color: #5a0050; }
+
+.color-90-0-90 {
+  color: #5a005a; }
+
+.colorbg-90-0-90 {
+  background-color: #5a005a; }
+
+.color-90-0-100 {
+  color: #5a0064; }
+
+.colorbg-90-0-100 {
+  background-color: #5a0064; }
+
+.color-90-10-0 {
+  color: #5a0a00; }
+
+.colorbg-90-10-0 {
+  background-color: #5a0a00; }
+
+.color-90-10-10 {
+  color: #5a0a0a; }
+
+.colorbg-90-10-10 {
+  background-color: #5a0a0a; }
+
+.color-90-10-20 {
+  color: #5a0a14; }
+
+.colorbg-90-10-20 {
+  background-color: #5a0a14; }
+
+.color-90-10-30 {
+  color: #5a0a1e; }
+
+.colorbg-90-10-30 {
+  background-color: #5a0a1e; }
+
+.color-90-10-40 {
+  color: #5a0a28; }
+
+.colorbg-90-10-40 {
+  background-color: #5a0a28; }
+
+.color-90-10-50 {
+  color: #5a0a32; }
+
+.colorbg-90-10-50 {
+  background-color: #5a0a32; }
+
+.color-90-10-60 {
+  color: #5a0a3c; }
+
+.colorbg-90-10-60 {
+  background-color: #5a0a3c; }
+
+.color-90-10-70 {
+  color: #5a0a46; }
+
+.colorbg-90-10-70 {
+  background-color: #5a0a46; }
+
+.color-90-10-80 {
+  color: #5a0a50; }
+
+.colorbg-90-10-80 {
+  background-color: #5a0a50; }
+
+.color-90-10-90 {
+  color: #5a0a5a; }
+
+.colorbg-90-10-90 {
+  background-color: #5a0a5a; }
+
+.color-90-10-100 {
+  color: #5a0a64; }
+
+.colorbg-90-10-100 {
+  background-color: #5a0a64; }
+
+.color-90-20-0 {
+  color: #5a1400; }
+
+.colorbg-90-20-0 {
+  background-color: #5a1400; }
+
+.color-90-20-10 {
+  color: #5a140a; }
+
+.colorbg-90-20-10 {
+  background-color: #5a140a; }
+
+.color-90-20-20 {
+  color: #5a1414; }
+
+.colorbg-90-20-20 {
+  background-color: #5a1414; }
+
+.color-90-20-30 {
+  color: #5a141e; }
+
+.colorbg-90-20-30 {
+  background-color: #5a141e; }
+
+.color-90-20-40 {
+  color: #5a1428; }
+
+.colorbg-90-20-40 {
+  background-color: #5a1428; }
+
+.color-90-20-50 {
+  color: #5a1432; }
+
+.colorbg-90-20-50 {
+  background-color: #5a1432; }
+
+.color-90-20-60 {
+  color: #5a143c; }
+
+.colorbg-90-20-60 {
+  background-color: #5a143c; }
+
+.color-90-20-70 {
+  color: #5a1446; }
+
+.colorbg-90-20-70 {
+  background-color: #5a1446; }
+
+.color-90-20-80 {
+  color: #5a1450; }
+
+.colorbg-90-20-80 {
+  background-color: #5a1450; }
+
+.color-90-20-90 {
+  color: #5a145a; }
+
+.colorbg-90-20-90 {
+  background-color: #5a145a; }
+
+.color-90-20-100 {
+  color: #5a1464; }
+
+.colorbg-90-20-100 {
+  background-color: #5a1464; }
+
+.color-90-30-0 {
+  color: #5a1e00; }
+
+.colorbg-90-30-0 {
+  background-color: #5a1e00; }
+
+.color-90-30-10 {
+  color: #5a1e0a; }
+
+.colorbg-90-30-10 {
+  background-color: #5a1e0a; }
+
+.color-90-30-20 {
+  color: #5a1e14; }
+
+.colorbg-90-30-20 {
+  background-color: #5a1e14; }
+
+.color-90-30-30 {
+  color: #5a1e1e; }
+
+.colorbg-90-30-30 {
+  background-color: #5a1e1e; }
+
+.color-90-30-40 {
+  color: #5a1e28; }
+
+.colorbg-90-30-40 {
+  background-color: #5a1e28; }
+
+.color-90-30-50 {
+  color: #5a1e32; }
+
+.colorbg-90-30-50 {
+  background-color: #5a1e32; }
+
+.color-90-30-60 {
+  color: #5a1e3c; }
+
+.colorbg-90-30-60 {
+  background-color: #5a1e3c; }
+
+.color-90-30-70 {
+  color: #5a1e46; }
+
+.colorbg-90-30-70 {
+  background-color: #5a1e46; }
+
+.color-90-30-80 {
+  color: #5a1e50; }
+
+.colorbg-90-30-80 {
+  background-color: #5a1e50; }
+
+.color-90-30-90 {
+  color: #5a1e5a; }
+
+.colorbg-90-30-90 {
+  background-color: #5a1e5a; }
+
+.color-90-30-100 {
+  color: #5a1e64; }
+
+.colorbg-90-30-100 {
+  background-color: #5a1e64; }
+
+.color-90-40-0 {
+  color: #5a2800; }
+
+.colorbg-90-40-0 {
+  background-color: #5a2800; }
+
+.color-90-40-10 {
+  color: #5a280a; }
+
+.colorbg-90-40-10 {
+  background-color: #5a280a; }
+
+.color-90-40-20 {
+  color: #5a2814; }
+
+.colorbg-90-40-20 {
+  background-color: #5a2814; }
+
+.color-90-40-30 {
+  color: #5a281e; }
+
+.colorbg-90-40-30 {
+  background-color: #5a281e; }
+
+.color-90-40-40 {
+  color: #5a2828; }
+
+.colorbg-90-40-40 {
+  background-color: #5a2828; }
+
+.color-90-40-50 {
+  color: #5a2832; }
+
+.colorbg-90-40-50 {
+  background-color: #5a2832; }
+
+.color-90-40-60 {
+  color: #5a283c; }
+
+.colorbg-90-40-60 {
+  background-color: #5a283c; }
+
+.color-90-40-70 {
+  color: #5a2846; }
+
+.colorbg-90-40-70 {
+  background-color: #5a2846; }
+
+.color-90-40-80 {
+  color: #5a2850; }
+
+.colorbg-90-40-80 {
+  background-color: #5a2850; }
+
+.color-90-40-90 {
+  color: #5a285a; }
+
+.colorbg-90-40-90 {
+  background-color: #5a285a; }
+
+.color-90-40-100 {
+  color: #5a2864; }
+
+.colorbg-90-40-100 {
+  background-color: #5a2864; }
+
+.color-90-50-0 {
+  color: #5a3200; }
+
+.colorbg-90-50-0 {
+  background-color: #5a3200; }
+
+.color-90-50-10 {
+  color: #5a320a; }
+
+.colorbg-90-50-10 {
+  background-color: #5a320a; }
+
+.color-90-50-20 {
+  color: #5a3214; }
+
+.colorbg-90-50-20 {
+  background-color: #5a3214; }
+
+.color-90-50-30 {
+  color: #5a321e; }
+
+.colorbg-90-50-30 {
+  background-color: #5a321e; }
+
+.color-90-50-40 {
+  color: #5a3228; }
+
+.colorbg-90-50-40 {
+  background-color: #5a3228; }
+
+.color-90-50-50 {
+  color: #5a3232; }
+
+.colorbg-90-50-50 {
+  background-color: #5a3232; }
+
+.color-90-50-60 {
+  color: #5a323c; }
+
+.colorbg-90-50-60 {
+  background-color: #5a323c; }
+
+.color-90-50-70 {
+  color: #5a3246; }
+
+.colorbg-90-50-70 {
+  background-color: #5a3246; }
+
+.color-90-50-80 {
+  color: #5a3250; }
+
+.colorbg-90-50-80 {
+  background-color: #5a3250; }
+
+.color-90-50-90 {
+  color: #5a325a; }
+
+.colorbg-90-50-90 {
+  background-color: #5a325a; }
+
+.color-90-50-100 {
+  color: #5a3264; }
+
+.colorbg-90-50-100 {
+  background-color: #5a3264; }
+
+.color-90-60-0 {
+  color: #5a3c00; }
+
+.colorbg-90-60-0 {
+  background-color: #5a3c00; }
+
+.color-90-60-10 {
+  color: #5a3c0a; }
+
+.colorbg-90-60-10 {
+  background-color: #5a3c0a; }
+
+.color-90-60-20 {
+  color: #5a3c14; }
+
+.colorbg-90-60-20 {
+  background-color: #5a3c14; }
+
+.color-90-60-30 {
+  color: #5a3c1e; }
+
+.colorbg-90-60-30 {
+  background-color: #5a3c1e; }
+
+.color-90-60-40 {
+  color: #5a3c28; }
+
+.colorbg-90-60-40 {
+  background-color: #5a3c28; }
+
+.color-90-60-50 {
+  color: #5a3c32; }
+
+.colorbg-90-60-50 {
+  background-color: #5a3c32; }
+
+.color-90-60-60 {
+  color: #5a3c3c; }
+
+.colorbg-90-60-60 {
+  background-color: #5a3c3c; }
+
+.color-90-60-70 {
+  color: #5a3c46; }
+
+.colorbg-90-60-70 {
+  background-color: #5a3c46; }
+
+.color-90-60-80 {
+  color: #5a3c50; }
+
+.colorbg-90-60-80 {
+  background-color: #5a3c50; }
+
+.color-90-60-90 {
+  color: #5a3c5a; }
+
+.colorbg-90-60-90 {
+  background-color: #5a3c5a; }
+
+.color-90-60-100 {
+  color: #5a3c64; }
+
+.colorbg-90-60-100 {
+  background-color: #5a3c64; }
+
+.color-90-70-0 {
+  color: #5a4600; }
+
+.colorbg-90-70-0 {
+  background-color: #5a4600; }
+
+.color-90-70-10 {
+  color: #5a460a; }
+
+.colorbg-90-70-10 {
+  background-color: #5a460a; }
+
+.color-90-70-20 {
+  color: #5a4614; }
+
+.colorbg-90-70-20 {
+  background-color: #5a4614; }
+
+.color-90-70-30 {
+  color: #5a461e; }
+
+.colorbg-90-70-30 {
+  background-color: #5a461e; }
+
+.color-90-70-40 {
+  color: #5a4628; }
+
+.colorbg-90-70-40 {
+  background-color: #5a4628; }
+
+.color-90-70-50 {
+  color: #5a4632; }
+
+.colorbg-90-70-50 {
+  background-color: #5a4632; }
+
+.color-90-70-60 {
+  color: #5a463c; }
+
+.colorbg-90-70-60 {
+  background-color: #5a463c; }
+
+.color-90-70-70 {
+  color: #5a4646; }
+
+.colorbg-90-70-70 {
+  background-color: #5a4646; }
+
+.color-90-70-80 {
+  color: #5a4650; }
+
+.colorbg-90-70-80 {
+  background-color: #5a4650; }
+
+.color-90-70-90 {
+  color: #5a465a; }
+
+.colorbg-90-70-90 {
+  background-color: #5a465a; }
+
+.color-90-70-100 {
+  color: #5a4664; }
+
+.colorbg-90-70-100 {
+  background-color: #5a4664; }
+
+.color-90-80-0 {
+  color: #5a5000; }
+
+.colorbg-90-80-0 {
+  background-color: #5a5000; }
+
+.color-90-80-10 {
+  color: #5a500a; }
+
+.colorbg-90-80-10 {
+  background-color: #5a500a; }
+
+.color-90-80-20 {
+  color: #5a5014; }
+
+.colorbg-90-80-20 {
+  background-color: #5a5014; }
+
+.color-90-80-30 {
+  color: #5a501e; }
+
+.colorbg-90-80-30 {
+  background-color: #5a501e; }
+
+.color-90-80-40 {
+  color: #5a5028; }
+
+.colorbg-90-80-40 {
+  background-color: #5a5028; }
+
+.color-90-80-50 {
+  color: #5a5032; }
+
+.colorbg-90-80-50 {
+  background-color: #5a5032; }
+
+.color-90-80-60 {
+  color: #5a503c; }
+
+.colorbg-90-80-60 {
+  background-color: #5a503c; }
+
+.color-90-80-70 {
+  color: #5a5046; }
+
+.colorbg-90-80-70 {
+  background-color: #5a5046; }
+
+.color-90-80-80 {
+  color: #5a5050; }
+
+.colorbg-90-80-80 {
+  background-color: #5a5050; }
+
+.color-90-80-90 {
+  color: #5a505a; }
+
+.colorbg-90-80-90 {
+  background-color: #5a505a; }
+
+.color-90-80-100 {
+  color: #5a5064; }
+
+.colorbg-90-80-100 {
+  background-color: #5a5064; }
+
+.color-90-90-0 {
+  color: #5a5a00; }
+
+.colorbg-90-90-0 {
+  background-color: #5a5a00; }
+
+.color-90-90-10 {
+  color: #5a5a0a; }
+
+.colorbg-90-90-10 {
+  background-color: #5a5a0a; }
+
+.color-90-90-20 {
+  color: #5a5a14; }
+
+.colorbg-90-90-20 {
+  background-color: #5a5a14; }
+
+.color-90-90-30 {
+  color: #5a5a1e; }
+
+.colorbg-90-90-30 {
+  background-color: #5a5a1e; }
+
+.color-90-90-40 {
+  color: #5a5a28; }
+
+.colorbg-90-90-40 {
+  background-color: #5a5a28; }
+
+.color-90-90-50 {
+  color: #5a5a32; }
+
+.colorbg-90-90-50 {
+  background-color: #5a5a32; }
+
+.color-90-90-60 {
+  color: #5a5a3c; }
+
+.colorbg-90-90-60 {
+  background-color: #5a5a3c; }
+
+.color-90-90-70 {
+  color: #5a5a46; }
+
+.colorbg-90-90-70 {
+  background-color: #5a5a46; }
+
+.color-90-90-80 {
+  color: #5a5a50; }
+
+.colorbg-90-90-80 {
+  background-color: #5a5a50; }
+
+.color-90-90-90 {
+  color: #5a5a5a; }
+
+.colorbg-90-90-90 {
+  background-color: #5a5a5a; }
+
+.color-90-90-100 {
+  color: #5a5a64; }
+
+.colorbg-90-90-100 {
+  background-color: #5a5a64; }
+
+.color-90-100-0 {
+  color: #5a6400; }
+
+.colorbg-90-100-0 {
+  background-color: #5a6400; }
+
+.color-90-100-10 {
+  color: #5a640a; }
+
+.colorbg-90-100-10 {
+  background-color: #5a640a; }
+
+.color-90-100-20 {
+  color: #5a6414; }
+
+.colorbg-90-100-20 {
+  background-color: #5a6414; }
+
+.color-90-100-30 {
+  color: #5a641e; }
+
+.colorbg-90-100-30 {
+  background-color: #5a641e; }
+
+.color-90-100-40 {
+  color: #5a6428; }
+
+.colorbg-90-100-40 {
+  background-color: #5a6428; }
+
+.color-90-100-50 {
+  color: #5a6432; }
+
+.colorbg-90-100-50 {
+  background-color: #5a6432; }
+
+.color-90-100-60 {
+  color: #5a643c; }
+
+.colorbg-90-100-60 {
+  background-color: #5a643c; }
+
+.color-90-100-70 {
+  color: #5a6446; }
+
+.colorbg-90-100-70 {
+  background-color: #5a6446; }
+
+.color-90-100-80 {
+  color: #5a6450; }
+
+.colorbg-90-100-80 {
+  background-color: #5a6450; }
+
+.color-90-100-90 {
+  color: #5a645a; }
+
+.colorbg-90-100-90 {
+  background-color: #5a645a; }
+
+.color-90-100-100 {
+  color: #5a6464; }
+
+.colorbg-90-100-100 {
+  background-color: #5a6464; }
+
+.color-100-0-0 {
+  color: #640000; }
+
+.colorbg-100-0-0 {
+  background-color: #640000; }
+
+.color-100-0-10 {
+  color: #64000a; }
+
+.colorbg-100-0-10 {
+  background-color: #64000a; }
+
+.color-100-0-20 {
+  color: #640014; }
+
+.colorbg-100-0-20 {
+  background-color: #640014; }
+
+.color-100-0-30 {
+  color: #64001e; }
+
+.colorbg-100-0-30 {
+  background-color: #64001e; }
+
+.color-100-0-40 {
+  color: #640028; }
+
+.colorbg-100-0-40 {
+  background-color: #640028; }
+
+.color-100-0-50 {
+  color: #640032; }
+
+.colorbg-100-0-50 {
+  background-color: #640032; }
+
+.color-100-0-60 {
+  color: #64003c; }
+
+.colorbg-100-0-60 {
+  background-color: #64003c; }
+
+.color-100-0-70 {
+  color: #640046; }
+
+.colorbg-100-0-70 {
+  background-color: #640046; }
+
+.color-100-0-80 {
+  color: #640050; }
+
+.colorbg-100-0-80 {
+  background-color: #640050; }
+
+.color-100-0-90 {
+  color: #64005a; }
+
+.colorbg-100-0-90 {
+  background-color: #64005a; }
+
+.color-100-0-100 {
+  color: #640064; }
+
+.colorbg-100-0-100 {
+  background-color: #640064; }
+
+.color-100-10-0 {
+  color: #640a00; }
+
+.colorbg-100-10-0 {
+  background-color: #640a00; }
+
+.color-100-10-10 {
+  color: #640a0a; }
+
+.colorbg-100-10-10 {
+  background-color: #640a0a; }
+
+.color-100-10-20 {
+  color: #640a14; }
+
+.colorbg-100-10-20 {
+  background-color: #640a14; }
+
+.color-100-10-30 {
+  color: #640a1e; }
+
+.colorbg-100-10-30 {
+  background-color: #640a1e; }
+
+.color-100-10-40 {
+  color: #640a28; }
+
+.colorbg-100-10-40 {
+  background-color: #640a28; }
+
+.color-100-10-50 {
+  color: #640a32; }
+
+.colorbg-100-10-50 {
+  background-color: #640a32; }
+
+.color-100-10-60 {
+  color: #640a3c; }
+
+.colorbg-100-10-60 {
+  background-color: #640a3c; }
+
+.color-100-10-70 {
+  color: #640a46; }
+
+.colorbg-100-10-70 {
+  background-color: #640a46; }
+
+.color-100-10-80 {
+  color: #640a50; }
+
+.colorbg-100-10-80 {
+  background-color: #640a50; }
+
+.color-100-10-90 {
+  color: #640a5a; }
+
+.colorbg-100-10-90 {
+  background-color: #640a5a; }
+
+.color-100-10-100 {
+  color: #640a64; }
+
+.colorbg-100-10-100 {
+  background-color: #640a64; }
+
+.color-100-20-0 {
+  color: #641400; }
+
+.colorbg-100-20-0 {
+  background-color: #641400; }
+
+.color-100-20-10 {
+  color: #64140a; }
+
+.colorbg-100-20-10 {
+  background-color: #64140a; }
+
+.color-100-20-20 {
+  color: #641414; }
+
+.colorbg-100-20-20 {
+  background-color: #641414; }
+
+.color-100-20-30 {
+  color: #64141e; }
+
+.colorbg-100-20-30 {
+  background-color: #64141e; }
+
+.color-100-20-40 {
+  color: #641428; }
+
+.colorbg-100-20-40 {
+  background-color: #641428; }
+
+.color-100-20-50 {
+  color: #641432; }
+
+.colorbg-100-20-50 {
+  background-color: #641432; }
+
+.color-100-20-60 {
+  color: #64143c; }
+
+.colorbg-100-20-60 {
+  background-color: #64143c; }
+
+.color-100-20-70 {
+  color: #641446; }
+
+.colorbg-100-20-70 {
+  background-color: #641446; }
+
+.color-100-20-80 {
+  color: #641450; }
+
+.colorbg-100-20-80 {
+  background-color: #641450; }
+
+.color-100-20-90 {
+  color: #64145a; }
+
+.colorbg-100-20-90 {
+  background-color: #64145a; }
+
+.color-100-20-100 {
+  color: #641464; }
+
+.colorbg-100-20-100 {
+  background-color: #641464; }
+
+.color-100-30-0 {
+  color: #641e00; }
+
+.colorbg-100-30-0 {
+  background-color: #641e00; }
+
+.color-100-30-10 {
+  color: #641e0a; }
+
+.colorbg-100-30-10 {
+  background-color: #641e0a; }
+
+.color-100-30-20 {
+  color: #641e14; }
+
+.colorbg-100-30-20 {
+  background-color: #641e14; }
+
+.color-100-30-30 {
+  color: #641e1e; }
+
+.colorbg-100-30-30 {
+  background-color: #641e1e; }
+
+.color-100-30-40 {
+  color: #641e28; }
+
+.colorbg-100-30-40 {
+  background-color: #641e28; }
+
+.color-100-30-50 {
+  color: #641e32; }
+
+.colorbg-100-30-50 {
+  background-color: #641e32; }
+
+.color-100-30-60 {
+  color: #641e3c; }
+
+.colorbg-100-30-60 {
+  background-color: #641e3c; }
+
+.color-100-30-70 {
+  color: #641e46; }
+
+.colorbg-100-30-70 {
+  background-color: #641e46; }
+
+.color-100-30-80 {
+  color: #641e50; }
+
+.colorbg-100-30-80 {
+  background-color: #641e50; }
+
+.color-100-30-90 {
+  color: #641e5a; }
+
+.colorbg-100-30-90 {
+  background-color: #641e5a; }
+
+.color-100-30-100 {
+  color: #641e64; }
+
+.colorbg-100-30-100 {
+  background-color: #641e64; }
+
+.color-100-40-0 {
+  color: #642800; }
+
+.colorbg-100-40-0 {
+  background-color: #642800; }
+
+.color-100-40-10 {
+  color: #64280a; }
+
+.colorbg-100-40-10 {
+  background-color: #64280a; }
+
+.color-100-40-20 {
+  color: #642814; }
+
+.colorbg-100-40-20 {
+  background-color: #642814; }
+
+.color-100-40-30 {
+  color: #64281e; }
+
+.colorbg-100-40-30 {
+  background-color: #64281e; }
+
+.color-100-40-40 {
+  color: #642828; }
+
+.colorbg-100-40-40 {
+  background-color: #642828; }
+
+.color-100-40-50 {
+  color: #642832; }
+
+.colorbg-100-40-50 {
+  background-color: #642832; }
+
+.color-100-40-60 {
+  color: #64283c; }
+
+.colorbg-100-40-60 {
+  background-color: #64283c; }
+
+.color-100-40-70 {
+  color: #642846; }
+
+.colorbg-100-40-70 {
+  background-color: #642846; }
+
+.color-100-40-80 {
+  color: #642850; }
+
+.colorbg-100-40-80 {
+  background-color: #642850; }
+
+.color-100-40-90 {
+  color: #64285a; }
+
+.colorbg-100-40-90 {
+  background-color: #64285a; }
+
+.color-100-40-100 {
+  color: #642864; }
+
+.colorbg-100-40-100 {
+  background-color: #642864; }
+
+.color-100-50-0 {
+  color: #643200; }
+
+.colorbg-100-50-0 {
+  background-color: #643200; }
+
+.color-100-50-10 {
+  color: #64320a; }
+
+.colorbg-100-50-10 {
+  background-color: #64320a; }
+
+.color-100-50-20 {
+  color: #643214; }
+
+.colorbg-100-50-20 {
+  background-color: #643214; }
+
+.color-100-50-30 {
+  color: #64321e; }
+
+.colorbg-100-50-30 {
+  background-color: #64321e; }
+
+.color-100-50-40 {
+  color: #643228; }
+
+.colorbg-100-50-40 {
+  background-color: #643228; }
+
+.color-100-50-50 {
+  color: #643232; }
+
+.colorbg-100-50-50 {
+  background-color: #643232; }
+
+.color-100-50-60 {
+  color: #64323c; }
+
+.colorbg-100-50-60 {
+  background-color: #64323c; }
+
+.color-100-50-70 {
+  color: #643246; }
+
+.colorbg-100-50-70 {
+  background-color: #643246; }
+
+.color-100-50-80 {
+  color: #643250; }
+
+.colorbg-100-50-80 {
+  background-color: #643250; }
+
+.color-100-50-90 {
+  color: #64325a; }
+
+.colorbg-100-50-90 {
+  background-color: #64325a; }
+
+.color-100-50-100 {
+  color: #643264; }
+
+.colorbg-100-50-100 {
+  background-color: #643264; }
+
+.color-100-60-0 {
+  color: #643c00; }
+
+.colorbg-100-60-0 {
+  background-color: #643c00; }
+
+.color-100-60-10 {
+  color: #643c0a; }
+
+.colorbg-100-60-10 {
+  background-color: #643c0a; }
+
+.color-100-60-20 {
+  color: #643c14; }
+
+.colorbg-100-60-20 {
+  background-color: #643c14; }
+
+.color-100-60-30 {
+  color: #643c1e; }
+
+.colorbg-100-60-30 {
+  background-color: #643c1e; }
+
+.color-100-60-40 {
+  color: #643c28; }
+
+.colorbg-100-60-40 {
+  background-color: #643c28; }
+
+.color-100-60-50 {
+  color: #643c32; }
+
+.colorbg-100-60-50 {
+  background-color: #643c32; }
+
+.color-100-60-60 {
+  color: #643c3c; }
+
+.colorbg-100-60-60 {
+  background-color: #643c3c; }
+
+.color-100-60-70 {
+  color: #643c46; }
+
+.colorbg-100-60-70 {
+  background-color: #643c46; }
+
+.color-100-60-80 {
+  color: #643c50; }
+
+.colorbg-100-60-80 {
+  background-color: #643c50; }
+
+.color-100-60-90 {
+  color: #643c5a; }
+
+.colorbg-100-60-90 {
+  background-color: #643c5a; }
+
+.color-100-60-100 {
+  color: #643c64; }
+
+.colorbg-100-60-100 {
+  background-color: #643c64; }
+
+.color-100-70-0 {
+  color: #644600; }
+
+.colorbg-100-70-0 {
+  background-color: #644600; }
+
+.color-100-70-10 {
+  color: #64460a; }
+
+.colorbg-100-70-10 {
+  background-color: #64460a; }
+
+.color-100-70-20 {
+  color: #644614; }
+
+.colorbg-100-70-20 {
+  background-color: #644614; }
+
+.color-100-70-30 {
+  color: #64461e; }
+
+.colorbg-100-70-30 {
+  background-color: #64461e; }
+
+.color-100-70-40 {
+  color: #644628; }
+
+.colorbg-100-70-40 {
+  background-color: #644628; }
+
+.color-100-70-50 {
+  color: #644632; }
+
+.colorbg-100-70-50 {
+  background-color: #644632; }
+
+.color-100-70-60 {
+  color: #64463c; }
+
+.colorbg-100-70-60 {
+  background-color: #64463c; }
+
+.color-100-70-70 {
+  color: #644646; }
+
+.colorbg-100-70-70 {
+  background-color: #644646; }
+
+.color-100-70-80 {
+  color: #644650; }
+
+.colorbg-100-70-80 {
+  background-color: #644650; }
+
+.color-100-70-90 {
+  color: #64465a; }
+
+.colorbg-100-70-90 {
+  background-color: #64465a; }
+
+.color-100-70-100 {
+  color: #644664; }
+
+.colorbg-100-70-100 {
+  background-color: #644664; }
+
+.color-100-80-0 {
+  color: #645000; }
+
+.colorbg-100-80-0 {
+  background-color: #645000; }
+
+.color-100-80-10 {
+  color: #64500a; }
+
+.colorbg-100-80-10 {
+  background-color: #64500a; }
+
+.color-100-80-20 {
+  color: #645014; }
+
+.colorbg-100-80-20 {
+  background-color: #645014; }
+
+.color-100-80-30 {
+  color: #64501e; }
+
+.colorbg-100-80-30 {
+  background-color: #64501e; }
+
+.color-100-80-40 {
+  color: #645028; }
+
+.colorbg-100-80-40 {
+  background-color: #645028; }
+
+.color-100-80-50 {
+  color: #645032; }
+
+.colorbg-100-80-50 {
+  background-color: #645032; }
+
+.color-100-80-60 {
+  color: #64503c; }
+
+.colorbg-100-80-60 {
+  background-color: #64503c; }
+
+.color-100-80-70 {
+  color: #645046; }
+
+.colorbg-100-80-70 {
+  background-color: #645046; }
+
+.color-100-80-80 {
+  color: #645050; }
+
+.colorbg-100-80-80 {
+  background-color: #645050; }
+
+.color-100-80-90 {
+  color: #64505a; }
+
+.colorbg-100-80-90 {
+  background-color: #64505a; }
+
+.color-100-80-100 {
+  color: #645064; }
+
+.colorbg-100-80-100 {
+  background-color: #645064; }
+
+.color-100-90-0 {
+  color: #645a00; }
+
+.colorbg-100-90-0 {
+  background-color: #645a00; }
+
+.color-100-90-10 {
+  color: #645a0a; }
+
+.colorbg-100-90-10 {
+  background-color: #645a0a; }
+
+.color-100-90-20 {
+  color: #645a14; }
+
+.colorbg-100-90-20 {
+  background-color: #645a14; }
+
+.color-100-90-30 {
+  color: #645a1e; }
+
+.colorbg-100-90-30 {
+  background-color: #645a1e; }
+
+.color-100-90-40 {
+  color: #645a28; }
+
+.colorbg-100-90-40 {
+  background-color: #645a28; }
+
+.color-100-90-50 {
+  color: #645a32; }
+
+.colorbg-100-90-50 {
+  background-color: #645a32; }
+
+.color-100-90-60 {
+  color: #645a3c; }
+
+.colorbg-100-90-60 {
+  background-color: #645a3c; }
+
+.color-100-90-70 {
+  color: #645a46; }
+
+.colorbg-100-90-70 {
+  background-color: #645a46; }
+
+.color-100-90-80 {
+  color: #645a50; }
+
+.colorbg-100-90-80 {
+  background-color: #645a50; }
+
+.color-100-90-90 {
+  color: #645a5a; }
+
+.colorbg-100-90-90 {
+  background-color: #645a5a; }
+
+.color-100-90-100 {
+  color: #645a64; }
+
+.colorbg-100-90-100 {
+  background-color: #645a64; }
+
+.color-100-100-0 {
+  color: #646400; }
+
+.colorbg-100-100-0 {
+  background-color: #646400; }
+
+.color-100-100-10 {
+  color: #64640a; }
+
+.colorbg-100-100-10 {
+  background-color: #64640a; }
+
+.color-100-100-20 {
+  color: #646414; }
+
+.colorbg-100-100-20 {
+  background-color: #646414; }
+
+.color-100-100-30 {
+  color: #64641e; }
+
+.colorbg-100-100-30 {
+  background-color: #64641e; }
+
+.color-100-100-40 {
+  color: #646428; }
+
+.colorbg-100-100-40 {
+  background-color: #646428; }
+
+.color-100-100-50 {
+  color: #646432; }
+
+.colorbg-100-100-50 {
+  background-color: #646432; }
+
+.color-100-100-60 {
+  color: #64643c; }
+
+.colorbg-100-100-60 {
+  background-color: #64643c; }
+
+.color-100-100-70 {
+  color: #646446; }
+
+.colorbg-100-100-70 {
+  background-color: #646446; }
+
+.color-100-100-80 {
+  color: #646450; }
+
+.colorbg-100-100-80 {
+  background-color: #646450; }
+
+.color-100-100-90 {
+  color: #64645a; }
+
+.colorbg-100-100-90 {
+  background-color: #64645a; }
+
+.color-100-100-100 {
+  color: #646464; }
+
+.colorbg-100-100-100 {
+  background-color: #646464; }
+
+table {
+  width: 100%;
+  border-collapse: collapse; }
+  table tr, table td, table th {
+    border: 1px solid black; }
+
+@-webkit-keyframes image_blur {
+  0% {
+    -webkit-filter: blur(0px); }
+  50% {
+    -webkit-filter: blur(5px); }
+  100% {
+    -webkit-filter: blur(0px); } }
+
+img {
+  border-radius: 45%;
+  width: 300px; }
+
+.blur {
+  -webkit-animation: blur 3s infinite; }
+
+.brightness {
+  -webkit-animation: brightness 3s infinite; }
+
+.contrast {
+  -webkit-animation: contrast 3s infinite; }
+
+.grayscale {
+  -webkit-animation: grayscale 3s infinite; }
+
+.hue-rotate {
+  -webkit-animation: hue-rotate 3s infinite; }
+
+.invert {
+  -webkit-animation: invert 3s infinite; }
+
+.sepia {
+  -webkit-animation: sepia 3s infinite; }
+
+@-webkit-keyframes blur {
+  0%, 100% {
+    -webkit-filter: blur(0px); }
+  50% {
+    -webkit-filter: blur(5px); } }
+
+@-webkit-keyframes brightness {
+  0%, 100% {
+    -webkit-filter: brightness(100%); }
+  50% {
+    -webkit-filter: brightness(50%); } }
+
+@-webkit-keyframes contrast {
+  0%, 100% {
+    -webkit-filter: contrast(100%); }
+  50% {
+    -webkit-filter: contrast(200%); } }
+
+@-webkit-keyframes grayscale {
+  0%, 100% {
+    -webkit-filter: grayscale(0%); }
+  50% {
+    -webkit-filter: grayscale(100%); } }
+
+@-webkit-keyframes hue-rotate {
+  0%, 100% {
+    -webkit-filter: hue-rotate(0deg); }
+  50% {
+    -webkit-filter: hue-rotate(150deg); } }
+
+@-webkit-keyframes invert {
+  0%, 100% {
+    -webkit-filter: invert(0%); }
+  50% {
+    -webkit-filter: invert(80%); } }
+
+@-webkit-keyframes sepia {
+  0%, 100% {
+    -webkit-filter: sepia(0%); }
+  50% {
+    -webkit-filter: sepia(100%); } }
