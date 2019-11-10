@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+
+        main div {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        div.glosa:nth-child(even){
+            background-color: #EEEEEE;
+        }
+    </style>
+
+
+</head>
+<body>
+<div id="aplicacio" v-cloak class="container-fluid">
+    <header>
+        <div class="row">
+            <button class="col-sm btn btn-danger btn-lg m-1" type="button" v-for="categoria in categories" @click="filtrarCategoria(categoria)">{{categoria.nom}}</button>
+        </div>
+        <div class="form-group">
+            <input v-model="cerca" @keyup="filtrarText()" class="form-control" placeholder="Cercar glosa">
+        </div>
+    </header>
+    <main>
+        <div v-for="g in glosesFilter" :key="g.idglosa" class="glosa">
+            <h2>{{g.titol}}</h2>
+            <p v-for="v in g.versos">{{v.vers | escapejs}}</p>
+        </div>
+    </main>
+</div>
+<script src="https://vuejs.org/js/vue.js"></script>
+<script>
+    let app = new Vue({
+        el: '#aplicacio',
+        data: {
+            gloses: [],
+            glosesFilter: [],
+            categories: [],
+            cerca: ''
+        },
+        created: function () {
+            this.get();
+        },
+        methods: {
+            get: function () {
+                //1- PROMISE ALL
+                /* Alerta! El fetch no és bloquejant, és a dir, l'execució del codi continua
+                per això hem de fer un Promise.all, perquè esperi els 4 fetch */
+                let glosesFetch = fetch('./bbdd/glosa.json', {
+                    method: 'GET'
+                }).then(res => res.json()).then(resposta => resposta);
+
+                let categoriesFetch = fetch('./bbdd/categoria.json', {
+                    method: 'GET'
+                }).then(res => res.json()).then(resposta => resposta);
+
+                let gloses_categoriesFetch = fetch('./bbdd/glosa_categoria.json', {
+                    method: 'GET'
+                }).then(res => res.json()).then(resposta => resposta);
+
+                let versosFetch = fetch('./bbdd/vers.json', {
+                    method: 'GET'
+                }).then(res => res.json()).then(resposta => resposta);
+
+
+                Promise.all([glosesFetch, categoriesFetch, gloses_categoriesFetch, versosFetch]).then(function (resposta) {
+
+                    let gloses = resposta[0];
+                    let categories = resposta[1];
+                    let glosesCategoria = resposta[2];
+                    /* Sort */
+                    /* Si la funció retorna un número major a 0 vol dir que a > b
+                       Si la funció retorna un número menor a 0 vol dir que a < b
+                       Si la funció retorna 0 vol dir que a == b
+
+                       Si fem la resta donarà un dels tres resultats.
+
+                       Nota: si ordenem els versos junts quan les assignem a les gloses ja
+                       estaran ordenats.
+                     */
+                    let versos = resposta[3].sort(function(a, b){return a.ordre-b.ordre});
+
+                    console.log(gloses, categories, glosesCategoria, versos);
+
+                    gloses.forEach(function (glosa) {
+                        glosa.versos = versos.filter(function (vers) {
+                            return vers.glosa_idglosa == glosa.idglosa;
+                        });
+
+                        glosa.categories = glosesCategoria.filter(function (glosacat) {
+                            return glosacat.glosa_idglosa == glosa.idglosa;
+                        });
+                    });
+
+                    app.gloses = gloses;
+                    app.glosesFilter = gloses;
+                    app.categories = categories;
+                });
+
+
+            },
+            filtrarCategoria: function (categoria) {
+                app.glosesFilter = app.gloses.filter(function (glosa) {
+                    /* Com que el filter ha de retornar un booleà i volem un
+                    filter dins un filter, guardarem el resultat a una variable
+                    per després veure si està emplenada o no */
+                    let glosesfiltrades = glosa.categories.filter(function (glosacategoria) {
+                        return glosacategoria.categoria_idcategoria == categoria.idcategoria;
+                    });
+                    return glosesfiltrades.length > 0;
+                }).sort(function(a, b){return 0.5 - Math.random()}); //Ordenar aleatòriament
+            },
+            filtrarText: function () {
+                app.glosesFilter = app.gloses.filter(function (glosa) {
+                    let versos = glosa.versos.filter(function (vers) {
+                        return vers.vers.toUpperCase().indexOf(app.cerca.toUpperCase()) != -1;
+                    });
+
+                    return versos.length > 0;
+                });
+            }
+        },
+        filters: {
+            escapejs: function (value) {
+                if (value) {
+                    return value.replace(/&#(\d+);/g, function (match, dec) {
+                        return String.fromCharCode(dec);
+                    });
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

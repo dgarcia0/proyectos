@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="salseo">
+    <esliceu c="salseo" color="red"></esliceu>
+    <esliceu c="pepino" color="blue"></esliceu>
+    <esliceu c="manolo" color="green"></esliceu>
+    <esliceu c="xaxocosas" color="yellow"></esliceu>
+</div>
+<script src="https://vuejs.org/js/vue.js"></script>
+<script>
+    Vue.component('esliceu', {
+        template: '<p :style="{color: color}" @click="rev">{{contenido}}</p>',
+        data(){
+            return{
+                contenido:''
+            }
+        },
+        props: ['c', 'color'],
+        created: function () {
+          this.contenido = this.c;
+        },
+        methods: {
+            rev: function(){
+                this.contenido = this.contenido.split("").reverse().join("");
+            }
+        }
+    });
+    new Vue({
+        el: '#salseo'
+    })
+</script>
+
+</body>
+</html>

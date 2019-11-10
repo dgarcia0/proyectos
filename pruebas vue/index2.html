@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+    <style>
+        [v-cloak]{display: none;}
+    </style>
+</head>
+<body>
+<div id="aplicacion" v-cloak>
+    <div><p>nombre: {{animal.nom | formatdata}}</p></div>
+    <div><p>color: {{animal.color}}</p></div>
+    <form>
+        <label for="nombre">nombre</label>
+        <input type="text" v-model="animal.nom" id="nombre">
+        <label for="numreg">numero de registro</label>
+        <input type="text" v-model="animal.numregistre" id="numreg">
+        <label for="tipo">tipo</label>
+        <select v-model="animal.tipus" id="tipo">
+            <option v-for="t in tipos" :key="t.idtipus" :value="t.idtipus">{{t.nom}}</option>
+        </select>
+        <br>
+        <label for="sexo">sexo</label>
+        <br>
+        Masculino: <input type="radio" value="MASC" v-model="animal.sexo" id="sexo">
+        <br>
+        Femenino: <input type="radio" value="FEM" v-model="animal.sexo">
+        <br>
+        <button @click="enviar">envia</button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+
+<script>
+
+    let app = new Vue({
+        el:'#aplicacion',
+        data: {
+            animal: {id:'',nom:'',numregistre:'',color:'',tipus:'',sexo:''},
+            tipos: []
+        },
+        created:function(){
+            this.get();
+            this.getTipo();
+        },
+        methods:{
+            enviar: function(event){
+                event.preventDefault();
+                console.log("enviando...");
+                let params = JSON.stringify({'nom':this.animal.nom,
+                'sexe':this.animal.sexo,
+                'reg':this.animal.numregistre,
+                'tipus':this.animal.tipus,
+                'id':this.animal.id
+                });
+
+                if (!this.animal.id) {
+                    fetch(`http://35.194.72.13/vetplus/serveis.php`, {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                        body: `MethodName=insertAnimal&params=` + params,
+                    })
+                        .then(res => res.json())
+                        .then((resposta) => {
+                            console.log('respuesta', resposta);
+                        });
+                }else{
+                    fetch(`http://35.194.72.13/vetplus/serveis.php`, {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                        body: `MethodName=updateAnimal&params=` + params,
+                    })
+                        .then(res => res.json())
+                        .then((resposta) => {
+                            console.log('respuesta', resposta);
+                        });
+                }
+
+            },
+            get: function(){
+                let params = JSON.stringify({'id':515});
+                fetch(`http://35.194.72.13/vetplus/serveis.php`,{
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    body: `MethodName=getAnimalById&params=`+params,
+                })
+                .then(res => res.json())
+                .then((resposta)=>{
+                    console.log('respuesta',resposta);
+                    this.animal.color = 'azul';
+                    this.animal.nom = resposta.nomAnimal;
+                    this.animal.numregistre = resposta.numregistre;
+                    this.animal.tipus = resposta.idTipus;
+                    this.animal.sexo = resposta.sexe;
+                    this.animal.id = resposta.idanimal;
+                });
+            },
+
+            getTipo: function(){
+                fetch(`http://35.194.72.13/vetplus/serveis.php`,{
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    body: `MethodName=getTipus&params=""`,
+                })
+                    .then(res => res.json())
+                    .then((resposta)=>{
+                        this.tipos = resposta;
+                    });
+            }
+        },
+        filters: {
+            formatdata: function (value) {
+                return value.toUpperCase()+'salseo';
+            }
+        }
+    });
+
+    // Vue.filter('formatdata',function(value) {
+    //     return value.toUpperCase()+'salseo';
+    // });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Animals</title>
+</head>
+<body>
+<div id="aplicacion">
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Sexo</th>
+            <th>Numero registro</th>
+            <th>Tipo</th>
+            <th></th>
+        </tr>
+        <tr v-for="animal in animals" :key="animal.idanimal">
+            <td>{{animal.nomAnimal}}</td>
+            <td>{{animal.sexe}}</td>
+            <td>
+
+                <span v-if="animal.numreg == ''">Sin numero</span>
+                <span v-else>{{animal.numregistre}}</span>
+            </td>
+            <td>{{animal.nomTipus}}</td>
+            <td>
+                <button @click="editar(animal.idanimal)">Editar</button>
+                <button onclick="borrar()">Borrar</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<!--1.import vue-->
+<!--2.new vue-->
+<!--3.inicializar elemento root(el: '#app')-->
+<!--4.variables reactivas-->
+<!--v-bind:x = :x(atributo)-->
+<!--v-on:x = @x(evento)-->
+<script src="https://vuejs.org/js/vue.js"></script>
+<script>
+    function borrar(){
+        console.log("borrado");
+    }
+    let app = new Vue({
+        el:'#aplicacion',
+        data:{
+            animals:[
+                // {
+                //     nombre:'bola de nieve',
+                //     sexo:'macho',
+                //     numreg: '666',
+                //     tipo:{
+                //         id:1,
+                //         nombre:'gato'
+                //     }
+                // },
+                // {
+                //     nombre:'bola de nieve',
+                //     sexo:'macho',
+                //     numreg: '',
+                //     tipo:{
+                //         id:2,
+                //         nombre:'perro'
+                //     }
+                // }
+            ]
+        },
+        created:function(){
+            this.get();
+        },
+        methods:{
+            get: function(){
+                fetch(`http://35.194.72.13/vetplus/serveis.php`,{
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    body: `MethodName=getAnimals&params=`
+                })
+                    .then(res => res.json())
+                    .then(resposta => this.animals=resposta);
+            },
+            editar: function(animal){
+                console.log("editado"+animal);
+            }
+        }
+
+    });
+
+</script>
+</body>
+</html>

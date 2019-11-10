@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('./js/service-worker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }).catch(function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
+        <script>
+            function Joc(){
+                this.imatge = null;
+                this.paraula = null;
+
+                this.init = function(){
+                    //PARAULA
+                    let paraulesDisponibles = ["windows","linux",'macos','bsd','dos'];
+                    let random = Math.floor(Math.random() * (paraulesDisponibles.length));
+                    let paraulaSeleccionada = paraulesDisponibles[random];
+                    let par = new Paraula(paraulaSeleccionada);
+                    par.drawAmagat();
+                    console.log(par.lletres());
+                    this.paraula = par;
+                    console.log(paraulaSeleccionada);
+
+                    //IMATGE
+                    this.imatge = new Imatge(1);
+                    this.imatge.draw();
+
+                    //TAULELL
+                    let lletresTaulell = [];
+                    for(let i=0; i<26; i++){
+                        let chr = String.fromCharCode(97 + i);
+                        let lletra = new Lletra(chr,false);
+
+                        let botolletra = document.createElement('BUTTON');
+                        botolletra.innerHTML = lletra.valor;
+                        botolletra.addEventListener('click',function(){
+                            if(!j.paraula.conteLletra(this.innerHTML)){
+                                j.imatge.incrementar();
+                                j.imatge.draw();
+                            } else {
+                                j.paraula.destapa(this.innerHTML);
+                            }
+
+                            j.checkGame(j.imatge, j.paraula);
+                        });
+                        document.body.appendChild(botolletra);
+
+                    }
+                }
+
+                this.checkGame = function(imatge,paraula){
+                    if(imatge.isMort()){
+                       alert('has mort');
+                       //EMPREM BOM
+                        location.reload();
+                    }
+
+                    if(paraula.isWin()){
+                        alert('has guanyat');
+                        //EMPREM BOM
+                        location.reload();
+                    }
+                }
+
+            }
+
+            function Paraula(paraula){
+                this.lletres = function(){
+                    let arraylletres = paraula.split("");
+                    let arrayResultat = [];
+                    for(let i=0; i<arraylletres.length; i++){
+                        let l = new Lletra(arraylletres[i],false);
+                        arrayResultat.push(l);
+                    }
+                    return arrayResultat;
+                };
+                this.drawAmagat = function(){
+                    let lletres = this.lletres();
+                    for(let i=0; i<lletres.length; i++){
+                        let span = document.createElement('SPAN');
+                        span.innerHTML = lletres[i].valorAmagat;
+                        span.id = 'lletra'+i;
+                        document.body.appendChild(span);
+
+                    }
+                }
+
+                this.conteLletra = function(ch){
+                    let lletres = this.lletres();
+                    for(let i=0; i<lletres.length; i++){
+                        if(ch == lletres[i].valor){
+                            return true;
+                        }
+                    }
+
+                    return false;
+                }
+
+                this.destapa = function(ch){
+                    let lletres = this.lletres();
+                    let numTapats = 0;
+                    for(let i=0; i<lletres.length; i++){
+                        if(lletres[i].valor == ch){
+                            document.getElementById('lletra'+i).innerHTML = lletres[i].valor;
+                        }
+                    }
+                }
+
+                this.isWin = function(){
+                    let lletres = this.lletres();
+                    for(let i=0; i<lletres.length; i++){
+                        if(lletres[i].valorAmagat == document.getElementById('lletra'+i).innerHTML){
+                            return false;
+                        }
+                    }
+
+                    return true;
+                }
+
+            }
+
+            function Lletra(val,marcat){
+                this.valor = val;
+                this.valorAmagat = ' __ ';
+                this.marcat = marcat;
+                this.marcar = function(m){
+                    this.marcat = m;
+                }
+            }
+
+            function Imatge(num){
+                this.path = num;
+
+                this.incrementar = function(){
+                    this.path++;
+                };
+
+                this.draw = function(){
+                    let img = document.getElementById('imatge');
+
+
+                    if(!img) {
+                        let imatge = document.createElement('IMG');
+                        imatge.id = 'imatge';
+                        imatge.src = 'img/'+this.path+'.PNG';
+                        imatge.style.width = '100px';
+                        document.body.appendChild(imatge);
+                    } else {
+                        img.src = 'img/'+this.path+'.PNG';
+                    }
+
+                    if(this.path == 8) {
+                        this.mort = true;
+                    }
+                }
+
+                this.isMort = function(){
+                    return this.path >= 7;
+                };
+            }
+
+            let j = new Joc();
+            j.init();
+        </script>
+    </body>
+</html>
