@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a name="usuaris_web" id="usuarios">Usuarios</a></li>
+            <li><a name="rols_web" id="rols">Roles</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+</main>
+    <script>
+        async function menu(url){
+          let fetchito = await fetch('http://35.194.72.13/'+url+'.php')
+          let resp = await fetchito.text();
+          document.querySelector('main').innerHTML = resp;
+        }
+
+        (function() {
+          document.getElementById("usuarios").addEventListener("click", function (event) {
+            event.preventDefault()
+            menu(event.target.name);
+            history.pushState({ id: "usuaris_web" }, "usuaris", "usuarios.html");
+            window.onpopstate = function(event) {
+              history.back();
+            };
+          });
+          document.getElementById("rols").addEventListener("click", function (event) {
+            event.preventDefault()
+            menu(event.target.name);
+            history.pushState({ id: "rols_web" }, "rols", "rols.html");
+            window.onpopstate = function(event) {
+              menu(event.state.id);
+            };
+          });
+        })();
+    </script>
+</body>
+</html>
