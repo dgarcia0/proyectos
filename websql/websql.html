@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+
+        <title>Websql</title>
+
+    </head>
+
+    <body>
+        <table id="tabla">
+        </table>
+        <form>
+            <input id="nomJoguina" type="text" placeholder="nombre">
+            <select id="llistaEstat">
+                <option>NOU</option>
+                <option>SEMINOU</option>
+                <option>EMPRAT</option>
+                <option>ROMPUT</option>
+            </select>
+            <select id="llistaMarca"></select>
+            <input type="button" value="Enviar" onclick="insert()">
+        </form>
+        <script type="text/javascript">
+
+            var db;
+
+            function init() {
+
+                db = openDatabase('joguines', '1.0', 'prueba', 2 * 1024 * 1024);
+                db.transaction(function (tx) {
+                    //tx.executeSql('DROP TABLE JOGUINA');
+                    //tx.executeSql('DROP TABLE MARCA');
+                    tx.executeSql('CREATE TABLE IF NOT EXISTS MARCA (id unique, nom)');
+                    tx.executeSql('CREATE TABLE IF NOT EXISTS JOGUINA (id unique, nom, estat, marca_idmarca)');
+
+                    tx.executeSql("INSERT INTO MARCA (id, nom) VALUES (1,'Hashbro')");
+                    tx.executeSql("INSERT INTO MARCA (id, nom) VALUES (2,'PlayDo')");
+                    tx.executeSql("INSERT INTO MARCA (id, nom) VALUES (3,'Diset')");
+                    tx.executeSql("INSERT INTO MARCA (id, nom) VALUES (4,'Famosa')");
+                    tx.executeSql("INSERT INTO MARCA (id, nom) VALUES (5,'Borras')");
+
+                    tx.executeSql("INSERT INTO JOGUINA (id, nom, estat, marca_idmarca) VALUES (1,'Playstation','SEMINOU',2)");
+                    tx.executeSql("INSERT INTO JOGUINA (id, nom, estat, marca_idmarca) VALUES (2,'Comba','ROMPUT',5)");
+                    tx.executeSql("INSERT INTO JOGUINA (id, nom, estat, marca_idmarca) VALUES (3,'Lleo','SEMINOU',3)");
+
+                });
+                display();
+            }
+
+            function insert() {
+                db.transaction(function (tx) {
+                    tx.executeSql('SELECT max(id) as Max FROM JOGUINA', [], function (tx, results) {
+                        var id = parseInt(results.rows.item(0).Max) + 1;
+                        var nomJoguina = document.getElementById('nomJoguina').value;
+                        var estat = document.getElementById('llistaEstat').value;
+                        var marca = document.getElementById('llistaMarca').value;
+                        tx.executeSql('SELECT id FROM MARCA WHERE nom="' + marca + '"', [], function (tx, results) {
+                            var idMarca = results.rows.item(0).id;
+                            tx.executeSql('INSERT INTO JOGUINA (id, nom, estat, marca_idmarca) VALUES (?, ?, ?, ?)', [id, nomJoguina, estat, idMarca]);
+                        }, null);
+                    }, null);
+                });
+                display();
+            }
+
+            function display() {
+                var tabla = document.getElementById("tabla");
+                db.transaction(function (tx) {
+                    tx.executeSql('SELECT JOGUINA.id as idJuguete, JOGUINA.nom as nomJoguina, JOGUINA.estat, MARCA.nom as nomMarca  FROM JOGUINA, MARCA WHERE JOGUINA.marca_idmarca = MARCA.id', [], function (tx, results) {
+                        tabla.innerHTML =
+                                "<tr>\n\
+                                    <th>Nom joguina</th>\n\
+                                    <th>Estat</th>\n\
+                                    <th>Nom marca</th>\n\
+                                </tr>";
+        
+                        for (var i = 0; i < results.rows.length; i++) {
+                            console.log(results.rows.item(i).idJuguete);
+                            var nomJoguina = results.rows.item(i).nomJoguina;
+                            var estat = results.rows.item(i).estat;
+                            var nomMarca = results.rows.item(i).nomMarca;
+                            tabla.innerHTML +=
+                                    "<tr>\n\
+                                        <td>" + nomJoguina + "</td>\n\
+                                        <td>" + estat + "</td>\n\
+                                        <td>" + nomMarca + "</td>\n\
+                                    </tr>";
+                        }
+                    });
+                }, null);
+
+                var llistaMarca = document.getElementById("llistaMarca");
+                db.transaction(function (tx) {
+                    tx.executeSql('SELECT nom FROM MARCA', [], function (tx, results) {
+                        for (var i = 0; i < results.rows.length; i++) {
+                            var optionMarca = document.createElement("option");
+                            optionMarca.innerHTML = results.rows.item(i).nom;
+                            llistaMarca.appendChild(optionMarca);
+                        }
+                    });
+                }, null);
+            }
+            init();
+        </script>
+    </body>
+
+</html>
