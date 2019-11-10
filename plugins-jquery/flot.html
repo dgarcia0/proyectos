@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flot</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/excanvas.min.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.flot/0.8.3/jquery.flot.min.js"></script>
+
+
+
+<script>
+
+    let d1 = [[0, 0], [24, 24]];
+    let d2 = [[0, 11],[1, 15],[2, 25],[3, 24],[4, 13],[5, 18]];
+
+  $(document).ready(function() {
+    $.ajax({url: "http://samples.openweathermap.org/data/2.5/history/city?lat=39.6010585&lon=-2.6895411&appid=893ec5e4902084a9148b3b8d7418a7e8", success: function(result){
+      console.log(result);
+      d1 = result;
+    }});
+    $.plot($("#placeholder"), [
+      {data: d1, lines: {show: true}},
+      {data: d2, bars: {show: true}}
+    ]);
+  });
+</script>
+<div id="placeholder" style="width:600px;height:300px"></div>
+</body>
+</html>

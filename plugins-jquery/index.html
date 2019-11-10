@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.4.2/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>
+<script src="//cdn.datatables.net/buttons/1.4.2/js/buttons.flash.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+<script src="//cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js"></script>
+<script src="//cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+<script src="http://momentjs.com/downloads/moment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+<script>
+
+  $.ajax({url: "http://35.194.72.13/airports/airports.json", method:"get", success: function(result){
+    let resultado = result;
+    let thead = document.createElement("thead");
+    let tabla = document.createElement('table');
+    let trheader = document.createElement('tr');
+    let thheadernombre = document.createElement('th');
+    thheadernombre.innerHTML = "nombre";
+    let thheaderapellidos = document.createElement('th');
+    thheaderapellidos.innerHTML = "apellidos";
+
+    thead.appendChild(trheader);
+    trheader.appendChild(thheadernombre);
+    trheader.appendChild(thheaderapellidos);
+    tabla.appendChild(thead);
+
+    let tbody = document.createElement("tbody");
+    resultado.forEach(function(result){
+      let tr = document.createElement("tr");
+      let tdnombre = document.createElement("td");
+      tdnombre.innerHTML = result.name;
+      let tdapellidos = document.createElement("td");
+      tdapellidos.innerHTML = result.city;
+
+      tr.appendChild(tdnombre);
+      tr.appendChild(tdapellidos);
+      tbody.appendChild(tr);
+    })
+    tabla.appendChild(tbody);
+    tabla.setAttribute("id", "tabla");
+    tabla.setAttribute("class", "display nowrap");
+    document.querySelector("#resultado").appendChild(tabla);
+
+    resultado.forEach(function(result){
+      let option = document.createElement("option");
+      option.value = result.name;
+      option.innerHTML = result.name;
+      let select = document.getElementById("origen");
+      select.appendChild(option);
+
+      let option2 = document.createElement("option");
+      option2.value = result.name;
+      option2.innerHTML = result.name;
+      let select2 = document.getElementById("destino");
+      select2.appendChild(option2);
+    })
+
+    $(document).ready(function() {
+      $('#origen').select2();
+      $('#destino').select2();
+
+      $('#calendar').fullCalendar({
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,agendaWeek,agendaDay'
+        },
+        events: [
+          {
+            title  : 'event1',
+            start  : '2017-11-29T09:00:00',
+            end    : '2017-11-29T12:00:00',
+            eventColor  : 'green',
+          },
+          {
+            title  : 'event2',
+            start  : '2017-11-30T08:00:00',
+            end    : '2017-12-02T19:00:00',
+            color  : 'green'
+          },
+          {
+            title  : 'event3',
+            start  : '2017-12-07',
+            end    : '2017-12-07',
+            color  : 'yellow',
+            allDay : true
+          },
+          {
+            title  : 'event4',
+            start  : '2017-12-01T19:00:00',
+            end    : '2017-12-01T22:00:00',
+            color  : 'red'
+          }
+        ],
+        eventClick: function(event) {
+
+        },
+        dayClick: function(date, jsEvent, view) {
+          $('#modalTitle').html(event.title);
+          $('#modalBody').html(event.description);
+          $('#eventUrl').attr('href',event.url);
+          $('#myModal').modal();
+          $('#ida').datepicker().datepicker('setDate', new Date(date));
+          $('#vuelta').datepicker().datepicker('setDate', new Date(date));
+        }
+      });
+
+      $('#tabla').DataTable({
+        stateSave: true,
+        language: {
+          "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Catalan.json"
+        },
+        dom: 'Bfrtip',
+        buttons: [
+          'print', 'excel', 'pdf'
+        ]
+      });
+
+      $( function() {
+        $( "#ida" ).datepicker({
+          inline: true,
+          onSelect: function(dateText, inst) {
+            let d = new Date(dateText);
+            $('#fullcalendar').fullCalendar('gotoDate', d);
+          }
+        });
+      } );
+      $( function() {
+        $( "#vuelta" ).datepicker({
+          inline: true,
+          onSelect: function(dateText, inst) {
+            let d = new Date(dateText);
+            $('#fullcalendar').fullCalendar('gotoDate', d);
+          }
+        });
+      });
+      $(".btn-primary").on("click",function(){
+        let o = document.getElementById("origen");
+        let origen = o.options[o.selectedIndex].value;
+        let d = document.getElementById("destino");
+        let destino = d.options[d.selectedIndex].value;
+        let ida = document.getElementById("ida").value;
+        let vuelta = document.getElementById("vuelta").value;
+        let num = document.getElementById("num").value;
+        alert("origen: "+origen+"\n"+"destino: "+destino+"\n"+"fecha ida: "+ida+"\n"+"fecha vuelta: "+vuelta+"\n"+"n pasajeros: "+num);
+      });
+    });
+  }});
+
+</script>
+
+<div id="resultado"></div>
+<div id='calendar'></div>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="modalTitle">Elige vuelo</h4>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <span>origen</span>
+                <select class="select1" id="origen"></select>
+                <span>destino</span>
+                <select class="select2" id="destino"></select>
+                <p>Fecha ida: <input type="text" id="ida"></p>
+                <p>Fecha vuelta: <input type="text" id="vuelta"></p>
+                <p>Nº pasajeros: <input type="number" id="num"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Aceptar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
