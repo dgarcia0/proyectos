@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="id">
+    <esliceu></esliceu>
+</div>
+
+<script src="https://vuejs.org/js/vue.js"></script>
+<script>
+
+  Vue.component('esliceu',{
+    template: '<p @click="reverse">{{pepino}}</p>',
+    data(){
+      return{
+        pepino: 'pepino'
+      }
+    },
+    methods:{
+      reverse:function () {
+        this.pepino = this.pepino.split('').reverse().join('');
+      }
+    }
+  });
+
+  new Vue({
+    el: '#id',
+    data(){
+      return {
+        pepino:'hola'
+      }
+    }
+  });
+</script>
+</body>
+</html>
