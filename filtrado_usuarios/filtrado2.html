@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<script>
+    function ordenaporedad(array) {
+      array.sort(function (a, b) {
+        return parseInt(a.edat) - parseInt(b.edat);
+      });
+    }
+
+    async function salseo () {
+      let prueba = await fetch("http://35.194.72.13/usuari.php");
+      let array  = await prueba.json();
+
+          var x = document.createElement("SELECT");
+          x.setAttribute("id", "desplegable");
+          var option = document.createElement("option");
+          option.setAttribute("value", "todos");
+          option.text = "tots";
+          x.add(option);
+          var option2 = document.createElement("option");
+          option2.setAttribute("value", "edad");
+          option2.text = "menores de edad";
+          x.add(option2);
+          var option3 = document.createElement("option");
+          option3.setAttribute("value", "activo");
+          option3.text = "activos";
+          x.add(option3);
+          document.body.appendChild(x);
+          creatabla(array);
+          let desplegable = document.getElementById("desplegable");
+          desplegable.addEventListener("change", function() {
+            if(desplegable.value === "todos")
+            {
+              document.getElementById("tabla").remove();
+              creatabla(array);
+            }
+            if(desplegable.value === "edad")
+            {
+              let arraynuevo = [];
+              for (let i=0;i<array.length;i++){
+                if (array[i].edat < 18 ){
+                  arraynuevo.push(array[i]);
+                }
+              }
+              document.getElementById("tabla").remove();
+              creatabla(arraynuevo);
+            }
+            if(desplegable.value === "activo")
+            {
+              let arraynuevo = [];
+              for (let i=0;i<array.length;i++){
+                if (array[i].actiu === '0' ){
+                  arraynuevo.push(array[i]);
+                }
+              }
+              document.getElementById("tabla").remove();
+              creatabla(arraynuevo);
+            }
+          });
+      }
+salseo();
+  function creatabla(array) {
+    ordenaporedad(array);
+    let table = document.createElement("table");
+    table.setAttribute("id", "tabla");
+    let cabecera = document.createElement("tr");
+    let nombre = document.createElement("th");
+    let apellidos = document.createElement("th");
+    let edad = document.createElement("th");
+    let activos = document.createElement("th");
+    nombre.innerHTML = "nombre";
+    apellidos.innerHTML = "apellidos";
+    edad.innerHTML = "edad";
+    activos.innerHTML = "activos";
+    cabecera.appendChild(nombre);
+    cabecera.appendChild(apellidos);
+    cabecera.appendChild(activos);
+    cabecera.appendChild(edad);
+    table.appendChild(cabecera);
+
+    for(let i = 0; i < array.length; i++) {
+      let fila = document.createElement("tr");
+      let nom = document.createElement("td");
+      let cognoms = document.createElement("td");
+      let actiu = document.createElement("td");
+      let edat = document.createElement("td");
+
+      nom.innerHTML = array[i].nom;
+      cognoms.innerHTML = array[i].cognom1+" "+array[i].cognom2;
+      if (array[i].actiu === '0'){actiu.innerHTML = "si";}
+      else {actiu.innerHTML = "no";}
+      edat.innerHTML = array[i].edat;
+
+      fila.appendChild(nom);
+      fila.appendChild(cognoms);
+      fila.appendChild(actiu);
+      fila.appendChild(edat);
+      table.appendChild(fila);
+      document.body.appendChild(table);
+    }
+  }
+</script>
+</body>
+</html>
